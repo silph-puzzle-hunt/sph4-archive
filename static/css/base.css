@@ -1,0 +1,502 @@
+/************************************************************************************
+ * Stuff that got split out but needs to be applied first??? 
+ ************************************************************************************/
+ @import url(print.css);
+ @import url(shortcuts.css);
+ @import url(responsive.css);
+
+/************************************************************************************
+ * Actual base, fonts, general stuff
+ ************************************************************************************/
+:root {
+  --gradient-shade: #b6f5e7;
+  --main-shade: #2f4858;
+  --variation-one: #3e92cc;
+  --variation-two: #133a30;
+  --almost-transparent: #ffffff01;
+  
+  --bg-img: url("");
+
+  /** change colors here **/
+  --main-bg: linear-gradient(var(--almost-transparent), white 3.5in), var(--bg-img), linear-gradient(var(--gradient-shade), var(--almost-transparent) 3in);
+  --main-primary: var(--main-shade);
+  --content: white;
+  --font-default: var(--main-shade);
+  --font-light: white;
+  --font-header: var(--main-shade);
+  --font-link: var(--variation-two);
+  --font-link-hover: var(--variation-one);
+  --font-link-light: white;
+  --font-link-light-hover: var(--variation-one);
+  --mapdot-one: var(--main-shade);
+  --mapdot-two: var(--variation-one);
+  --puzzle-selected: #97c1de;
+
+  /** size breaks */
+  --max-width: 960px;
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/avenir.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/avenir-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/avenir-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/avenir-bold-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/avenir-light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: url('../fonts/avenir-light-italic.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Avenir Next LT Pro', sans-serif;
+  font-variant-ligatures: none;
+  line-height: 2.6rem;
+  font-size: 1.75rem;
+  overflow-wrap: break-word;
+  position: relative;
+}
+
+main {
+  padding: 20px 30px;
+  position: relative;
+}
+
+footer {
+  text-align: center;
+  opacity: 0.5;
+  font-size: 80%;
+}
+
+@media screen {
+  body {
+    background-image: var(--main-bg);
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  main {
+    display: table;
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .content {
+    margin: 0 auto 60px;
+    padding: 20px;
+    max-width: var(--max-width);
+    min-height: 80vh;
+    background-color: var(--content);
+    border-radius: 10px;
+  }
+}
+
+/************************************************************************************
+ * General Text and font related
+ ************************************************************************************/
+
+p {
+  margin-bottom: 2rem;
+}
+
+.flavor {
+  text-align: center;
+  font-size: 1.8rem; 
+  line-height: 1.5;  
+  letter-spacing: -.05rem;
+  font-style: italic;
+}
+
+textarea {
+  width: 100%;
+  min-height: 24ch;
+  font-family: monospace, monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+/* title on main page */
+h1 {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+h2 {
+  margin: 4rem 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+a,
+.btn {
+  color: var(--font-link);
+}
+
+@media screen {
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--font-header);
+  }
+
+  a {
+    transition: color 0.3s;
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--font-link-hover);
+  }
+}
+/************************************************************************************
+ * Nav Bar 
+ ************************************************************************************/
+
+@media screen {
+  nav {
+    overflow: hidden;
+  }
+
+  .top-tabs {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1;
+    background-color: var(--main-primary);
+  }
+
+  .top-tabs a:hover,
+  .top-tabs a:focus {
+    color: var(--font-link-light-hover);
+  }
+
+  .top-tabs .selected-tab {
+    font-weight: bold;
+  }
+
+  .actions {
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .top-left-actions,
+  .top-right-actions {
+    line-height: 36px;
+    word-spacing: 8px;
+    min-height: 36px;
+    margin-bottom: 1.5rem;
+  }
+
+  .top-left-actions > *,
+  .top-right-actions > * {
+    word-spacing: initial;
+  }
+
+  .current-stat {
+    white-space: nowrap;
+    display: inline-block;
+    text-decoration: none;
+  }
+}
+
+
+@media screen and (min-width: 961px) {
+  .top-tabs a {
+    text-decoration: none;
+    color: var(--font-link-light);
+    padding: 0 1vw;
+  }
+
+  .top-tabs {
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+  }
+}
+/************************************************************************************
+ * Buttons 
+ ************************************************************************************/
+
+.btn {
+  display: inline-block;
+  padding: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  font-family: 'Avenir Next LT Pro', sans-serif;
+  text-transform: none;
+  letter-spacing: 0;
+  height: 30px;
+  line-height: 30px;
+  font-size: 1.5rem;
+}
+
+@media screen {
+  .btn {
+    transition: background-color 0.3s;
+    color: var(--font-link-light);
+    background-color: var(--main-primary);
+  }
+
+  .btn:hover,
+  .btn:focus {
+    color: var(--font-link-light);
+    background-color: var(--font-link-light-hover);
+  }
+}
+
+
+/************************************************************************************
+ * tables
+ ************************************************************************************/
+
+.gph-list-table tr:last-child td {
+  border-bottom: none;
+}
+
+.gph-list-table {
+  min-width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+.gph-list-table td, .gph-list-table th {
+  padding: 4px 8px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+@media screen {
+  .gph-list-table th {
+      border: none;
+      position: sticky;
+      top: 0;
+      background-color: white;
+      box-shadow: inset 0 -1px 0 0 var(--main-primary);
+  }
+}
+
+.submitted-text {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+
+/************************************************************************************
+ * Forms
+ ************************************************************************************/
+ input[type=text],
+ input[type=password],
+ input[type=email] {
+     width: 100%;
+     border-radius: 0;
+ }
+
+form .btn {
+  height: 38px;
+  line-height: 38px;
+  font-size: 1.75rem;
+}
+
+.form-section {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.errorlist {
+    padding: 10px;
+    border: 3px solid currentColor;
+    list-style-type: none;
+    color: #b21;
+    background-color: #eee;
+}
+
+.errorlist li {
+    margin-bottom: 0;
+    list-style-type: none;
+    text-indent: 0;
+    padding-left: 0;
+}
+
+
+@media (min-width: 961px) {
+  label {
+      text-align: right;
+      height: 2em;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+  /* normally the label is right-aligned because it's in a column inside a
+   * row and left of the corresponding input, but sometimes it's just by
+   * itself in a row above the input (hints page) */
+  .row > label {
+      text-align: left;
+      justify-content: flex-start;
+  }
+}
+
+/************************************************************************************
+ * misc shared; TODO: name these better, or move them
+ ************************************************************************************/
+.solved-title-marker {
+    font-size: 50%;
+    color: #0c0906;
+}
+
+.solved-title-answer {
+    color: #4a2;
+    text-transform: uppercase;
+}
+
+.stat-entry {
+  font-size: 2rem;
+}
+
+.stat-value {
+  font-weight: bold;
+}
+
+.current-team {
+    font-weight: bold;
+}
+
+.puzzle-erratum {
+    color: #c32;
+    margin-bottom: 10px;
+}
+
+.hint-table {
+    width: 100%;
+}
+
+.hint-table th, .hint-table td {
+    border: none;
+    padding: 0 15px;
+}
+
+.hint-table tr:first-child th, .hint-table tr:first-child td, .hint-table td[colspan] {
+    padding-top: 12px;
+}
+
+.hint-table tr:last-child th, .hint-table tr:last-child td {
+    padding-bottom: 12px;
+}
+
+.hint-table button {
+    margin: 0;
+}
+
+.hint-table hr {
+    border-color: currentColor;
+    opacity: 0.25;
+}
+
+.hint-table .submitted-text, .hint-table textarea {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.hint-controls {
+    margin-bottom: 2rem;
+}
+
+.hint-controls > :last-child {
+    float: right;
+}
+
+.hint-controls form, .hint-controls input {
+    margin: 0;
+}
+
+.note {
+    border: 1px solid #ae4160;
+    padding: 0.5em;
+    margin-bottom: 2em;
+}
+
+.note strong {
+    color: #ae4160;
+}
+
+
+.hunt-icon {
+  vertical-align: middle;
+}
+
+/* ??? */
+
+.copy-only {
+    display: none;
+}
+
+.clipboard-button {
+    border-radius: 1em;
+    bottom: 1.5em;
+    cursor: pointer;
+    font-size: 1em;
+    height: 2em;
+    padding: 0 0.8em;
+    position: fixed !important;
+    right: 1.5em;
+}
+
+@media print {
+    .clipboard-button {
+        display: none;
+    }
+}
+
+@media screen {
+    time[title] {
+        text-decoration: underline dotted;
+        text-underline-position: under;
+        cursor: help;
+    }
+}

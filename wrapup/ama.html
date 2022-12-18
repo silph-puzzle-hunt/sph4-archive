@@ -1,0 +1,284 @@
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>Silph Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../index.html">
+                    Home
+                </a>
+                <a  href="../rules.html">
+                    Rules
+                </a>
+                
+                <a  href="../story.html">
+                    Story
+                </a>
+                
+                
+                <a  href="../puzzles.html">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams.html">
+                    Teams
+                </a>
+                <a  href="../faq.html">
+                    FAQ
+                </a>
+                
+                
+                <a  class="selected-tab"  href="../wrapup.html">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="../wrapup.html" class="btn">Back to wrapup</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<style>
+    li {
+        margin-bottom: 0;
+        list-style-type: disc;
+    }
+
+    ul {
+        list-style-position: outside;
+        margin-left: 50px;
+    }
+</style>
+
+<h1>Ask Us Anything</h1>
+
+<main>
+
+<p><center><p><b>Question categories</b><br><a href="ama.html#story">Story</a> |
+        <a href="ama.html#hunt-admin">Hunt administration</a> | 
+        Hunt writing (<a href="ama.html#writing-general">general</a> / <a href="ama.html#writing-specific">specific puzzles</a>) |
+        <a href="ama.html#puzzles">Puzzles in general</a> |
+        <a href="ama.html#misc">Miscellaneous</a></p><p><i>Some questions have been edited slightly for clarity.</i></p></center><hr><h2 id="story">Story</h2>
+<strong>Why Shuppy?</strong></p>
+<p>We were struggling to think of a reason why the solvers would be helping Team Rocket, so the natural solution was just to come up with something silly. Shuppet has some very compelling Pok&eacute;dex entries:</p>
+<ul>
+<li><em>Ruby</em>: Shuppet is attracted by feelings of jealousy and vindictiveness. If someone develops strong feelings of vengeance, this Pok&eacute;mon will appear in a swarm and line up beneath the eaves of that person's home.</li>
+<li><em>Sapphire</em>: Shuppet grows by feeding on dark emotions, such as vengefulness and envy, in the hearts of people. It roams through cities in search of grudges that taint people.</li>
+</ul>
+<p><center><p><img src="../static/wrapup/origin-story-1.png" width=70%></p><p><img src="../static/wrapup/origin-story-2.png" width=70%></p></center></p>
+<p>Obviously, a few things changed over the course of the writing process, but this is how the Shuppet idea first came to be!</p>
+<p><strong>Was there any point to the first bit of story?</strong></p>
+<p>There were five (bullet) points!<br />
+No, but really, the aim there was just to introduce the theme of the hunt, in case people didn't already get it from the logo and the whole team allegiance thing.</p>
+<p><strong>Why are the story patch notes alphabetized?</strong></p>
+<p>Mostly because after I wrote them and floated the idea of patch note "story" past the rest of the team, no one noticed that the notes were alphabetized. Also, to indicate that the order isn't relevant for extraction.</p>
+<p><hr><h2 id="hunt-admin">Hunt administration</h2></p>
+<p><strong>Who <em>are</em> you guys?</strong></p>
+<p>Our writing team comprises a bunch of people from assorted teams, so it's hard to give ourselves a short collective description apart from "the Silph writing team". The bulk of the team hunts together as Eggplant Parms in other hunts, but we also have members from ⛎ UNICODE EQUIVALENCE, ✈️✈️✈️ Galactic Trendsetters ✈️✈️✈️, and NES, as well as at least one member whose team membership is not well-defined at the moment.</p>
+<p><strong>What made you guys decide to switch from the Discord format to the more traditional puzzle hunt website?</strong></p>
+<p>The goal was always to have a website; the Discord format was meant as a temporary workaround due to problems we had with hosting and later inertia due to the Discord format being quite well-received. The ease of use of gph-site merely lowered the activation energy of moving our operations to a site sufficiently for us to make the move. It's also proven a lot more manageable in terms of operations during the hunt, like managing teams and answering hints.</p>
+<p>The rest of the list is more of the benefits of having a site rather than reasons we moved to a site, but we now also have many more options in terms of puzzle writing. Some notable examples are Minute Details, The Minimeta That Goes Wrong, and both metapuzzles that used the grid maps on the puzzle pages. We also got to implement little touches like matching the site theme to your team of choice, as well as making the story stand out a bit more via the site&mdash;the Rocket twist would not have been very feasible to implement on a Discord bot.</p>
+<p><strong>How do you go about making a website for something like this? What tools do you use? I have no background knowledge of the topic and I think the site is mighty impressive. It's very professional.</strong></p>
+<p>This site is powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>, which did all the heavy lifting for us. We merely tweaked a few knobs here and there and threw on a few different skins. We'd highly recommend it for anyone looking to run a hunt!</p>
+<p><strong>If you were going to do mechanical differences for the teams, what would they have been?</strong></p>
+<p>Earlier on in the theme selection process, we briefly discussed puzzles that had small differences based on which team the user was in, but we couldn't find a way to implement this idea that was interesting, mechanically meaningful, and fair. Mostly unrelated to the Pok&eacute;mon GO idea, we were also kicking around some ideas about a hypothetical hunt that allowed teams to select "perks'' or "boons" that would provide bonuses within the hunt, kind of like choosing which part of a tech tree to spec into. Some ideas we floated were earlier unlocks, a decrease in the wrong answer throttle, and additional hints. Ultimately we decided that we were never going to be able to balance in such a way that the perks would be equally powerful and that solvers, especially on competitive teams, would find the choice interesting and fun rather than stressful. </p>
+<p><strong>How did you always give such good hint responses?</strong></p>
+<p>Mostly by being familiar with the flow and solve paths of the puzzles and by being prepared! Before hints opened, we created a hint document with pre-written pointers for what we expected to be common choke points on the puzzles in the hunt. When hints actually came around, we were able to use these as bases for our hint responses, which we edited to suit the team's specific position in the hunt but to maintain the general idea of where the solver should be looking next.</p>
+<p><strong>Why the move from July? Will this be occurring every 6 months or 12?</strong></p>
+<p>The move from July was mostly necessitated by conflicts with other hunts, and since we had fallen a bit behind our writing schedule it was easier on us as well. If all goes well we'll be sticking to a more vague once-a-year schedule, but we have no plans as of now.</p>
+<p><strong>If you do more puzzle stuff in the future, where can I expect to hear about it?</strong></p>
+<p>We'll likely continue to advertise this hunt on the <a href="http://puzzlehuntcalendar.com/">Puzzle Hunt Calendar</a> if we run it again.</p>
+<p><hr><h2 id="writing-general">Hunt writing (general)</h2></p>
+<p><strong>How many puzzles were written week of? (or day of??)</strong></p>
+<p>Straight From The Headlines was written the morning of the hunt. Connections, Only Geniuses Can Solve This Puzzle!!, and Whole New Ball Game were written the week of hunt. ⭐ Alliance had its first half rewritten the day before hunt.</p>
+<p><strong>Which puzzles changed in editing/testsolving, and how?</strong></p>
+<p>Some highlights:</p>
+<ul>
+<li>Harmony was originally going to be a puzzle about chess variants, but the idea was unfortunately sniped by a puzzle in another hunt early in the year. Fortunately, the author had suggested some backup ideas, including the Queen's Gambit idea, which we liked and fell back on.</li>
+<li>⭐ Alliance's first half was quite strongly changed after a testsolve revealed some underlying faults in the dataset used for construction pretty close to the hunt starting. In the original version, red circles were instead red lines connecting airports to show that some flight connected the two.</li>
+<li>The Minimeta That Goes Wrong originally had a final meta that gave an explicit direction for extraction, but this was pointed out to be quite unthematic during testsolving, so we came up with the extraction that made it into the hunt.</li>
+</ul>
+<p>Editing mostly helped to develop half-formed puzzle ideas into full puzzle structures, rather than alter fully developed ideas. Other than these, most of the other puzzles experienced pretty minor changes during testsolving, such as nerfing or cleaning up individual clues.</p>
+<p><strong>What were the design intentions of Round 1 puzzles vs. Round 2 puzzles?</strong></p>
+<p>The general idea was for Round 1 to provide a comfortable landing for less powerful teams as well as be educational to newer solvers. Most of the puzzles are structured as some immediately obtainable partial progress to get teams into the puzzle content, followed by a twist that teams must resolve, in order to invoke the idea of "well, I've seen/done the immediately obvious thing, but now what?" in solvers. We think the sense of progress is important in getting teams to feel invested in continuing or completing a puzzle, while the twist encourages solvers to take a step back and search for a pattern that explains the puzzle's "weirdness", either within or without the limits of what's given.</p>
+<p>As for Round 2, there weren't any particular design directions communicated to the whole team, so it was mostly what puzzle authors came up with. We generally assigned Round 2 answers to harder puzzle ideas, which were generally more involved and had more steps to them. Many puzzles here are less clearly structured to give solvers easy ins, and often require stronger insights up front, like White as a Sheet or Six Feet Under.</p>
+<p><strong>Were there plans at any stage to overlay the Pok&eacute;mon strength / weakness chart on the Go board, given that they're the same size (18 squares / 19 lines)? I was sure that one of the metas would feature that particular Pok&eacute;mon Go combo, but of course it didn't happen.</strong></p>
+<p>There were no plans for that&mdash;honestly, we didn't even notice it! It seems like it could've been doable, but it would be hard to do "naturally". We would have to find a way to work around the lack of a canonical ordering for the types.</p>
+<p><strong>When did the first concept of tying Go to Pok&eacute;mon GO come around? How quickly does that evolve into a full-fledged structure concept? Curious as to the very beginnings and initial creation of a puzzle hunt. Was any of this planned or worked on before Smogon last year?</strong></p>
+<p>The concept of tying Go to Pok&eacute;mon GO wasn't the original impetus for designing a hunt around the theme; we joked about it in passing soon after the theme was suggested, but it only came up seriously while brainstorming ideas for metas.</p>
+<p>The beginnings and initial creation of a hunt, at least in our workflow, are pretty straightforward since none of us are particularly strongly-opinionated people when it comes to theme. We usually have one pretty generic idea and a few other ideas that are more closely tied to weird meta structures, which get discussed more. In the case that people aren't really convinced, we have a nice generic theme to write a pretty standard-looking hunt around, as was the case this year.</p>
+<p>As for the general timeline for this hunt, it was pretty cleanly disjoint from last year's hunt, since we absolutely do not have the capacity to work on two hunts of this size at once. (Arguably, we don't have the capacity to work on <em>one</em> hunt of this size at once!)</p>
+<p><strong>Was there anything that went wrong behind the scenes?</strong></p>
+<p>Many, many things went wrong behind the scenes. The small size of our writing team and the relative inexperience of several writers meant that we struggled to generate enough puzzle ideas to fill the hunt; as hunt drew nearer, some writers realized they would not be able to complete their puzzles and opted to drop the ideas to reserve them for future use. At some point, we earnestly considered having a puzzle in the middle of the second round which encouraged solvers to rest, stretch, and drink water, then come back in 5 minutes for a free answer.</p>
+<p>Additionally, conflicts in scheduling meant that testsolve sessions often had less testing power than necessary, and testsolvers often solved puzzles solo or in pairs, leading to struggles on some harder puzzles. In many cases, we opted to take the safer route by nerfing or otherwise smoothing out the stickier parts of the puzzles, even if we thought they were more approachable in larger teams.</p>
+<p><strong>Do you personally think this hunt was more difficult than the one last year that was still connected to Smogon?</strong></p>
+<p>At least with reference to puzzles in the second round, we generally agree that this hunt's harder puzzles were easier than last year's and that its easier puzzles were harder than last year's, so the window of puzzle difficulties is just narrower. But since the easier puzzles are the ones that most teams solve and that arguably have the most impact on teams' experiences, we expected the general perception to be that this hunt ran somewhat harder than last year's.</p>
+<p><strong>This hunt was <em>much</em> harder than Smogon Puzzle Hunt 3. And the puzzles were significantly less Pok&eacute;mon-themed. Is this a direction you see SPH continuing in the future? Do you expect SPH to be similarly sized if it runs again?</strong></p>
+<p>We're definitely planning to scale down, at least in terms of puzzle quantity, if we run this again. While it was very rewarding seeing everyone enjoy the puzzles, the hunt took a lot out of us. Naturally, fewer puzzles will mean a less difficult hunt, though we think the general difficulty of individual puzzles will likely remain around this difficulty. This is the main or only hunt most of us write for each year, so it's typically the one we save our standout ideas for.</p>
+<p>We don't think the puzzles were significantly less Pok&eacute;mon-themed. This year, we had two puzzles that specifically relied on datasets from the Pok&eacute;mon games and a third that used a piece of Pok&eacute;mon-related media. Last year's hunt can be characterized in exactly the same way.</p>
+<p><strong>Is it a rule between puzzle hunt developers to always Rickroll players when possible?</strong></p>
+<p>Not specifically, but the general principles of humor we employed are generally the same as in other hunts. There's a pretty good explanation of some elements we tried to develop and utilize in <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">this article</a>. </p>
+<p><strong>Rank the writers of this hunt by deviousness in puzzle-writing. Just so I know who to watch out for next Silph.</strong></p>
+<p><em>rf</em>: Was there anybody (besides me, who wrote 0 puzzles) who <em>didn't</em> have a devious-in-some-way puzzle to their name?<br />
+<em>lydian</em>: Obviously Deusovi is the most devious, but I hope my puzzles had some ":)" moments as well!</p>
+<p><strong>Could Level 51 share the blueprints of their time machine? There is no way someone can create so many puzzles with only 24 hours in a day, and I also always have too much to do.</strong></p>
+<p>Thanks for noticing, haha. I actually worked on this hunt over the entire year, which is where the time came from. I'm a full-time student at the moment, which means I also definitely have more free time than a typical working adult. A rough estimate suggests that I spent over 1500 hours on this hunt, across coordinating writing efforts and organizing testsolves, workshopping and constructing my own puzzles, doing editing work and providing feedback on other puzzles, working on the site, and testsolving the three puzzles I somehow didn't get spoiled on. Is 1500/8760 a big proportion? You decide!</p>
+<p><hr><h2 id="writing-specific">Hunt writing (specific puzzles)</h2></p>
+<p><strong>Were you able to construct Medal Ceremony by hand, or did it require web scraping?</strong></p>
+<p>It was pretty easy to construct by hand. <a href="https://en.wikipedia.org/wiki/List_of_athletes_with_Olympic_medals_in_different_sports">This Wikipedia page</a> came in very handy.</p>
+<p><strong>Be honest with us: how last minute was Six Feet Under actually written?</strong></p>
+<p>Actually, this was the first non-meta puzzle I conceptualized for this hunt, and one of the first I finished writing. I think the reason it sounds so desperate is that I was busy reliving the memories of the last hunt we ran.</p>
+<p><strong>On Composition, why were there only 31 soup cans instead of 32?</strong><br />
+The idea was to nest successive paintings approximately in the top-right corners of their parent paintings. For most paintings, there was nothing there to get in the way of the next painting, but unfortunately, we had to nest over one of the soup cans in the Warhol. In retrospect, maybe we should've just squished one of the cans and nested the next painting on top of it, or something.</p>
+<p><strong>How difficult was Re-actions to construct, and how did you go about doing it?</strong></p>
+<p>It wasn't actually that difficult to construct&mdash;the only <em>strict</em> constraint on each clue is that it has to have a certain number of words. We accounted for this in gridding by starting with easily-constructible words in the lights after the short ones: UNDERGRAD, METALLICA, EARLIEST, and LACERATED were our seed entries. (This posed next to no issues&mdash;turns out blocked grids are more lenient than either of us realized!)</p>
+<p>For the actual clues, we mostly wrote runs of 4-8 clues at once; each time we started a new run, we'd decide on the wordplay for the clue before it. This meant that for every clue, we could see how it would look when fragmented: we wanted the fragments to read as sensibly as possible (...for the most part; a few "obviously wrong" ones were intentionally put in there to hint that they wouldn't form clues as-is).</p>
+<p>To help the fragments make sense, we didn't decide on what the actual dropped words would be until all the clues were written. So the only other thing we had to keep in mind was that we had the right set of dropped letters. We wrote down the ones we needed and crossed them off as we wrote clues. Using the hard letters (like Q and Z) early, it was easy to fiddle around with the few we had left at the end to get everything into place.</p>
+<p><strong>How did you get the idea for the cursed subpuzzles in Minimeta?</strong></p>
+<p>In many cases, I thought about ways that search tools could exploit some interesting constraints of puzzles, like the limited range of possible answers in Original Content or the big random anagram in Word Search. Some of the other ones were just jokes that I'd had somewhere in my mind for a while and now had a chance to put into a puzzle, like Crossword and Extremely Hard Programming Puzzle. Finally, for others, I just thought about what a "minimeta that goes wrong" would look like, which gave me Rebus, Capital Letters, and Text Adventure.</p>
+<p><strong>Tell me about the constructions for Overdone, Chimera, and RED SUS! Did you write custom solvers to construct them?</strong></p>
+<p><em>Level 51</em>: For Overdone, I selected words that both clearly clued ordered sets and were also simple enough to realistically be the result of some transformation, then sat around and thought about some transformations I could use, and just... tried stuff until I managed to fit transformations to words. For the remaining ones, it was not super difficult to just find similar-looking phrases or words and use the power of Caesar shift values to tweak from one to the other (this is how REINVENT THE WHEEL / REINDEER was created). I wrote a little bit of custom code to try different Caesar shift values for ZODIAC, and then inspected the results by hand and found MAIDOF in there.</p>
+<p><em>lovemathboy</em>: For Chimera and RED SUS, nope! The method I use (that I think most logic puzzle constructors use) is to first plan out where you want all your clues to be (i.e. placing a bunch of blank clues with symmetry). Then, every time you replace a blank clue with an actual clue, you make as many deductions as possible. Keep repeating that step until you only have a few clues left, then just tweak the remaining clues until the puzzle is unique. This method of construction guarantees that there’s a logical way through the puzzle. (Also, usually at the start, puzzle constructors will have a “break-in” they want to use, which is where they intend solvers to start the puzzle).</p>
+<p><hr><h2 id="puzzles">Puzzles in general</h2></p>
+<p><strong>Have you noticed that Pok&eacute;mon games also like to include some puzzly elements like ciphers or mysteries?</strong></p>
+<p><em>lydian</em>: Yeah, the games have some cool stuff, like Braille writing in places like the Dotted Hole and Sealed Chamber and the palindrome passwords to enter the Rocket Warehouse. There's also more logic-y stuff like ice puzzles and Voltorb Flip!</p>
+<p><strong>Do you want your puzzles to have millions of solvers?</strong></p>
+<p><em>mstang</em>: I think society would be very different if that were possible.<br />
+<em>lydian</em>: Only if they exclusively compliment my puzzles :)<br />
+<em>Deusovi</em>: I don't think I could comprehend "millions of people"&mdash;the human brain just isn't equipped to handle that kind of thing. "Thousands of solvers" and "millions of solvers" both just get visualized as "big number". I definitely want a lot of people to enjoy my puzzles, though!</p>
+<p><strong>How do I get good at metas, extraction, cryptics, and not overthinking everything?</strong></p>
+<p><em>Deusovi</em>: What typically helps me with metas and extraction is trying to see things from the other side: "if I was a constructor, why would I have done things this way?" Specifically, looking for unused information, <em>especially</em> unused information that seems more awkward than it needs to be.</p>
+<p>For cryptics, probably just practice&mdash;some puzzle sources I'd recommend, in increasing order of difficulty: Kegler, The Guardian quiptics, Hex (Cox and Rathvon), Ucaoimhu.</p>
+<p>For not overthinking everything... I'll let you know when I figure that one out.</p>
+<p><hr><h2 id="misc">Miscellaneous</h2></p>
+<p><strong>What are your favorite Pok&eacute;mon?</strong></p>
+<p><em>lydian</em>: Alolan Raichu :)<br />
+<em>lovemathboy</em>: Shaymin!<br />
+<em>beta</em>: Grovyle (⌐■_■)<br />
+<em>Level 51</em>: Togekiss! :D</p>
+<p><strong>How do you sleep at night? (general question)</strong></p>
+<p><em>beta</em>: melatonin helps (a small dose like 0.3mg if possible, but it’s hard to find doses less than 0.5mg)<br />
+<em>lydian</em>: well yes, but actually no<br />
+<em>Deusovi</em>: poorly<br />
+<em>mstang</em>: I recently got a weighted blanket which has helped, but in general see lydian's answer<br />
+<em>lovemathboy</em>: hugging plushies works well</p>
+<p><strong>Who hurt you?</strong></p>
+<p><em>Level 51</em>: People who give feedback on puzzles they don't solve.<br />
+<em>lydian</em>: People who think Shaymin "isn't that great".<br />
+<em>Level 51</em>: I mean it's "okay" imo<br />
+<em>lydian</em>: case in point, Level 51 just hurt me!</p>
+<p><strong>Which Pok&eacute;mon GO teams are you on?</strong></p>
+<p><em>lydian</em>: Mystic :)<br />
+<em>beta</em>: Instinct<br />
+<em>lovemathboy</em>: Mystic.<br />
+<em>rf</em>: Instinct<br />
+<em>Deusovi</em>: Mystic, for the two days(?) I played it.<br />
+<em>Level 51</em>: Is there seriously no one else on this writing team on Valor???<br />
+<em>mstang</em>: ...oh this hunt was about Pok&eacute;mon GO??</p>
+<p><strong>Do any of you play Go?</strong></p>
+<p><em>beta</em>: poorly<br />
+<em>rf</em>: ditto ^</p>
+<p><strong>What generation do you think we'll get Black 3 and White 3?</strong></p>
+<p><em>lydian</em>: Polynomial interpolation tells us the Black and White remakes should happen in generation 9. However, this approach would mean Pok&eacute;mon Z will happen in this generation; that Master Sun and Master Moon should have happened in generation 4; and lastly, that Pok&eacute;mon Gun will show up in generation -4 (maybe after enough generations, the generation count underflows?). So yeah, polynomial interpolation may be a bit of a dubious method.</p>
+<p><strong>What is the weather like there?</strong></p>
+<p><em>lydian</em>: Hot and humid :(<br />
+<em>Level 51</em>: Hot and humid as well, except I live like halfway across the world from lydian. Just equator things, I guess.</p>
+<p><strong>Loved the drawings of the team leaders and Giovanni! Props to the artist. What programs did you use?</strong></p>
+<p><em>Level 51</em>: The team leader art is actually official Pok&eacute;mon GO art; Giovanni and the phone in Round 1 were drawn to approximate a similar art style by a mysterious artist who declined to be credited using, as far as I can tell, just Photoshop and a tablet.</p>
+<p><strong>What's your favourite Olympic mascot?</strong></p>
+<p><em>lydian</em>: As a Brazilian, I think I'm contractually bound to say Tom, with Vinicius coming in second; they represent a very important part of Brazilian culture, and I for one love so much of Tom Jobim's music. Also they just look really cool, especially Tom. Honorable mention goes to the Fuwa: Beibei, Jingjing, Huanhuan, Yingying, and Nini, as I had a plushie of Huanhuan as a kid, they're all very cute (especially their names), and I ADORE how they tie in the five Olympic rings with the Wuxing. Just really really nice and cute. Finally, Amik, because they're a gay beaver, like, what else do you want from an Olympic mascot??!!</p>
+<p><strong>Favorite trainer type?</strong></p>
+<p><em>Level 51</em>: Is this, like, trainer class? Like in the Pok&eacute;mon games? I think it's neat that "Double Team" is both a trainer class and a move name. (Also "Psychic", less interestingly.)<br />
+<em>lydian</em>: If it is indeed about trainer classes, Scuba Diver!</p>
+<p><strong>If you had to live in a Poké Ball, which one would you choose and why?</strong></p>
+<p><em>lydian</em>: Lure Ball, I like the color scheme!<br />
+<em>Level 51</em>: Canonically, I think the most obvious answer should be the Luxury Ball, since it's the nicest to live in.</p>
+<p><strong>Favourite eeveelution?</strong></p>
+<p><em>lydian</em>: Vaporeon! But I love them all &lt;3<br />
+<em>lovemathboy</em>: Espeon!</p>
+<p><strong>How many Pok&eacute;mon can you name without looking them up (approximately)? Can you do the Perfect Pok&eacute;Rap?</strong></p>
+<p><em>lydian</em>: I tried naming as many of them as I could on just a blank txt file (to avoid using one of these quizzes that show the Pok&eacute;mon in their dex position, so I couldn't infer anything). The rules I gave myself were to name as many as I could until I'd spent 3 minutes without being able to name any more, which got me to <a href="../static/wrapup/lyd-names-all-the-pokemon.txt">797 Pok&eacute;mon</a> in a total of 70 minutes. Nice! I'm very curious to see which ones I've missed, but I just spent the last hour and a bit naming Pok&eacute;mon, so I think I'll save that for later, lol.<br />
+<em>Level 51</em>: I could probably name like 200 if you gave me a notepad and an hour. What the heck lyd??<br />
+<em>lydian</em>: :)</p>
+<p><strong>Who is your favorite VTuber?</strong></p>
+<p><em>Level 51</em>: I don't actually watch any VTubers but Mori has a cool scythe.</p>
+<p><strong>Favorite Pok&eacute;mon not-GO side game?</strong></p>
+<p><em>lydian</em>: Has to be Mystery Dungeon, I think. I played them as a kid and got stuck so I don't remember them very well, but I do remember them very fondly, and that's what counts, right? Plus, the only other spin-off I've played is Pok&eacute;mon Rumble Blast, which was fun, but nowhere near Mystery Dungeon.<br />
+<em>lovemathboy</em>: My all-time favorite game is Pok&eacute;mon Mystery Dungeon: Explorers of Sky! Though I must say all of the Pok&eacute;mon side games are really fun and worth playing.<br />
+<em>beta</em>: <a href="../static/wrapup/yes.jpg">↑</a></p>
+<p><strong>What was your favorite team name?</strong></p>
+<p><em>lydian</em>: ፨ ETHIOPIC SEPARATOR REGISTEEL FACE (with \ KAKTOVIK NUMERAL ARCTIC UNO as a close second)<br />
+<em>Level 51</em>: I quite like 𝗲. Also, not really a team name, but the team member lineup for 1 Billion Puzzles vs 1 of Every Pokemon is very cute.</p>
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

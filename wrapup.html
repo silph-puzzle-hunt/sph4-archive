@@ -1,0 +1,530 @@
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>Silph Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="static/css/skeleton.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="static/js/sorttable.js"></script>
+    <script src="static/js/tray.js"></script>
+    <script src="static/js/notify.js"></script>
+    <script src="static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="index.html">
+                    Home
+                </a>
+                <a  href="rules.html">
+                    Rules
+                </a>
+                
+                <a  href="story.html">
+                    Story
+                </a>
+                
+                
+                <a  href="puzzles.html">
+                    Puzzles
+                </a>
+                
+                <a  href="teams.html">
+                    Teams
+                </a>
+                <a  href="faq.html">
+                    FAQ
+                </a>
+                
+                
+                <a  class="selected-tab"  href="wrapup.html">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="wrapup/finishers.html" class="btn">Finishers</a>
+<a href="bigboard.html" class="btn">Big Board</a>
+<a href="stats.html" class="btn">Stats</a>
+<a href="wrapup/ama.html" class="btn">AMA</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+          
+
+<style>
+    li {
+        margin-bottom: 0;
+        list-style-type: disc;
+    }
+
+    ul {
+        list-style-position: outside;
+        margin-left: 50px;
+    }
+</style>
+
+<h1>Wrap-up</h1>
+
+<main>
+  
+<p>Congratulations to the 88 teams who engaged in some splendid subterfuge and managed to uncover Giovanni's master plans, especially <strong>DIGIMON: DIGITAL MONSTERS</strong> for winning the hunt in just over 13 hours! It was a close race for second place, with <strong>Swim Shaymin</strong> and <strong>⬤ JIGGLYPUFF SEEN FROM ABOVE</strong> placing second and third respectively just over half an hour apart!</p>
+<p>All in all, <strong>372</strong> teams solved at least one puzzle, while <strong>236</strong> teams finished Round 1. Thank you all for hunting with us!</p>
+<p>Before we dive into the rest of the wrapup, we'd like to extend a special shoutout to <strong>Aviation Laws</strong> for solving every puzzle without using hints and with zero incorrect answers! Also of note are <strong>The Greatest Bruce Nanny</strong>, <strong>LMW</strong>, and <strong>Gotta Llama Mall</strong>, who finished the hunt with zero, one, and two incorrect answers respectively.</p>
+<p>As a word of caution, this wrap-up contains many unmarked spoilers for the puzzles in this hunt! If you're still planning on trying out the puzzles, you may want to leave reading this wrap-up for later.</p>
+<p>The rest of this wrap-up will cover a bunch of details about the writing process behind this hunt, but feel free to skip to the <a href="wrapup.html#fun-stuff">fun stuff</a>, or check out some of the <a href="wrapup.html#statistics">statistics</a> we compiled!</p>
+<p><hr><h2 id="story">Story</h2></p>
+<p>Teams began the hunt with what appeared to be a relatively straightforward first round, which involved visiting Puzzl&eacute;stops and solving puzzles there. However, upon solving the Round 1 meta, they discovered that their team leader had assigned them to do some <strong>ROCKETEERING</strong>&mdash;they were actually Team Rocket agents working directly under Team Rocket boss Giovanni, and their goal was to cause unrest among the three Pok&eacute;mon GO teams!</p>
+<p>In Round 2, teams attempted to gain favor with the three GO team leaders, Blanche, Candela, and Spark. Once they had enough favor with the leaders and gained an audience with them, they got to chip in with some (usually incredibly aggressive) words of advice, and ultimately cause a confrontation between the three teams. Returning to Giovanni, it turned out his well-laid nefarious plans merely had the end goal of feeding some human hatred to his pet Shuppet as a treat&mdash;all they had done was to <strong>FEED AN ODIUM ADDICTION</strong>!</p>
+<div style="text-align:center"><p><img src="static/images/victory-final.jpg" width='500' /></p></div>
+
+<p><hr><h2 id="writing">Writing the Hunt</h2></p>
+<h3>Some context</h3>
+<p>Silph Puzzle Hunt isn't actually the first hunt that we've written together as a writing team. Since 2018, we've written an annual hunt named Smogon Puzzle Hunt, named for the competitive Pok&eacute;mon community it was originally created for and whose forums it operated out of. We ran the hunt in a Discord server (with puzzles served by a Discord bot), advertised the hunt entirely by word-of-mouth, and kept the hunt deliberately small due to the constraints imposed by the medium.</p>
+<p>Over the years, as the writing team gained more experience with puzzles, the target audience generally shifted away from the specific Smogon community to the hunt community at large. This year, we additionally made the move to a more typical website-based format to make running the hunt easier on us. Since it hardly seems fair to use the Smogon name for an event that is only barely associated with them, we rebranded to Silph Puzzle Hunt to maintain the initialism and general Pok&eacute;mon theming we've had all these years, while signifying the divergence from our original format.</p>
+<h3>Goals</h3>
+<p>Based on how last year's hunt went, as well as feedback from last year's participants, we had three main goals for this hunt:</p>
+<ul>
+<li>Make the first round more significant and feel more like a milestone, as opposed to almost like a hassle before solvers could get to the main meat of the hunt.</li>
+<li>Make puzzle difficulty more consistent within the second round.</li>
+<li>Set up the second round to encourage solvers to interact with more of the puzzles.</li>
+</ul>
+<p>We believe we did a reasonable job of achieving all three of these goals, as we'll discuss in the following sections.</p>
+<h3>Theme and structure</h3>
+<p>The idea of a Pok&eacute;mon GO theme had been a definite possibility even before planning for this year started: its three-team structure naturally lends itself to a hunt with a three-meta round, there's a reasonable amount of flavor to build off, and it's the Pok&eacute;mon content that the average non-player is most likely to have heard of. </p>
+<p>The thematic structure of the "plot twist" after the first round also tied nicely into our goals for the hunt. Our hope was that completion of the first round metapuzzle would segment the hunt cleanly into two disjoint halves, which would bring some sense of completion to teams who managed to finish the first round but not the entire hunt. To this end, we tried to elevate the contrast between the rounds by changes to the site theme and also set up the site to send out a "milestone" email upon solving the meta.</p>
+<p>The structure of our hunt was pretty standard fare as far as modern hunts go. During theme and structure discussions, a number of more complex structural ideas for the hunt were thrown around but unfortunately failed to stick, mostly due to implementation difficulties. The idea that got the furthest was "semi-metas" that would use some Round 1 answers and some Round 2 answers, but we decided that these would end up too shell-heavy and not elegant enough to be worth the extra implementation work. We ended up sticking to the tried-and-tested "three-meta Round 2 with feeder-to-meta matching", which was the same structure the hunt had last year. We channeled most of our creative energy into the puzzles instead, which we think yielded higher marginal benefits for the hunt as a whole.</p>
+<h3>Unlock structure</h3>
+<p>One area where we did deviate from last year's structure was in the unlock schedule for Round 2's metapuzzles. In a round with feeder-to-meta matching, we found the linear unlocking schedule for metapuzzles rather artificial since the specific subset of puzzles you solve is never relevant to which meta unlocks and when. It can also place additional restraints on the already difficult problem of puzzle ordering by restricting where puzzles from earlier-unlocking metas can go.</p>
+<p>Instead, we opted to tie meta unlocks directly to the solving of associated puzzles. Specifically, we conceptualized the meta structure as each puzzle being a feeder for one GO team (the team whose leader you're giving advice to). Each meta is "tightly" associated with seven puzzles (its feeders) and "loosely" associated with seven other puzzles (the feeders of the other team referenced in the flavor). Then metas unlock when a team has solved either 6/7 of the meta's "tightly" associated puzzles (feeders), or 10/14 of the total set of "tightly" and "loosely" associated puzzles. In practice, this translates to usually getting the three meta unlocks around 13, 14, and 16 solves respectively, and generally via the second condition, though we did notice that some teams were forced to the maximum of 17 solves to unlock their third meta due to their unfortunate selection of solves.</p>
+<p>There were a few reasons this structure won out in the end. The decision to associate meta unlocks directly to associated solves was due to our desire to ensure that people had a good amount of feeders before starting work on a puzzle. We felt this was especially important for Spark's meta, which involved many of the most difficult puzzles in the hunt as feeders (Re-actions, ⭐ Alliance, Six Feet Under) but was (we felt) disproportionately easy to solve with a low number of feeders. Secondarily, as solvers we sometimes dislike the feeling of unlocking a meta while being unable to reasonably approach it; this structure was designed both to lower the odds of teams successfully short-circuiting our metas, and to ensure that teams usually had enough data with which to approach a freshly-unlocked meta.</p>
+<p>On the other hand, we didn't want information about meta assignment to be leaked by which puzzle's solve unlocked the metapuzzle. The additional condition helps to obfuscate this correlation somewhat since it means that solving a puzzle can unlock a meta it's not a feeder for. In the end, the additional condition seemed almost a bit too strong for unlocking metas, so perhaps a slightly tighter condition (say, 11/14) might have been a better point to tune it to (maybe even creating an asymmetrical structure by setting this tighter condition only for Spark's meta).</p>
+<p>One notable feature of this hunt's unlock structure is that it didn't contain automatic unlocks, even within rounds. After some previous hunts this year, we asked around for opinions from some friends' teams who had experienced the automatic unlocks within them. We generally got the impression that the teams who were actually likely to experience the automatic unlocks found them overwhelming and somewhat demotivating. Due to the way we organized our puzzle unlock order (see the next section), unlocks early on in a round will generally lead into more difficult puzzles before the easier ones show up. Not only does this increase the number of open puzzles, spreading out team members' attention and potentially decreasing the chance of any one being solved, it can also demotivate solvers further should they fail to gain traction on a newly opened puzzle.</p>
+<p>That said, we received some feedback that a light amount of auto-unlocks would be appreciated, and we recognize that some teams may be more adverse to asking for hints as a means of progress. We're looking into other ways to balance auto-unlocks so that they are actually helpful and not overwhelming, such as having auto-unlocks occur in a different order from regular unlocks, and we hope to be able to develop a system that works for solvers who prefer having some extra avenues to which they can direct their attention.</p>
+<h3>Puzzle ordering</h3>
+<p>Puzzle ordering is always a difficult problem in any hunt. Last year, we arranged the puzzles so that difficulty generally increased as the hunt went on, with the idea that teams would slowly "acclimatize" to harder puzzles and be able to make steady progress. Unfortunately, most of the large puzzles ended up unlocking close to or after metas, and so were either solved around or backsolved.</p>
+<p>This year, with the intention of giving teams more reason to interact with our puzzles, we decided to rework the way puzzles were ordered in our second round, and be much more deliberate with where we placed certain puzzles in the round. Some things we considered and specifically built the unlock ordering around were:</p>
+<ul>
+<li>Puzzles that don't have any particularly tricky individual steps but which required a lot of work, like Drop The Cube and (to a lesser extent) Minute Details, were put earlier on, to increase the odds that teams still had the energy to attempt the puzzles when they unlocked them. The parallel we drew here was to Teammate Hunt's The Bazaar, a very large (but mostly straightforward) crossword-esque puzzle that we enjoyed working on early on in the hunt while we were less tired.</li>
+<li>The puzzles we considered the hardest in the hunt, Re-actions and RED SUS, went in the middle of the round, long before teams could unlock their respective metas, to give teams time to look at and consider forwardsolving them. We think the rate at which they were attempted was also boosted by them being (at least superficially) cryptics and grid logic puzzles, which are both genres that offer steady progress. At the same time, we hoped the mid-round positioning would also not cause too sharp a difficulty spike compared to Round 1 or early Round 2 puzzles, and that teams would have the middling kind of diameter where the puzzles <em>could</em> be worked around but would at least be attempted solidly.</li>
+<li>We put puzzles with more humor in them, like The Minimeta That Goes Wrong and Straight From The Headlines, near the end of the round, to provide some reprieve for teams who had been soldiering through very intense puzzles. The same line of thought applied to some easier and more familiar puzzle types late in the round, like Overdone and Whole New Ball Game, which we hoped acted as nice palate cleansers.</li>
+<li>We had several puzzles which we considered "visually interesting", like White as a Sheet, Six Feet Under, and ⭐ Alliance. We tried to spread these out throughout the round both to break up the standard-looking puzzles in the round (such as 🤝, Cyclic, and Overdone) and, conversely, to give solvers a break between these puzzles, which were often insight-heavy and demanded ahas upfront in order to get anywhere at all with them.</li>
+<li>Early in the round, we tried to time the increase in unlock diameter to match the appearance of one specific puzzle we thought was much more challenging than its surrounding puzzles. Specifically, for a team solving the Round 1 meta with the minimum possible number of solved puzzles, Drop The Cube unlocks alongside the much more approachable Only Geniuses Can Solve This Puzzle!!. We chose to prioritize this specific instance above our aim of having more teams attempt our harder puzzles since we recognized the round represented a significant step up in difficulty from Round 1 and wanted to cut some slack for less experienced teams at this point.</li>
+<li>We mostly avoided placing puzzles written by the newer authors on the team late in the round, so more teams would get to try them, though the extent to which we could do this was limited by the nature of the puzzles themselves. Honestly, we just thought they did a great job and wanted to show off their work.</li>
+</ul>
+<p>It took several sessions of tinkering with orderings to get an arrangement we were mostly happy with, which is what ended up in the hunt in the end. Based on feedback from teams that experienced the entirety of the second round, we're quite happy with the job we did on the ordering.</p>
+<h3>Puzzle writing and testsolving</h3>
+<p>One major change from last year's writing process was the addition of several new authors to the writing team, to serve the twofold goals of introducing more variety to the setting style as well as generally increasing the number of man-hours available to work on puzzles. This year we had 9 unique writers, compared to 6 last year, despite 3 of our writers from last year not writing a puzzle this year.</p>
+<p>Metapuzzle writing began in December with the three second-round metas. We put out a call for meta pun and mechanic ideas to all available writers early on, from which we received ideas like the usage of Frost's "Fire and Ice", but ultimately Level 51 did the bulk of the legwork on pun generation and meta construction. We tested the metas with group testsolves where testsolvers could simulate arbitrarily unlocking answers, but due to our relatively small team size could only manage three such tests before we finalized the feeder sets.</p>
+<p>Solvers may have noticed that all three of our metas were pure metas (that is, they contain no additional information beyond flavortext). We had a few different reasons for this. One motivating factor was to contrast with the previously mentioned and eventually discarded "semi-metas", which were single-leader metas that would unlock before the three that actually made it into the hunt. The idea was that those would have a significant amount of "shell", so they could be constructed more flexibly to allow answer reuse. Another reason was just as a challenge! We've seen "match the answers to the metas" used as a mechanic in several other hunts (the most notable being Puzzle Boat), but never with more than one pure meta. Coincidentally, we ended up with two metas written and noticed that they could both be pure, and so decided to try to do all three.</p>
+<p>Feeder puzzle writing ran from the last day of March, when feeder answers were released, all the way to just before the hunt started. We designated one lead editor to be spoiled on every puzzle to avoid excessive overlap between puzzle concepts, and later settled into a fairly informal system for reserving answers, where writers requested answers from this editor given certain restrictions or preferences of the puzzle being written.</p>
+<p>Although we initially attempted to keep the feeder list private from most writers so they could better testsolve other authors' puzzles, the quantity-wise demands on puzzle writing ultimately led to us sending a list of unreserved answers to some writers at several points so they could develop ideas based on answers we still needed puzzles for. We hope to be able to find a good balance between the two options to maintain high-fidelity testsolves while allowing authors to take inspiration from puzzle answers.</p>
+<p>One new thing we tried this year, inspired by Teammate Hunt's weekly meetings, was organizing weekly group testsolves at regular times on the weekends, especially later on in the writing process when the testsolving queue really started to fill up. While solves generally went smoother than individual testsolves, it was a challenge to find times when many testsolvers were available due to the international (and mostly working-age) nature of our team. Additionally, solves sometimes failed to end within a single session, making it difficult to coordinate gathering exact sets of solvers who had already been spoiled on some given puzzle for another testsolve session together. In the future, we hope that initiating and planning these weekly sessions further in advance can help to ease these scheduling conflicts.</p>
+<h3>Hunt-writing timeline</h3>
+<p>This is a pretty sparse timeline of the hunt, based just on facts that we could check.</p>
+<ul>
+<li>August 2020: Pok&eacute;mon GO theme idea initially floated.</li>
+<li>October 2020: We abandon our funky meta structure ideas and decide to settle for the typical three-meta second round.</li>
+<li>December 2020: Work on metapuzzles begins!</li>
+<li>February 2021: beta secretly PMs Level 51 "as a heads up, there will probably be a fairly major puzzlehunt scheduled to start 7/23 or so". It is pretty obvious what this is. None of the editors want to run Silph immediately after GPH, so we tentatively agree to move the hunt to a later spot in the year.</li>
+<li>Early March 2021: GPH is announced, and Silph is officially relocated to September after discussion with the rest of the team.</li>
+<li>Late March 2021: Metas are tested, feeders are released. Puzzlord is set up.</li>
+<li>June 2021: QoDE gets scheduled for a week in the calendar where its tail end overlaps with Silph's opening weekend. After some discussions with the QoDE team and attempts to find alternatives, Silph is (reluctantly) moved to December. This turns out to be incredibly good for stress levels in general.</li>
+<li>30 Oct 2021: About half the puzzles have had a testsolvable draft or beyond.</li>
+<li>1 Dec 2021: All answers are claimed and have an idea assigned to them.</li>
+<li>3 Dec 2021: Metameta is written.</li>
+<li>Early hours of 4 Dec 2021: All puzzles have been testsolved.</li>
+<li>About 2 hours before the hunt starts: All the puzzles have been postprodded.</li>
+<li>About 30 minutes before the hunt starts: We wait for the hunt to start, under the (notably false) impression that we've located and dealt with a large number of the site's bugs.</li>
+</ul>
+<p><hr><h2 id="reflections">Reflections on the hunt</h2></p>
+<h3>Hunt difficulty and length</h3>
+<p>This hunt was—as we expected—more difficult than our previous hunts, both in ways we intended and ways we did not. We felt the first round lived up to our goal of being a more substantial challenge for teams to solve through, rather than just being a chore to get through before the "real hunt" begins. We're also happy with our decision to cap it off with a rather more involved meta than the more simplistic single-aha metas we ended Round 1 with in previous hunts.</p>
+<p>Round 2 was also, similarly, more difficult than our previous hunts, though we may have underestimated just how much more difficult it was. Having more puzzle writers meant that the puzzles that made it into our hunt, on balance, had significantly more intricate structures than in previous years since they were afforded more attention during the writing process. Thus, though the hardest puzzles in this hunt were perhaps not as hard as some previous puzzles we've published, the more consistent puzzle difficulty meant that the difficulty of the "path of least resistance" was increased significantly. Additionally, less backsolveable metapuzzles and an overall tighter meta unlock schedule meant that teams generally had to solve more feeder puzzles to unlock metas, which definitely increased the load on solvers more than anticipated.</p>
+<p>Although we indeed hit our initial goals of better within-round consistency and more solver interaction with puzzles, we acknowledge that it came at a tradeoff of a notably harder hunt overall. Based on the feedback we received this year, many solvers felt that the hunt felt too difficult and ran longer than expected. This led us to conclude that the expected difficulty of the hunt was perhaps not communicated effectively, or that solver expectations regarding difficulty and length were not managed sufficiently well. While our prediction that the hunt's difficulty would fall between that of Huntinality and Teammate Hunt, and that top teams would finish within the weekend, was correct, it wasn't a very helpful guideline for solvers outside of those top teams. We believe that there's nothing inherently wrong with a difficult hunt&mdash;and that indeed it's more natural to regulate solver expectations rather than push back on our own ideas&mdash;but for future hunts, we hope to be able to make more useful estimations of length so solvers have a clearer idea of what to expect.</p>
+<p>We also received feedback noting that the puzzles this year contained much less flavortext than in previous years. We think the general perception of flavortext amongst our writing team has shifted from seeing flavortext as a generic part of a puzzle to seeing it as an artificial addition to be made only when an aha is sufficiently obtuse or not likely to be seen otherwise. It's probably a good idea to trade off some elegance for a better solver experience, especially in the introductory round on puzzles like Color-Coded or Continuity. However, we're not convinced flavortext would have helped much for some of the harder Round 2 puzzles: there, suggestions about some of the harder steps of the puzzle are better understood from the way they're baked into the puzzle's structure itself&mdash;such as the extraction steps on Drop The Cube or RED SUS&mdash;rather than delivered artificially through flavortext.</p>
+<p>Finally, we noticed that although the first round was enjoyable for relatively new solvers and the second round was appropriate for highly experienced solvers, many teams in the middle seemed frustrated by the jump in difficulty going into the second round. Reflecting on this, we believe we have some ideas about how to better support intermediate-strength teams, and hope to find good implementations of them in future hunts we write.</p>
+<h3>Errata</h3>
+<p>Unfortunately, this hunt contained many more errata than the average hunt of its size, and definitely far more errata than we would have liked; we'd like to apologize to teams whose solving experience was adversely affected by them. Our small team size meant that many testsolves occurred rather late into the writing process, leaving little to no time for fact-checking. In combination with general manpower constraints&mdash;the vast majority of the puzzles were post-prodded and uploaded by two people&mdash;it was easy for mistakes to slip into the process despite our best efforts. We're working on better organizational processes and stricter timelines for future hunts and hope that these will be a big step towards solving this problem.</p>
+<h3>Future plans</h3>
+<p>For some years now, Silph / SPH has been a much larger hunt than what its organizing team is realistically scaled to handle. While we have managed to pull off the hunts we've planned so far, and the hunts have met with generally positive responses from the community, we think it may be in the best interests of the continued sustainability of the hunt to scale its operations back down to a more manageable size.</p>
+<p>Silph 2022 is, as of now, very much hypothetical. The bulk of our writing force is pretty tired after the crunch time leading up to the hunt, and due to other commitments, we feel quite comfortable in saying that Silph 2022, if it does occur, will not return to the July time slot that Smogon Puzzle Hunt occupied before this year.</p>
+<p><hr><h2 id="fun-stuff">Fun stuff</h2></p>
+<p>Thank you to all the teams who sent us questions, stories, and more through the feedback form and over the course of the hunt! It's always fun for us to hear about what it's like on the other side of our puzzles. We've compiled some stories we received below, as well as our responses to some <a href="wrapup/ama.html">questions you asked us</a> and a collation of some <a href="wrapup/answers.html">answer submissions we enjoyed</a>!</p>
+<h3>Stories we received</h3>
+<h4>Harmony</h4>
+<p><strong>Six Tsareena</strong>: Our resident chessxpert was totally baffled by the chess puzzle: "none of these are gambits! The queen isn't even involved in some of them. They can't just be chess puzzles; they all look like they're from real games. But they can't be famous games, I don't recognize any of them." Eventually he gave up, and we spent a few hours solving the marathon-length rebus puzzle. When he got online the next morning, the very first thing he said was: "I am an idiot, they're all games from The Queen's Gambit." We all had a great big guffaw, and then solved the puzzle quite quickly.</p>
+<h4>Getting Going</h4>
+<p><strong>The Choicest Band</strong>: My teammate and I both independently, simultaneously, stopped solving meta-1 to learn the rules of Go. When we returned, we confessed what we spent the last hour doing, that we had nothing to contribute to the puzzle, and that honestly, we still didn't really know how to play Go.</p>
+<h4>Minute Details</h4>
+<p><strong>We are going on a puzzle hunt!</strong>: After the hunt, in our household any answer to "what time is it?" includes " ... Perfect time to do some word searches!" :)</p>
+<h4>Drop The Cube</h4>
+<p><strong>17th Generation Is All Ghost/Blood Pokémon</strong>: We tried our hardest to skip the intended solve path and exclusively use Nutrimatic&mdash;with some success!</p>
+<p><center><img src="static/wrapup/intended-solve-path.png" width=40%></center></p>
+<p>Also, between all of the people working on the puzzle, the only physical Rubik's cube that we found was <em>12-sided</em>.</p>
+<p><strong>1 Billion Puzzles vs 1 of Every Pokemon</strong>: I actually own a Rubik's Cube made out of the same material that whiteboards are made of, and some dry erase markers, and I was so excited to write the letters on my cube and turn it IRL to do all the extractions. The first time I did it, I learned there's no way to turn the cube without wiping away 70% of the dry erase markings, and doing it from sheets ended up being faster :(</p>
+<h4>Indirect Anagrams</h4>
+<p><strong>smuon sneutrino</strong>: At one point I was working on Indirect Anagrams in a shared office full of grad students who knew nothing about puzzles. Two separate people asked "why are you looking at a picture of the alphabet?", one person asked "oh is this one of those puzzles you do?", and another person asked me to help him with a Sudoku puzzle on his phone after hearing me say "puzzle".</p>
+<h4>Composition</h4>
+<p><strong>17th Generation Is All Ghost/Blood Pokémon</strong>: We came up with a lot of theories about why certain elements appeared to be missing; our favourite was that the woman in American Gothic had been turned into 24 soup cans by a passing wizard.</p>
+<h4>Candela's Mystic Correspondence</h4>
+<p><strong>Arithmancers Catching 'Em All</strong> loved sentence diagrams so much, they made one for the entirety of Fire and Ice!</p>
+<p><center><img src="static/wrapup/sentence-diagram.jpg" width=60%></center></p>
+<h4>Spark's Stolen Valor</h4>
+<p><strong>🚀🚀🚀</strong>: I work as a designer on Valorant, and so when we hit the 🤝 puzzle (League/DoTA), I mentioned "damn it'd be the DREAM to see a Valorant puzzle one day." A few puzzles later, Spark's Stolen Valor came along! And FIREBIRDXL was a particular treat for me (I designed Phoenix). Thanks for making that meta - it made my day.</p>
+<h4>A Turn For The Worse</h4>
+<p><strong>Shady Gentlemen</strong>: We "solved" the metameta without using any of the feeders by using code to run the given Caesar shifts on a list of 8- and 9-letter words, with the best results being FEEDANO and ICTION. Entering "feed an odium addiction" into the answer checker after seeing these results because "eh, why not, might as well try it" and then getting congratulated on finishing the hunt felt kind of weird. </p>
+<p><hr><h2 id="statistics">Statistics</h2></p>
+<p>While the hunt ran, we collected some statistics on teams' progress through the hunt. You can check some of them out here:</p>
+<ul>
+<li>The <a href="bigboard.html">Big Board</a> we used to monitor teams' global progress</li>
+<li>A <a href="stats.html">general stats page</a> with information on puzzle solves, hints used, and backsolves</li>
+<li>A <a href="biggraph.html">chart</a> of solves over time for the first 30 teams to finish the hunt</li>
+<li><a href="wrapup/finishers.html">Progress charts</a> for the 88 teams who finished the hunt</li>
+</ul>
+<h3>Team statistics</h3>
+<p>We collected some statistics on the general performance of each of the three allegiances in this hunt. Which team did the best? Err, that's up to you to decide, we think.</p>
+<table>
+<thead>
+<tr>
+<th>Alignment</th>
+<th>Instinct</th>
+<th>Mystic</th>
+<th>Valor</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total teams</td>
+<td>130</td>
+<td>223</td>
+<td>90</td>
+<td>443</td>
+</tr>
+<tr>
+<td>Solved at least one puzzle</td>
+<td>111</td>
+<td>189</td>
+<td>72</td>
+<td>372</td>
+</tr>
+<tr>
+<td>Solved the introductory meta</td>
+<td>70</td>
+<td>117</td>
+<td>49</td>
+<td>236</td>
+</tr>
+<tr>
+<td>Solved at least one R2 meta</td>
+<td>32</td>
+<td>42</td>
+<td>24</td>
+<td>98</td>
+</tr>
+<tr>
+<td>Finishers</td>
+<td>28</td>
+<td>36</td>
+<td>24</td>
+<td>88</td>
+</tr>
+<tr>
+<td>Guesses</td>
+<td>5195 (avg 40.0)</td>
+<td>8141 (avg 36.5)</td>
+<td>3907 (avg 43.4)</td>
+<td>17243 (avg 38.9)</td>
+</tr>
+<tr>
+<td>Solves</td>
+<td>1953 (avg 15.0)</td>
+<td>3069 (avg 13.8)</td>
+<td>1353 (avg 15.0)</td>
+<td>6375 (avg 14.4)</td>
+</tr>
+<tr>
+<td>Correct %</td>
+<td>37.6%</td>
+<td>37.7%</td>
+<td>34.6%</td>
+<td>37.0%</td>
+</tr>
+</tbody>
+</table>
+<h3>Speed</h3>
+<p>The fastest solves on each of the puzzles in this hunt were shared among 25 unique teams. The fastest solve registered anywhere in the hunt was aabbcc's solve on Spark's Stolen Valor in 4 minutes and 43 seconds, while the fastest solve on a non-meta puzzle was pockET MAsters' solve on 🤝 in 5 minutes and 26 seconds.</p>
+<table>
+<thead>
+<tr>
+<th>Puzzle</th>
+<th>Fastest team</th>
+<th>Solve time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opening Ceremony</td>
+<td>DIGIMON: DIGITAL MONSTERS</td>
+<td>0:06:38</td>
+</tr>
+<tr>
+<td>Kids These Days</td>
+<td>Just For The Magikarp</td>
+<td>0:31:38</td>
+</tr>
+<tr>
+<td>Quick Fix</td>
+<td>Swim Shaymin</td>
+<td>0:14:38</td>
+</tr>
+<tr>
+<td>Now I Know My 🐝🐝🐝s</td>
+<td>Briny Shark</td>
+<td>0:07:19</td>
+</tr>
+<tr>
+<td>If You Give...</td>
+<td>⬤ JIGGLYPUFF SEEN FROM ABOVE</td>
+<td>0:06:09</td>
+</tr>
+<tr>
+<td>Harmony</td>
+<td>KaBaL</td>
+<td>0:24:52</td>
+</tr>
+<tr>
+<td>Color-Coded</td>
+<td>Speculative Execution</td>
+<td>0:21:11</td>
+</tr>
+<tr>
+<td>Connections</td>
+<td>Mobius Strippers</td>
+<td>0:14:16</td>
+</tr>
+<tr>
+<td>Natural Order</td>
+<td>Swim Shaymin</td>
+<td>0:19:24</td>
+</tr>
+<tr>
+<td>Continuity</td>
+<td>Squirtle Curlers</td>
+<td>0:14:11</td>
+</tr>
+<tr>
+<td>Chimera</td>
+<td>Just For The Magikarp</td>
+<td>0:21:14</td>
+</tr>
+<tr>
+<td>Medal Ceremony</td>
+<td>Swim Shaymin</td>
+<td>0:33:17</td>
+</tr>
+<tr>
+<td>Getting Going</td>
+<td>DIGIMON: DIGITAL MONSTERS</td>
+<td>0:18:07</td>
+</tr>
+<tr>
+<td>I See!</td>
+<td>pockET MAsters</td>
+<td>0:21:19</td>
+</tr>
+<tr>
+<td>White as a Sheet</td>
+<td>pockET MAsters</td>
+<td>0:48:08</td>
+</tr>
+<tr>
+<td>Δ</td>
+<td>Swim Shaymin</td>
+<td>0:22:18</td>
+</tr>
+<tr>
+<td>Minute Details</td>
+<td>Team Fletchling</td>
+<td>1:09:37</td>
+</tr>
+<tr>
+<td>Indirect Anagrams</td>
+<td>Middle Class</td>
+<td>0:27:28</td>
+</tr>
+<tr>
+<td>Drop The Cube</td>
+<td>ScytherteamA</td>
+<td>2:04:31</td>
+</tr>
+<tr>
+<td>Only Geniuses Can Solve This Puzzle!!</td>
+<td>1 Billion Puzzles vs 1 of Every Pokemon</td>
+<td>0:19:32</td>
+</tr>
+<tr>
+<td>Six Feet Under</td>
+<td>17th Generation Is All Ghost/Blood Pokémon</td>
+<td>1:24:08</td>
+</tr>
+<tr>
+<td>🤝</td>
+<td>pockET MAsters</td>
+<td>0:05:26</td>
+</tr>
+<tr>
+<td>Cyclic</td>
+<td>Just For The Magikarp</td>
+<td>0:30:03</td>
+</tr>
+<tr>
+<td>RED SUS</td>
+<td>aabbcc</td>
+<td>3:45:09</td>
+</tr>
+<tr>
+<td>Audit Instance</td>
+<td>Team Galactic</td>
+<td>0:28:49</td>
+</tr>
+<tr>
+<td>Re-actions</td>
+<td>[pi]</td>
+<td>2:34:02</td>
+</tr>
+<tr>
+<td>Composition</td>
+<td>✈</td>
+<td>0:30:58</td>
+</tr>
+<tr>
+<td><small>A Lot of Research into Things That Have Very Little Meaning</small></td>
+<td>🐢🐢🐢3 DREDNAW 0 ZAPDOS</td>
+<td>1:09:57</td>
+</tr>
+<tr>
+<td>Card Sharks</td>
+<td>DIGIMON: DIGITAL MONSTERS</td>
+<td>0:43:16</td>
+</tr>
+<tr>
+<td>The Minimeta That Goes Wrong</td>
+<td>[pi]</td>
+<td>1:10:15</td>
+</tr>
+<tr>
+<td>⭐ Alliance</td>
+<td>The Carnivine Schism</td>
+<td>1:22:21</td>
+</tr>
+<tr>
+<td>Overdone</td>
+<td>Arithmancers Battling Rocket Affiliates</td>
+<td>0:26:24</td>
+</tr>
+<tr>
+<td>Whole New Ball Game</td>
+<td>Team Galactic</td>
+<td>0:37:24</td>
+</tr>
+<tr>
+<td>Straight From The Headlines</td>
+<td>Speculative Execution</td>
+<td>0:58:33</td>
+</tr>
+<tr>
+<td>Candela's Mystic Correspondence</td>
+<td>\ KAKTOVIK NUMERAL ARCTIC UNO</td>
+<td>0:11:52</td>
+</tr>
+<tr>
+<td>Blanche's Social Instinct</td>
+<td>Jigglyplugh</td>
+<td>0:13:40</td>
+</tr>
+<tr>
+<td>Spark's Stolen Valor</td>
+<td>aabbcc</td>
+<td>0:04:43</td>
+</tr>
+<tr>
+<td>A Turn For the Worse</td>
+<td>Needlessly Eating Shuckles</td>
+<td>0:37:14</td>
+</tr>
+</tbody>
+</table>
+<h3>Hints</h3>
+<p>During this hunt, we responded to a total of <strong>2338</strong> requests, including follow-up hint requests. We collectively wrote 101,820 words' worth of hint responses, which is slightly longer than <em>To Kill a Mockingbird</em> and slightly shorter than <em>Gulliver's Travels</em>.</p>
+<p>Our median hint response time was a pretty zippy <strong>2 minutes and 33 seconds</strong>, and we managed to respond to <strong>92.5%</strong> of hints within 10 minutes. We're quite pleased with this response time, especially given that <strong>1609</strong> requests, or 68.8% of the total number of requests, were handled by <em>two people</em>.</p>
+<p><hr><h2 id="credits">Credits</h2></p>
+<p><strong>Project lead</strong>: Level 51</p>
+<p><strong>Tech</strong>: rf215, Level 51, betaveros</p>
+<p><strong>Puzzle editors</strong>: Level 51, Deusovi</p>
+<p><strong>Puzzle authors</strong>: betaveros, chaotic_iak, Deusovi, kt3, Level 51, lovemathboy, lydian, moo, mstang</p>
+<p><strong>Additional testsolvers</strong>: ALT, Dogfish44, Mistrals, talkingtree</p>
+<p><strong>Art</strong>: lydian, mysterious uncredited artist</p>  
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,2040 @@
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>Silph Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="static/css/skeleton.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    
+    
+<link rel="stylesheet" href="static/css/templates/indigo.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="static/js/sorttable.js"></script>
+    <script src="static/js/tray.js"></script>
+    <script src="static/js/notify.js"></script>
+    <script src="static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="index.html">
+                    Home
+                </a>
+                <a  href="rules.html">
+                    Rules
+                </a>
+                
+                <a  href="story.html">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="puzzles.html">
+                    Puzzles
+                </a>
+                
+                <a  href="teams.html">
+                    Teams
+                </a>
+                <a  href="faq.html">
+                    FAQ
+                </a>
+                
+                
+                <a  href="wrapup.html">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<!-- handling for tabs-->
+<script>
+    function switchRound(evt, round) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("tab-page");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" tab-selected", "");
+        }
+        document.getElementById(round).style.display = "block";
+        evt.currentTarget.className += " tab-selected";
+    }
+
+    console.log("4")
+</script>
+
+<main>
+    
+
+    <div class="tab-bar">
+        <button class="tab-bar-item tablink tab-selected"
+            onclick="switchRound(event, 'round-1')">Round 1</button>
+        
+        <button class="tab-bar-item tablink "
+            onclick="switchRound(event, 'round-2')">Round 2</button>
+        
+    </div>
+
+    <div class="tab-content">
+        <script>
+            const highlight = (round, id, title) => {
+                dot = document.getElementById("mapdot-" + id);
+                dot.classList.add("mapdot_selected");
+
+                document.getElementById("puzzle-" + id).classList.add("puzzle_selected")
+                document.getElementById("highlight-title-" + round).innerHTML = title;
+
+                document.getElementById("puzzlestop-" + id).style.display = "flex"
+                document.getElementById("puzzlestop-img-" + id).classList.add("puzzlestop-img-selected");
+            }
+
+            const unhighlight = (round, id) => {
+                dot = document.getElementById("mapdot-" + id);
+                dot.classList.remove("mapdot_selected");
+
+                document.getElementById("puzzle-" + id).classList.remove("puzzle_selected")
+                document.getElementById("highlight-title-" + round).innerHTML = "";
+
+                document.getElementById("puzzlestop-img-" + id).classList.remove("puzzlestop-img-selected");
+            }
+        </script>
+
+        <div id="round-1" class="tab-page" style="">
+            <div class="flexbox">
+                <div id="highlight-title-1" class="flexbox-child">
+                </div>
+                <div class="map_container flexbox-child">
+                    <img src="static/images/indigo_map.png" class="map">
+                    
+                    
+                    <div class="mapdot" style="left: 334px; top: 262px" id="mapdot-1">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-1").onmouseenter = function () {
+                            highlight(1, "1", "Opening Ceremony")
+                        };
+                        document.getElementById("mapdot-1").onmouseleave = function () {
+                            unhighlight(1, "1")
+                        };
+                    </script>
+                    
+                    <div class="mapdot" style="left: 334px; top: 191px" id="mapdot-2">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-2").onmouseenter = function () {
+                            highlight(1, "2", "Kids These Days")
+                        };
+                        document.getElementById("mapdot-2").onmouseleave = function () {
+                            unhighlight(1, "2")
+                        };
+                    </script>
+                    
+                    <div class="mapdot" style="left: 167px; top: 286px" id="mapdot-3">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-3").onmouseenter = function () {
+                            highlight(1, "3", "Quick Fix")
+                        };
+                        document.getElementById("mapdot-3").onmouseleave = function () {
+                            unhighlight(1, "3")
+                        };
+                    </script>
+                    
+                    <div class="mapdot" style="left: 144px; top: 144px" id="mapdot-4">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-4").onmouseenter = function () {
+                            highlight(1, "4", "Now I Know My 🐝🐝🐝s")
+                        };
+                        document.getElementById("mapdot-4").onmouseleave = function () {
+                            unhighlight(1, "4")
+                        };
+                    </script>
+                    
+                    <div class="mapdot" style="left: 167px; top: 191px" id="mapdot-5">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-5").onmouseenter = function () {
+                            highlight(1, "5", "If You Give...")
+                        };
+                        document.getElementById("mapdot-5").onmouseleave = function () {
+                            unhighlight(1, "5")
+                        };
+                    </script>
+                    
+                    <div class="mapdot" style="left: 310px; top: 191px" id="mapdot-6">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-6").onmouseenter = function () {
+                            highlight(1, "6", "Harmony")
+                        };
+                        document.getElementById("mapdot-6").onmouseleave = function () {
+                            unhighlight(1, "6")
+                        };
+                    </script>
+                    
+                    <div class="mapdot" style="left: 144px; top: 167px" id="mapdot-7">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-7").onmouseenter = function () {
+                            highlight(1, "7", "Color-Coded")
+                        };
+                        document.getElementById("mapdot-7").onmouseleave = function () {
+                            unhighlight(1, "7")
+                        };
+                    </script>
+                    
+                    <div class="mapdot" style="left: 382px; top: 167px" id="mapdot-8">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-8").onmouseenter = function () {
+                            highlight(1, "8", "Connections")
+                        };
+                        document.getElementById("mapdot-8").onmouseleave = function () {
+                            unhighlight(1, "8")
+                        };
+                    </script>
+                    
+                    <div class="mapdot" style="left: 215px; top: 191px" id="mapdot-9">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-9").onmouseenter = function () {
+                            highlight(1, "9", "Natural Order")
+                        };
+                        document.getElementById("mapdot-9").onmouseleave = function () {
+                            unhighlight(1, "9")
+                        };
+                    </script>
+                    
+                    <div class="mapdot" style="left: 382px; top: 215px" id="mapdot-10">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-10").onmouseenter = function () {
+                            highlight(1, "10", "Continuity")
+                        };
+                        document.getElementById("mapdot-10").onmouseleave = function () {
+                            unhighlight(1, "10")
+                        };
+                    </script>
+                    
+                    <div class="mapdot" style="left: 334px; top: 405px" id="mapdot-11">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-11").onmouseenter = function () {
+                            highlight(1, "11", "Chimera")
+                        };
+                        document.getElementById("mapdot-11").onmouseleave = function () {
+                            unhighlight(1, "11")
+                        };
+                    </script>
+                    
+                    <div class="mapdot" style="left: 429px; top: 286px" id="mapdot-12">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-12").onmouseenter = function () {
+                            highlight(1, "12", "Medal Ceremony")
+                        };
+                        document.getElementById("mapdot-12").onmouseleave = function () {
+                            unhighlight(1, "12")
+                        };
+                    </script>
+                    
+
+                    
+                    
+                    <div class="puzzlestop" style="left: 295px; top: 276px;"
+                        id="puzzlestop-1">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop-dark.png"
+                            id="puzzlestop-img-1" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 295px; top: 205px;"
+                        id="puzzlestop-2">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop-dark.png"
+                            id="puzzlestop-img-2" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 128px; top: 300px;"
+                        id="puzzlestop-3">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop-dark.png"
+                            id="puzzlestop-img-3" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 105px; top: 158px;"
+                        id="puzzlestop-4">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop-dark.png"
+                            id="puzzlestop-img-4" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 128px; top: 205px;"
+                        id="puzzlestop-5">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop-dark.png"
+                            id="puzzlestop-img-5" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 271px; top: 205px;"
+                        id="puzzlestop-6">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop-dark.png"
+                            id="puzzlestop-img-6" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 105px; top: 181px;"
+                        id="puzzlestop-7">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop-dark.png"
+                            id="puzzlestop-img-7" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 343px; top: 181px;"
+                        id="puzzlestop-8">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop-dark.png"
+                            id="puzzlestop-img-8" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 176px; top: 205px;"
+                        id="puzzlestop-9">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop-dark.png"
+                            id="puzzlestop-img-9" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 343px; top: 229px;"
+                        id="puzzlestop-10">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop-dark.png"
+                            id="puzzlestop-img-10" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 295px; top: 419px;"
+                        id="puzzlestop-11">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop-dark.png"
+                            id="puzzlestop-img-11" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 390px; top: 300px;"
+                        id="puzzlestop-12">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop-dark.png"
+                            id="puzzlestop-img-12" />
+                    </div>
+                    
+                </div>
+                <div class="metas">
+                    
+                    <div class="sticker-container" id="sticker-13">
+                        <a href="puzzle/getting-going.html">
+                            <img class="sticker" src="static/images/sticker-phone.png" />
+                        </a>
+                    </div>
+
+                    <script>
+                        // I will regret hard coding this....someday, but not today 
+                        sticker = document.getElementById("sticker-13");
+                        sticker.onmouseenter = function () {
+                            document.getElementById("highlight-title-1").innerHTML = "META: Getting Going";
+                        };
+                        sticker.onmouseleave = function () {
+                            document.getElementById("highlight-title-1").innerHTML = "";
+                        };
+                    </script>
+                    
+                </div>
+                <table class="gph-list-table" id="puzzle_list">
+                    <tr>
+                        <th> Puzzle </th>
+                        <th> Answer </th>
+                    </tr>
+                    
+
+                    <tr id="puzzle-1" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/opening-ceremony.html">
+                                Opening Ceremony
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </a>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-1");
+                        if ("1" != "13") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(1, "1", "Opening Ceremony")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(1, "1")
+                            };
+
+                            document.getElementById("mapdot-1").onclick = function () {
+                                goToUrl("/puzzle/opening-ceremony")
+                            };
+                        }
+                    </script>
+
+                    
+
+                    <tr id="puzzle-2" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/kids-these-days.html">
+                                Kids These Days
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </a>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-2");
+                        if ("2" != "13") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(1, "2", "Kids These Days")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(1, "2")
+                            };
+
+                            document.getElementById("mapdot-2").onclick = function () {
+                                goToUrl("/puzzle/kids-these-days")
+                            };
+                        }
+                    </script>
+
+                    
+
+                    <tr id="puzzle-3" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/quick-fix.html">
+                                Quick Fix
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </a>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-3");
+                        if ("3" != "13") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(1, "3", "Quick Fix")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(1, "3")
+                            };
+
+                            document.getElementById("mapdot-3").onclick = function () {
+                                goToUrl("/puzzle/quick-fix")
+                            };
+                        }
+                    </script>
+
+                    
+
+                    <tr id="puzzle-4" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/now-i-know-my-BBBs.html">
+                                Now I Know My 🐝🐝🐝s
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </a>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-4");
+                        if ("4" != "13") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(1, "4", "Now I Know My 🐝🐝🐝s")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(1, "4")
+                            };
+
+                            document.getElementById("mapdot-4").onclick = function () {
+                                goToUrl("/puzzle/now-i-know-my-BBBs")
+                            };
+                        }
+                    </script>
+
+                    
+
+                    <tr id="puzzle-5" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/if-you-give.html">
+                                If You Give...
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </a>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-5");
+                        if ("5" != "13") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(1, "5", "If You Give...")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(1, "5")
+                            };
+
+                            document.getElementById("mapdot-5").onclick = function () {
+                                goToUrl("/puzzle/if-you-give")
+                            };
+                        }
+                    </script>
+
+                    
+
+                    <tr id="puzzle-6" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/harmony.html">
+                                Harmony
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </a>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-6");
+                        if ("6" != "13") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(1, "6", "Harmony")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(1, "6")
+                            };
+
+                            document.getElementById("mapdot-6").onclick = function () {
+                                goToUrl("/puzzle/harmony")
+                            };
+                        }
+                    </script>
+
+                    
+
+                    <tr id="puzzle-7" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/color-coded.html">
+                                Color-Coded
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </a>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-7");
+                        if ("7" != "13") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(1, "7", "Color-Coded")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(1, "7")
+                            };
+
+                            document.getElementById("mapdot-7").onclick = function () {
+                                goToUrl("/puzzle/color-coded")
+                            };
+                        }
+                    </script>
+
+                    
+
+                    <tr id="puzzle-8" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/connections.html">
+                                Connections
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </a>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-8");
+                        if ("8" != "13") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(1, "8", "Connections")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(1, "8")
+                            };
+
+                            document.getElementById("mapdot-8").onclick = function () {
+                                goToUrl("/puzzle/connections")
+                            };
+                        }
+                    </script>
+
+                    
+
+                    <tr id="puzzle-9" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/natural-order.html">
+                                Natural Order
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </a>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-9");
+                        if ("9" != "13") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(1, "9", "Natural Order")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(1, "9")
+                            };
+
+                            document.getElementById("mapdot-9").onclick = function () {
+                                goToUrl("/puzzle/natural-order")
+                            };
+                        }
+                    </script>
+
+                    
+
+                    <tr id="puzzle-10" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/continuity.html">
+                                Continuity
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </a>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-10");
+                        if ("10" != "13") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(1, "10", "Continuity")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(1, "10")
+                            };
+
+                            document.getElementById("mapdot-10").onclick = function () {
+                                goToUrl("/puzzle/continuity")
+                            };
+                        }
+                    </script>
+
+                    
+
+                    <tr id="puzzle-11" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/chimera.html">
+                                Chimera
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </a>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-11");
+                        if ("11" != "13") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(1, "11", "Chimera")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(1, "11")
+                            };
+
+                            document.getElementById("mapdot-11").onclick = function () {
+                                goToUrl("/puzzle/chimera")
+                            };
+                        }
+                    </script>
+
+                    
+
+                    <tr id="puzzle-12" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/medal-ceremony.html">
+                                Medal Ceremony
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </a>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-12");
+                        if ("12" != "13") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(1, "12", "Medal Ceremony")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(1, "12")
+                            };
+
+                            document.getElementById("mapdot-12").onclick = function () {
+                                goToUrl("/puzzle/medal-ceremony")
+                            };
+                        }
+                    </script>
+
+                    
+
+                    <tr id="puzzle-13" class="puzzle_row meta">
+                        <td>
+                            <a href="puzzle/getting-going.html">
+                                META: Getting Going
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    </a>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-13");
+                        if ("13" != "13") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(1, "13", "META: Getting Going")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(1, "13")
+                            };
+
+                            document.getElementById("mapdot-13").onclick = function () {
+                                goToUrl("/puzzle/getting-going")
+                            };
+                        }
+                    </script>
+
+                    
+                </table>
+            </div>
+        </div>
+
+        
+        <div id="round-2" class="tab-page" style="display:none">
+            <div class="flexbox">
+                <div id="highlight-title-2" class="flexbox-child">
+                </div>
+                <div class="map_container flexbox-child">
+                    <img src="static/images/orange_map.png" class="map">
+                    
+                    
+                    <div class="map2dot" style="left: 144px; top: 215px" id="mapdot-14">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-14").onmouseenter = function () {
+                            highlight(2, "14", "I See!")
+                        };
+                        document.getElementById("mapdot-14").onmouseleave = function () {
+                            unhighlight(2, "14")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 382px; top: 191px" id="mapdot-15">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-15").onmouseenter = function () {
+                            highlight(2, "15", "White as a Sheet")
+                        };
+                        document.getElementById("mapdot-15").onmouseleave = function () {
+                            unhighlight(2, "15")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 120px; top: 191px" id="mapdot-16">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-16").onmouseenter = function () {
+                            highlight(2, "16", "Δ")
+                        };
+                        document.getElementById("mapdot-16").onmouseleave = function () {
+                            unhighlight(2, "16")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 405px; top: 144px" id="mapdot-17">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-17").onmouseenter = function () {
+                            highlight(2, "17", "Minute Details")
+                        };
+                        document.getElementById("mapdot-17").onmouseleave = function () {
+                            unhighlight(2, "17")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 310px; top: 144px" id="mapdot-18">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-18").onmouseenter = function () {
+                            highlight(2, "18", "Indirect Anagrams")
+                        };
+                        document.getElementById("mapdot-18").onmouseleave = function () {
+                            unhighlight(2, "18")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 144px; top: 144px" id="mapdot-19">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-19").onmouseenter = function () {
+                            highlight(2, "19", "Drop The Cube")
+                        };
+                        document.getElementById("mapdot-19").onmouseleave = function () {
+                            unhighlight(2, "19")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 429px; top: 262px" id="mapdot-20">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-20").onmouseenter = function () {
+                            highlight(2, "20", "Only Geniuses Can Solve This Puzzle!!")
+                        };
+                        document.getElementById("mapdot-20").onmouseleave = function () {
+                            unhighlight(2, "20")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 239px; top: 215px" id="mapdot-21">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-21").onmouseenter = function () {
+                            highlight(2, "21", "Six Feet Under")
+                        };
+                        document.getElementById("mapdot-21").onmouseleave = function () {
+                            unhighlight(2, "21")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 25px; top: 25px" id="mapdot-22">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-22").onmouseenter = function () {
+                            highlight(2, "22", "🤝")
+                        };
+                        document.getElementById("mapdot-22").onmouseleave = function () {
+                            unhighlight(2, "22")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 96px; top: 286px" id="mapdot-23">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-23").onmouseenter = function () {
+                            highlight(2, "23", "Cyclic")
+                        };
+                        document.getElementById("mapdot-23").onmouseleave = function () {
+                            unhighlight(2, "23")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 144px; top: 25px" id="mapdot-24">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-24").onmouseenter = function () {
+                            highlight(2, "24", "RED SUS")
+                        };
+                        document.getElementById("mapdot-24").onmouseleave = function () {
+                            unhighlight(2, "24")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 239px; top: 48px" id="mapdot-25">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-25").onmouseenter = function () {
+                            highlight(2, "25", "Audit Instance")
+                        };
+                        document.getElementById("mapdot-25").onmouseleave = function () {
+                            unhighlight(2, "25")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 334px; top: 215px" id="mapdot-26">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-26").onmouseenter = function () {
+                            highlight(2, "26", "Re-actions")
+                        };
+                        document.getElementById("mapdot-26").onmouseleave = function () {
+                            unhighlight(2, "26")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 72px; top: 239px" id="mapdot-27">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-27").onmouseenter = function () {
+                            highlight(2, "27", "Composition")
+                        };
+                        document.getElementById("mapdot-27").onmouseleave = function () {
+                            unhighlight(2, "27")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 286px; top: 25px" id="mapdot-28">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-28").onmouseenter = function () {
+                            highlight(2, "28", "A Lot of Research into Things That Have Very Little Meaning")
+                        };
+                        document.getElementById("mapdot-28").onmouseleave = function () {
+                            unhighlight(2, "28")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 262px; top: 382px" id="mapdot-29">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-29").onmouseenter = function () {
+                            highlight(2, "29", "Card Sharks")
+                        };
+                        document.getElementById("mapdot-29").onmouseleave = function () {
+                            unhighlight(2, "29")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 215px; top: 25px" id="mapdot-30">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-30").onmouseenter = function () {
+                            highlight(2, "30", "The Minimeta That Goes Wrong")
+                        };
+                        document.getElementById("mapdot-30").onmouseleave = function () {
+                            unhighlight(2, "30")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 310px; top: 239px" id="mapdot-31">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-31").onmouseenter = function () {
+                            highlight(2, "31", "⭐ Alliance")
+                        };
+                        document.getElementById("mapdot-31").onmouseleave = function () {
+                            unhighlight(2, "31")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 358px; top: 25px" id="mapdot-32">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-32").onmouseenter = function () {
+                            highlight(2, "32", "Overdone")
+                        };
+                        document.getElementById("mapdot-32").onmouseleave = function () {
+                            unhighlight(2, "32")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 286px; top: 429px" id="mapdot-33">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-33").onmouseenter = function () {
+                            highlight(2, "33", "Whole New Ball Game")
+                        };
+                        document.getElementById("mapdot-33").onmouseleave = function () {
+                            unhighlight(2, "33")
+                        };
+                    </script>
+                    
+                    <div class="map2dot" style="left: 48px; top: 453px" id="mapdot-34">
+                    </div>
+                    <script type="text/javascript">
+                        document.getElementById("mapdot-34").onmouseenter = function () {
+                            highlight(2, "34", "Straight From The Headlines")
+                        };
+                        document.getElementById("mapdot-34").onmouseleave = function () {
+                            unhighlight(2, "34")
+                        };
+                    </script>
+                    
+
+                    
+                    
+                    
+                    <img class="turn" style="left: 239px; top: 96px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 334px; top: 96px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 144px; top: 120px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 167px; top: 120px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 215px; top: 120px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 215px; top: 191px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 239px; top: 191px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 310px; top: 334px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 334px; top: 334px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 215px; top: 358px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 239px; top: 358px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 358px; top: 382px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 382px; top: 382px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 429px; top: 382px"
+                        src="static/images/turn-left.png" />
+                    
+                    <img class="turn" style="left: 453px; top: 382px"
+                        src="static/images/turn-left.png" />
+                    
+
+                    
+                    
+                    <img class="turn" style="left: 72px; top: 48px"
+                        src="static/images/turn-right.png" />
+                    
+                    <img class="turn" style="left: 167px; top: 72px"
+                        src="static/images/turn-right.png" />
+                    
+                    <img class="turn" style="left: 191px; top: 72px"
+                        src="static/images/turn-right.png" />
+                    
+                    <img class="turn" style="left: 262px; top: 96px"
+                        src="static/images/turn-right.png" />
+                    
+                    <img class="turn" style="left: 310px; top: 96px"
+                        src="static/images/turn-right.png" />
+                    
+                    <img class="turn" style="left: 382px; top: 96px"
+                        src="static/images/turn-right.png" />
+                    
+                    <img class="turn" style="left: 167px; top: 144px"
+                        src="static/images/turn-right.png" />
+                    
+                    <img class="turn" style="left: 262px; top: 144px"
+                        src="static/images/turn-right.png" />
+                    
+                    <img class="turn" style="left: 358px; top: 215px"
+                        src="static/images/turn-right.png" />
+                    
+                    <img class="turn" style="left: 144px; top: 453px"
+                        src="static/images/turn-right.png" />
+                    
+                    
+
+                    
+                    
+                    <div class="puzzlestop" style="left: 105px; top: 229px;"
+                        id="puzzlestop-14">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-14" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 343px; top: 205px;"
+                        id="puzzlestop-15">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-15" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 81px; top: 205px;"
+                        id="puzzlestop-16">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-16" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 366px; top: 158px;"
+                        id="puzzlestop-17">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-17" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 271px; top: 158px;"
+                        id="puzzlestop-18">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-18" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 105px; top: 158px;"
+                        id="puzzlestop-19">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-19" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 390px; top: 276px;"
+                        id="puzzlestop-20">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-20" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 200px; top: 229px;"
+                        id="puzzlestop-21">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-21" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: -14px; top: 39px;"
+                        id="puzzlestop-22">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-22" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 57px; top: 300px;"
+                        id="puzzlestop-23">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-23" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 105px; top: 39px;"
+                        id="puzzlestop-24">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-24" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 200px; top: 62px;"
+                        id="puzzlestop-25">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-25" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 295px; top: 229px;"
+                        id="puzzlestop-26">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-26" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 33px; top: 253px;"
+                        id="puzzlestop-27">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-27" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 247px; top: 39px;"
+                        id="puzzlestop-28">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-28" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 223px; top: 396px;"
+                        id="puzzlestop-29">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-29" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 176px; top: 39px;"
+                        id="puzzlestop-30">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-30" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 271px; top: 253px;"
+                        id="puzzlestop-31">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-31" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 319px; top: 39px;"
+                        id="puzzlestop-32">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-32" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 247px; top: 443px;"
+                        id="puzzlestop-33">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-33" />
+                    </div>
+                    
+                    <div class="puzzlestop" style="left: 9px; top: 467px;"
+                        id="puzzlestop-34">
+                        <img class="puzzlestop-img" src="static/images/puzzlestop.png"
+                            id="puzzlestop-img-34" />
+                    </div>
+                    
+                </div>
+                <div class="metas">
+                    
+                    <div class="sticker-container" id="sticker-35">
+                        <a href="puzzle/candelas-mystic-correspondence.html">
+                            <img class="sticker" src="static/images/sticker-candela.png" />
+                        </a>
+                    </div>
+
+                    <script>
+                        // I will regret hard coding this....someday, but not today 
+                        sticker = document.getElementById("sticker-35");
+                        sticker.onmouseenter = function () {
+                            document.getElementById("highlight-title-2").innerHTML = "META: Candela&#x27;s Mystic Correspondence";
+                        };
+                        sticker.onmouseleave = function () {
+                            document.getElementById("highlight-title-2").innerHTML = "";
+                        };
+                    </script>
+                    
+                    
+                    <div class="sticker-container" id="sticker-36">
+                        <a href="puzzle/blanches-social-instinct.html">
+                            <img class="sticker" src="static/images/sticker-blanche.png" />
+                        </a>
+                    </div>
+
+                    <script>
+                        sticker = document.getElementById("sticker-36");
+                        sticker.onmouseenter = function () {
+                            document.getElementById("highlight-title-2").innerHTML = "META: Blanche&#x27;s Social Instinct";
+                        };
+                        sticker.onmouseleave = function () {
+                            document.getElementById("highlight-title-2").innerHTML = "";
+                        };
+                    </script>
+                    
+                    
+                    <div class="sticker-container" id="sticker-37">
+                        <a href="puzzle/sparks-stolen-valor.html">
+                            <img class="sticker" src="static/images/sticker-spark.png" />
+                        </a>
+                    </div>
+
+                    <script>
+                        sticker = document.getElementById("sticker-37");
+                        sticker.onmouseenter = function () {
+                            document.getElementById("highlight-title-2").innerHTML = "META: Spark&#x27;s Stolen Valor";
+                        };
+                        sticker.onmouseleave = function () {
+                            document.getElementById("highlight-title-2").innerHTML = "";
+                        };
+                    </script>
+                    
+                    
+                    <div class="sticker-container" id="sticker-38">
+                        <a href="puzzle/a-turn-for-the-worse.html">
+                            <img class="sticker" src="static/images/sticker-giovanni.png" />
+                        </a>
+                    </div>
+
+                    <script>
+                        sticker = document.getElementById("sticker-38");
+                        sticker.onmouseenter = function () {
+                            document.getElementById("highlight-title-2").innerHTML = "METAMETA: A Turn For The Worse";
+                        };
+                        sticker.onmouseleave = function () {
+                            document.getElementById("highlight-title-2").innerHTML = "";
+                        };
+                    </script>
+                    
+                </div>
+                <table class="gph-list-table" id="puzzle_list">
+                    <tr>
+                        <th> Puzzle </th>
+                        <th> Answer </th>
+                    </tr>
+                    
+                    <tr id="puzzle-14" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/i-see.html">
+                                I See!
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-14");
+                        if ("14" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "14", "I See!")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "14")
+                            };
+
+                            document.getElementById("mapdot-14").onclick = function () {
+                                goToUrl("/puzzle/i-see")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-15" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/white-as-a-sheet.html">
+                                White as a Sheet
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-15");
+                        if ("15" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "15", "White as a Sheet")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "15")
+                            };
+
+                            document.getElementById("mapdot-15").onclick = function () {
+                                goToUrl("/puzzle/white-as-a-sheet")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-16" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/delta.html">
+                                Δ
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-16");
+                        if ("16" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "16", "Δ")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "16")
+                            };
+
+                            document.getElementById("mapdot-16").onclick = function () {
+                                goToUrl("/puzzle/delta")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-17" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/minute-details.html">
+                                Minute Details
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-17");
+                        if ("17" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "17", "Minute Details")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "17")
+                            };
+
+                            document.getElementById("mapdot-17").onclick = function () {
+                                goToUrl("/puzzle/minute-details")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-18" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/indirect-anagrams.html">
+                                Indirect Anagrams
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-18");
+                        if ("18" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "18", "Indirect Anagrams")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "18")
+                            };
+
+                            document.getElementById("mapdot-18").onclick = function () {
+                                goToUrl("/puzzle/indirect-anagrams")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-19" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/drop-the-cube.html">
+                                Drop The Cube
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-19");
+                        if ("19" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "19", "Drop The Cube")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "19")
+                            };
+
+                            document.getElementById("mapdot-19").onclick = function () {
+                                goToUrl("/puzzle/drop-the-cube")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-20" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/only-geniuses-can-solve-this-puzzle.html">
+                                Only Geniuses Can Solve This Puzzle!!
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-20");
+                        if ("20" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "20", "Only Geniuses Can Solve This Puzzle!!")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "20")
+                            };
+
+                            document.getElementById("mapdot-20").onclick = function () {
+                                goToUrl("/puzzle/only-geniuses-can-solve-this-puzzle")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-21" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/six-feet-under.html">
+                                Six Feet Under
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-21");
+                        if ("21" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "21", "Six Feet Under")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "21")
+                            };
+
+                            document.getElementById("mapdot-21").onclick = function () {
+                                goToUrl("/puzzle/six-feet-under")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-22" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/handshake.html">
+                                🤝
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-22");
+                        if ("22" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "22", "🤝")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "22")
+                            };
+
+                            document.getElementById("mapdot-22").onclick = function () {
+                                goToUrl("/puzzle/handshake")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-23" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/cyclic.html">
+                                Cyclic
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-23");
+                        if ("23" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "23", "Cyclic")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "23")
+                            };
+
+                            document.getElementById("mapdot-23").onclick = function () {
+                                goToUrl("/puzzle/cyclic")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-24" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/red-sus.html">
+                                RED SUS
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-24");
+                        if ("24" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "24", "RED SUS")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "24")
+                            };
+
+                            document.getElementById("mapdot-24").onclick = function () {
+                                goToUrl("/puzzle/red-sus")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-25" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/audit-instance.html">
+                                Audit Instance
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-25");
+                        if ("25" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "25", "Audit Instance")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "25")
+                            };
+
+                            document.getElementById("mapdot-25").onclick = function () {
+                                goToUrl("/puzzle/audit-instance")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-26" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/re-actions.html">
+                                Re-actions
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-26");
+                        if ("26" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "26", "Re-actions")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "26")
+                            };
+
+                            document.getElementById("mapdot-26").onclick = function () {
+                                goToUrl("/puzzle/re-actions")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-27" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/composition.html">
+                                Composition
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-27");
+                        if ("27" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "27", "Composition")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "27")
+                            };
+
+                            document.getElementById("mapdot-27").onclick = function () {
+                                goToUrl("/puzzle/composition")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-28" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/a-lot-of-research.html">
+                                A Lot of Research into Things That Have Very Little Meaning
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-28");
+                        if ("28" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "28", "A Lot of Research into Things That Have Very Little Meaning")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "28")
+                            };
+
+                            document.getElementById("mapdot-28").onclick = function () {
+                                goToUrl("/puzzle/a-lot-of-research")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-29" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/card-sharks.html">
+                                Card Sharks
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-29");
+                        if ("29" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "29", "Card Sharks")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "29")
+                            };
+
+                            document.getElementById("mapdot-29").onclick = function () {
+                                goToUrl("/puzzle/card-sharks")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-30" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/the-minimeta-that-goes-wrong.html">
+                                The Minimeta That Goes Wrong
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-30");
+                        if ("30" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "30", "The Minimeta That Goes Wrong")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "30")
+                            };
+
+                            document.getElementById("mapdot-30").onclick = function () {
+                                goToUrl("/puzzle/the-minimeta-that-goes-wrong")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-31" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/star-alliance.html">
+                                ⭐ Alliance
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-31");
+                        if ("31" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "31", "⭐ Alliance")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "31")
+                            };
+
+                            document.getElementById("mapdot-31").onclick = function () {
+                                goToUrl("/puzzle/star-alliance")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-32" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/overdone.html">
+                                Overdone
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-32");
+                        if ("32" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "32", "Overdone")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "32")
+                            };
+
+                            document.getElementById("mapdot-32").onclick = function () {
+                                goToUrl("/puzzle/overdone")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-33" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/whole-new-ball-game.html">
+                                Whole New Ball Game
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-33");
+                        if ("33" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "33", "Whole New Ball Game")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "33")
+                            };
+
+                            document.getElementById("mapdot-33").onclick = function () {
+                                goToUrl("/puzzle/whole-new-ball-game")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-34" class="puzzle_row ">
+                        <td>
+                            <a href="puzzle/straight-from-the-headlines.html">
+                                Straight From The Headlines
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-34");
+                        if ("34" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "34", "Straight From The Headlines")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "34")
+                            };
+
+                            document.getElementById("mapdot-34").onclick = function () {
+                                goToUrl("/puzzle/straight-from-the-headlines")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-35" class="puzzle_row meta">
+                        <td>
+                            <a href="puzzle/candelas-mystic-correspondence.html">
+                                META: Candela&#x27;s Mystic Correspondence
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-35");
+                        if ("35" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "35", "META: Candela&#x27;s Mystic Correspondence")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "35")
+                            };
+
+                            document.getElementById("mapdot-35").onclick = function () {
+                                goToUrl("/puzzle/candelas-mystic-correspondence")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-36" class="puzzle_row meta">
+                        <td>
+                            <a href="puzzle/blanches-social-instinct.html">
+                                META: Blanche&#x27;s Social Instinct
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-36");
+                        if ("36" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "36", "META: Blanche&#x27;s Social Instinct")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "36")
+                            };
+
+                            document.getElementById("mapdot-36").onclick = function () {
+                                goToUrl("/puzzle/blanches-social-instinct")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-37" class="puzzle_row meta">
+                        <td>
+                            <a href="puzzle/sparks-stolen-valor.html">
+                                META: Spark&#x27;s Stolen Valor
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-37");
+                        if ("37" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "37", "META: Spark&#x27;s Stolen Valor")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "37")
+                            };
+
+                            document.getElementById("mapdot-37").onclick = function () {
+                                goToUrl("/puzzle/sparks-stolen-valor")
+                            };
+                        }
+                    </script>
+
+                    
+                    <tr id="puzzle-38" class="puzzle_row meta">
+                        <td>
+                            <a href="puzzle/a-turn-for-the-worse.html">
+                                METAMETA: A Turn For The Worse
+                            </a>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <script>
+                        puzzle_row = document.getElementById("puzzle-38");
+                        if ("38" <= "34") {
+                            puzzle_row.onmouseenter = function () {
+                                highlight(2, "38", "METAMETA: A Turn For The Worse")
+                            };
+                            puzzle_row.onmouseleave = function () {
+                                unhighlight(2, "38")
+                            };
+
+                            document.getElementById("mapdot-38").onclick = function () {
+                                goToUrl("/puzzle/a-turn-for-the-worse")
+                            };
+                        }
+                    </script>
+
+                    
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

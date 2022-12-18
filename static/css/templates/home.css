@@ -1,0 +1,57 @@
+:root {
+  /** override logo on homepage **/
+  --bg-img: url("");
+}
+
+@media print {
+    a {
+        text-decoration: none;
+    }
+
+    p a {
+        color: inherit;
+    }
+
+    .feedback,
+    .register {
+        display: none;
+    }
+
+    .print-register {
+        font-weight: bold;
+        margin: 20px 0 40px;
+    }
+}
+
+@media screen {
+    .content {
+        background-color: transparent;
+        min-height: 0;
+    }
+
+    .print-register {
+        display: none;
+    }
+
+    .feedback,
+    .register {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .register .btn {
+        height: 46px;
+        line-height: 46px;
+        font-size: 2rem;
+    }
+}
+
+h3 {
+    text-align: center;
+    margin: 0;
+}
+
+.logo {
+    display: block;
+    margin: 10px auto 10px auto;
+}

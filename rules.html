@@ -1,0 +1,152 @@
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <title>Silph Puzzle Hunt</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="static/css/skeleton.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="static/js/sorttable.js"></script>
+    <script src="static/js/tray.js"></script>
+    <script src="static/js/notify.js"></script>
+    <script src="static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="index.html">
+                    Home
+                </a>
+                <a  class="selected-tab"  href="rules.html">
+                    Rules
+                </a>
+                
+                <a  href="story.html">
+                    Story
+                </a>
+                
+                
+                <a  href="puzzles.html">
+                    Puzzles
+                </a>
+                
+                <a  href="teams.html">
+                    Teams
+                </a>
+                <a  href="faq.html">
+                    FAQ
+                </a>
+                
+                
+                <a  href="wrapup.html">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>Rules</h1>
+
+<main>
+    <div class="no-break">
+        <h4 id="Format">Format</h4>
+        <ul>
+            <li>The puzzlehunt starts on <strong><time datetime="2021-12-04T10:00:00-05:00" data-format="%A, %B %d, %Y at %I:%M %p %Z">Saturday, December 04, 2021 at 10:00 AM EST</time></strong> and ends on <strong><time datetime="2021-12-13T10:00:00-05:00" data-format="%A, %B %d, %Y at %I:%M %p %Z">Monday, December 13, 2021 at 10:00 AM EST</time></strong>, at which point puzzle solutions will be available. </li>
+            <li>This hunt is designed for a team size of 6. You may not create multiple accounts or be on multiple teams.</li>
+            <li>A few puzzles will be available at the start. Solving puzzles lets your team level up, which in turn unlocks new puzzles, allowing teams to progress through the hunt.</li>
+            <li>Teams that complete the hunt will be ranked by the time at which they finish. Teams that do not complete the hunt will be ranked by number of puzzles solved and tie-broken by earliest last solve time.</li>
+        </ul>
+    </div>
+
+    <div class="no-break">
+        <h4 id="Solving">Solving</h4>
+        <ul>
+            <li>Each answer is a string of letters. Lowercase letters will be changed into uppercase, and any other characters will be stripped before checking for correctness.</li>
+            <li>You have <strong>20 total guesses</strong> for each puzzle. If you legitimately run out of guesses and need more, feel free to contact us, though we won&rsquo;t grant your request if we see that you were, for example, guessing random thematic answers, or brute-forcing all 6-letter words starting with G.</li>
+        </ul>
+    </div>
+
+    
+    <div class="no-break">
+        <h4 id="Hints">Hints</h4>
+        <ul>
+            <li>Starting on <time datetime="2021-12-06T10:00:00-05:00" data-format="%A, %B %d">Monday, December 06</time>, teams will receive <strong>2 Rare Candies</strong> per day, at <strong><time datetime="2021-12-06T10:00:00-05:00" data-format="%I:%M %p %Z">10:00 AM EST</time></strong> each day, until the end of the hunt.</li>
+            <li>You can use a Rare Candy to get help on a puzzle. This can be something like a nudge in the right direction (i.e. you give us your progress on the puzzle and we&rsquo;ll try to get you unstuck) or an answer to a question (e.g. &ldquo;Which answers to these crossword clues are wrong?&rdquo;).</li>
+        </ul>
+    </div>
+    
+
+    <div class="no-break">
+        <h4 id="Other">Other</h4>
+        <ul>
+            <li>You may use any external sources for help, including other people, as long as they aren&rsquo;t helping other teams and aren&rsquo;t actively participating in the hunt.</li>
+            <li>You may not publicly stream a solve of our hunt when the hunt is live.</li>
+            <li>It won&rsquo;t be necessary to look at the HTML source/JavaScript/CSS on any webpages for any puzzle, but you&rsquo;re welcome to look anyway.</li>
+            <li>We reserve the right to disqualify any team for unsportsmanlike conduct, which includes but is not limited to leaking answers and sabotaging other teams.</li>
+            <li>We reserve the right to change any of these rules. If there&rsquo;s a big change, we&rsquo;ll announce it to all teams.</li>
+            <li>If you have any questions about these rules, or if you want to contact us for any reason, email <a href="mailto:contact@silphpuzzlehunt.com">contact@silphpuzzlehunt.com</a>. We will get back to you as soon as we can.</li>
+        </ul>
+    </div>
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

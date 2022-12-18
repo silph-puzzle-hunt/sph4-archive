@@ -1,0 +1,229 @@
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>Card Sharks</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../index.html">
+                    Home
+                </a>
+                <a  href="../rules.html">
+                    Rules
+                </a>
+                
+                <a  href="../story.html">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles.html">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams.html">
+                    Teams
+                </a>
+                <a  href="../faq.html">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup.html">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+
+
+
+<a href="../post-hunt-solve/card-sharks.html" class="btn">Check your answer spoiler-free</a>
+
+
+<a href="https://silphpuzzlehunt.com/solution/card-sharks" class="btn">View solution</a>
+
+
+<a href="../stats/card-sharks.html" class="btn">Stats</a>
+
+
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    Card Sharks
+    
+    
+</h1>
+
+<main class="clipboard-container">
+    
+
+    
+    <style>
+    .card-table {
+        width: fit-content;
+        display: block;
+        margin: auto;
+    }
+
+    .card {
+        border: 1px solid black;
+        height: 3.5rem;
+        width: 25px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: center;
+        padding-top: 0.5rem;
+    }
+
+    .red-card {
+        color: red;
+    }
+
+    td {
+        padding: 0px 5px;
+        border: 0px;
+    }
+
+    .card-cell {
+        padding: 0px 2px;
+    }
+
+    .community {
+        text-align: center;
+        vertical-align: bottom;
+        height: 60px;
+        font-size: 1.3rem;
+    }
+
+    .unknown {
+        height: 3.5rem;
+        width: 15px;
+        background: #aaaaaa;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    .spacer {
+        padding: 0px 20px;
+    }
+
+    .pad-right {
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .pad-left {
+        padding-left: 10px;
+    }
+
+    .divider-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        padding-top: 20px;
+    }
+
+    hr {
+        border: 1px solid black;
+    }
+
+    .link-to-sheet {
+        border-radius: 1em;
+        bottom: 1.5em;
+        cursor: pointer;
+        font-size: 1em;
+        height: 2em;
+        padding: 0 0.8em;
+        position: fixed !important;
+        right: 1.5em;
+    }
+</style>
+
+<p class="flavor">Some people bring an ace up their sleeve, we bring a whole deck! Just be careful not to get caught...</p>
+<table class="card-table"><!-- for some reason, moving these segments to an inclusion tag fails, so it's copy pasted below. --><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&lt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>3<br/>♠</div></td><td class="card-cell"><div class=card>4<br/>♠</div></td><td class="card-cell"><div class=card>6<br/>♠</div></td><td class="card-cell"><div class="card red-card">Q<br/>♦</div></td><td class="card-cell"><div class="card red-card">K<br/>♦</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">5<br/>♦</div></td><td class="card-cell"><div class=card>7<br/>♠</div></td><td class="pad-left">Annie&#x27;s Hand</td></tr><!-- for some reason, moving these segments to an inclusion tag fails, so it's copy pasted below. --><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td class="card-cell"><div class="card red-card">3<br/>♦</div></td><td class="card-cell"><div class=card>4<br/>♠</div></td><td class="card-cell"><div class="card red-card">Q<br/>♦</div></td><td class="card-cell"><div class="card red-card">Q<br/>♥</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">3<br/>♥</div></td><td class="card-cell"><div class=card>Q<br/>♠</div></td><td class="pad-left">Bryn&#x27;s Hand</td></tr><!-- for some reason, moving these segments to an inclusion tag fails, so it's copy pasted below. --><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td class="card-cell"><div class="card red-card">2<br/>♦</div></td><td class="card-cell"><div class="card red-card">3<br/>♥</div></td><td class="card-cell"><div class=card>8<br/>♣</div></td><td class="card-cell"><div class="card red-card">8<br/>♦</div></td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♠</div></td><td class="card-cell"><div class=card>8<br/>♠</div></td><td class="pad-left">Cary&#x27;s Hand</td></tr><!-- for some reason, moving these segments to an inclusion tag fails, so it's copy pasted below. --><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td class="card-cell"><div class="card red-card">4<br/>♦</div></td><td class="card-cell"><div class="card red-card">6<br/>♥</div></td><td class="card-cell"><div class=card>8<br/>♠</div></td><td class="card-cell"><div class=card>J<br/>♣</div></td><td class="spacer"></td><td class="card-cell"><div class=card>3<br/>♣</div></td><td class="card-cell"><div class="card red-card">5<br/>♦</div></td><td class="pad-left">Daniel&#x27;s Hand</td></tr><!-- for some reason, moving these segments to an inclusion tag fails, so it's copy pasted below. --><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class="card red-card">2<br/>♦</div></td><td class="card-cell"><div class="card red-card">4<br/>♦</div></td><td class="card-cell"><div class="card red-card">4<br/>♥</div></td><td class="card-cell"><div class="card red-card">5<br/>♦</div></td><td class="card-cell"><div class="card red-card">5<br/>♥</div></td><td class="spacer"></td><td class="card-cell"><div class=card>4<br/>♣</div></td><td class="card-cell"><div class=card>5<br/>♣</div></td><td class="pad-left">Erik&#x27;s Hand</td></tr><!-- for some reason, moving these segments to an inclusion tag fails, so it's copy pasted below. --><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&lt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td class="card-cell"><div class=card>8<br/>♣</div></td><td class="card-cell"><div class=card>9<br/>♣</div></td><td class="card-cell"><div class=card>J<br/>♠</div></td><td class="card-cell"><div class="card red-card">J<br/>♥</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">8<br/>♦</div></td><td class="card-cell"><div class=card>J<br/>♣</div></td><td class="pad-left">Fedor&#x27;s Hand</td></tr><!-- for some reason, moving these segments to an inclusion tag fails, so it's copy pasted below. --><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td class="card-cell"><div class="card red-card">3<br/>♦</div></td><td class="card-cell"><div class=card>8<br/>♠</div></td><td class="card-cell"><div class=card>9<br/>♠</div></td><td class="card-cell"><div class="card red-card">K<br/>♥</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">2<br/>♥</div></td><td class="card-cell"><div class="card red-card">8<br/>♦</div></td><td class="pad-left">Gaëlle&#x27;s Hand</td></tr><!-- for some reason, moving these segments to an inclusion tag fails, so it's copy pasted below. --><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&lt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>7<br/>♣</div></td><td class="card-cell"><div class=card>8<br/>♣</div></td><td class="card-cell"><div class="card red-card">J<br/>♦</div></td><td class="card-cell"><div class="card red-card">J<br/>♥</div></td><td class="card-cell"><div class=card>Q<br/>♣</div></td><td class="spacer"></td><td class="card-cell"><div class=card>8<br/>♠</div></td><td class="card-cell"><div class=card>J<br/>♠</div></td><td class="pad-left">Hui&#x27;s Hand</td></tr><!-- for some reason, moving these segments to an inclusion tag fails, so it's copy pasted below. --><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td class="card-cell"><div class=card>5<br/>♣</div></td><td class="card-cell"><div class=card>8<br/>♣</div></td><td class="card-cell"><div class=card>9<br/>♠</div></td><td class="card-cell"><div class="card red-card">9<br/>♦</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">5<br/>♦</div></td><td class="card-cell"><div class=card>9<br/>♣</div></td><td class="pad-left">Isaac&#x27;s Hand</td></tr><!-- divider A--><tr class="copy-only"></tr><tr><td colspan=11 style="padding-top: 20px"><hr /></td><td class="divider-card"><div class=card>A<br/>🃟</div></td><td colspan=6 style="padding-top: 20px"><hr /></td></tr><!-- section 2 --><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>3<br/>♣</div></td><td class="card-cell"><div class="card red-card">3<br/>♦</div></td><td class="card-cell"><div class=card>6<br/>♣</div></td><td class="card-cell"><div class=card>7<br/>♠</div></td><td class="card-cell"><div class=card>K<br/>♠</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">3<br/>♥</div></td><td class="card-cell"><div class=card>6<br/>♠</div></td><td class="pad-left">Justin&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&lt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td class="card-cell"><div class=card>5<br/>♣</div></td><td class="card-cell"><div class="card red-card">5<br/>♦</div></td><td class="card-cell"><div class="card red-card">9<br/>♦</div></td><td class="card-cell"><div class="card red-card">10<br/>♥</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">9<br/>♥</div></td><td class="card-cell"><div class=card>9<br/>♠</div></td><td class="pad-left">Kathy&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♠</div></td><td class="card-cell"><div class=card>7<br/>♣</div></td><td class="card-cell"><div class=card>8<br/>♣</div></td><td class="card-cell"><div class=card>9<br/>♣</div></td><td class="card-cell"><div class=card>9<br/>♠</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">9<br/>♦</div></td><td class="card-cell"><div class="card red-card">9<br/>♥</div></td><td class="pad-left">Liv&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&lt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class="card red-card">A<br/>♦</div></td><td class="card-cell"><div class="card red-card">A<br/>♥</div></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td class="card-cell"><div class="card red-card">5<br/>♦</div></td><td class="card-cell"><div class=card>6<br/>♠</div></td><td class="spacer"></td><td class="card-cell"><div class=card>A<br/>♠</div></td><td class="card-cell"><div class=card>5<br/>♠</div></td><td class="pad-left">Maria&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class="card red-card">2<br/>♦</div></td><td class="card-cell"><div class=card>6<br/>♣</div></td><td class="card-cell"><div class="card red-card">6<br/>♦</div></td><td class="card-cell"><div class="card red-card">Q<br/>♥</div></td><td class="card-cell"><div class=card>K<br/>♣</div></td><td class="spacer"></td><td class="card-cell"><div class=card>6<br/>♠</div></td><td class="card-cell"><div class=card>Q<br/>♠</div></td><td class="pad-left">Nick&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class="card red-card">2<br/>♦</div></td><td class="card-cell"><div class="card red-card">3<br/>♦</div></td><td class="card-cell"><div class="card red-card">6<br/>♦</div></td><td class="card-cell"><div class=card>K<br/>♣</div></td><td class="card-cell"><div class="card red-card">K<br/>♦</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">K<br/>♥</div></td><td class="card-cell"><div class=card>K<br/>♠</div></td><td class="pad-left">Ole&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&lt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class="card red-card">2<br/>♥</div></td><td class="card-cell"><div class=card>10<br/>♣</div></td><td class="card-cell"><div class=card>J<br/>♠</div></td><td class="card-cell"><div class=card>K<br/>♣</div></td><td class="card-cell"><div class="card red-card">K<br/>♦</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">10<br/>♦</div></td><td class="card-cell"><div class="card red-card">K<br/>♥</div></td><td class="pad-left">Phil&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>A<br/>♣</div></td><td class="card-cell"><div class=card>3<br/>♣</div></td><td class="card-cell"><div class=card>5<br/>♣</div></td><td class="card-cell"><div class=card>8<br/>♣</div></td><td class="card-cell"><div class="card red-card">10<br/>♦</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">A<br/>♥</div></td><td class="card-cell"><div class=card>K<br/>♣</div></td><td class="pad-left">Qui&#x27;s Hand</td></tr><!-- divider B--><tr class="copy-only"></tr><tr><td colspan=11 style="padding-top: 20px"><hr /></td><td class="divider-card red-card"><div class=card>B<br/>🃟</div></td><td colspan=6 style="padding-top: 20px"><hr /></td></tr><!-- section 3 --><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td class="card-cell"><div class="card red-card">3<br/>♦</div></td><td class="card-cell"><div class="card red-card">9<br/>♥</div></td><td class="card-cell"><div class=card>10<br/>♠</div></td><td class="card-cell"><div class=card>Q<br/>♣</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">Q<br/>♦</div></td><td class="card-cell"><div class="card red-card">Q<br/>♥</div></td><td class="pad-left">Rainer&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♠</div></td><td class="card-cell"><div class=card>3<br/>♣</div></td><td class="card-cell"><div class="card red-card">4<br/>♥</div></td><td class="card-cell"><div class=card>K<br/>♣</div></td><td class="card-cell"><div class=card>K<br/>♠</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">3<br/>♥</div></td><td class="card-cell"><div class="card red-card">K<br/>♦</div></td><td class="pad-left">Stephen&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&lt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td class="card-cell"><div class=card>5<br/>♣</div></td><td class="card-cell"><div class=card>7<br/>♣</div></td><td class="card-cell"><div class="card red-card">7<br/>♥</div></td><td class="card-cell"><div class=card>10<br/>♠</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">5<br/>♦</div></td><td class="card-cell"><div class=card>7<br/>♠</div></td><td class="pad-left">Timothy&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&lt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class="card red-card">A<br/>♥</div></td><td class="card-cell"><div class=card>9<br/>♣</div></td><td class="card-cell"><div class="card red-card">9<br/>♥</div></td><td class="card-cell"><div class="card red-card">K<br/>♦</div></td><td class="card-cell"><div class="card red-card">K<br/>♥</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">9<br/>♦</div></td><td class="card-cell"><div class=card>K<br/>♠</div></td><td class="pad-left">Upeshka&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&lt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td class="card-cell"><div class="card red-card">3<br/>♥</div></td><td class="card-cell"><div class="card red-card">7<br/>♦</div></td><td class="card-cell"><div class=card>J<br/>♠</div></td><td class="card-cell"><div class="card red-card">Q<br/>♥</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">J<br/>♥</div></td><td class="card-cell"><div class="card red-card">J<br/>♦</div></td><td class="pad-left">Vanessa&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&lt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td class="card-cell"><div class="card red-card">2<br/>♦</div></td><td class="card-cell"><div class=card>5<br/>♣</div></td><td class="card-cell"><div class="card red-card">5<br/>♦</div></td><td class="card-cell"><div class=card>J<br/>♠</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">2<br/>♥</div></td><td class="card-cell"><div class=card>2<br/>♠</div></td><td class="pad-left">William&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&lt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>3<br/>♣</div></td><td class="card-cell"><div class="card red-card">4<br/>♦</div></td><td class="card-cell"><div class="card red-card">5<br/>♥</div></td><td class="card-cell"><div class=card>Q<br/>♠</div></td><td class="card-cell"><div class=card>K<br/>♣</div></td><td class="spacer"></td><td class="card-cell"><div class="card red-card">K<br/>♦</div></td><td class="card-cell"><div class="card red-card">K<br/>♥</div></td><td class="pad-left">Xuan&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&gt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td class="card-cell"><div class="card red-card">3<br/>♥</div></td><td class="card-cell"><div class="card red-card">5<br/>♥</div></td><td class="card-cell"><div class="card red-card">10<br/>♥</div></td><td class="card-cell"><div class=card>K<br/>♣</div></td><td class="spacer"></td><td class="card-cell"><div class=card>4<br/>♣</div></td><td class="card-cell"><div class=card>6<br/>♣</div></td><td class="pad-left">Yuri&#x27;s Hand</td></tr><tr class="title"><td colspan=9></td><td colspan=5 class="community">Community</td><td colspan=4></td></tr><tr><td colspan=5 class="pad-right">Your Hand</td><td class="unknown"> ? </td><td>&lt;</td><td class="unknown"> ? </td><td class="spacer"></td><td class="card-cell"><div class=card>A<br/>♣</div></td><td class="card-cell"><div class="card red-card">2<br/>♦</div></td><td class="card-cell"><div class=card>9<br/>♣</div></td><td class="card-cell"><div class="card red-card">9<br/>♥</div></td><td class="card-cell"><div class="card red-card">K<br/>♥</div></td><td class="spacer"></td><td class="card-cell"><div class=card>9<br/>♠</div></td><td class="card-cell"><div class=card>K<br/>♠</div></td><td class="pad-left">Zhu&#x27;s Hand</td></tr></table>
+
+<hr />
+<table class="card-table"><tr class="copy-only"></tr><tr><td class="card-cell"><div class=card>A<br/>♣</div></td><td class="card-cell"><div class=card>2<br/>♣</div></td><td> ... </td><td class="card-cell"><div class=card>10<br/>♣</div></td><td class="card-cell"><div class=card>J<br/>♣</div></td><td class="card-cell"><div class=card>Q<br/>♣</div></td><td class="card-cell"><div class=card>K<br/>♣</div></td><td class="card-cell"><div class="card red-card">A<br/>♦</div></td><td class="card-cell"><div class="card red-card">2<br/>♦</div></td><td> ... </td><td class="card-cell"><div class="card red-card">10<br/>♦</div></td><td class="card-cell"><div class="card red-card">J<br/>♦</div></td><td class="card-cell"><div class="card red-card">Q<br/>♦</div></td><td class="card-cell"><div class="card red-card">K<br/>♦</div></td><td class="card-cell"><div class="card red-card">A<br/>♥</div></td><td class="card-cell"><div class="card red-card">2<br/>♥</div></td><td> ... </td><td class="card-cell"><div class="card red-card">10<br/>♥</div></td><td class="card-cell"><div class="card red-card">J<br/>♥</div></td><td class="card-cell"><div class="card red-card">Q<br/>♥</div></td><td class="card-cell"><div class="card red-card">K<br/>♥</div></td><td class="card-cell"><div class=card>A<br/>♠</div></td><td class="card-cell"><div class=card>2<br/>♠</div></td><td> ... </td><td class="card-cell"><div class=card>10<br/>♠</div></td><td class="card-cell"><div class=card>J<br/>♠</div></td><td class="card-cell"><div class=card>Q<br/>♠</div></td><td class="card-cell"><div class=card>K<br/>♠</div></td><td class="card-cell"><div class=card>A<br/>🃟</div></td><td class="card-cell"><div class=card>B<br/>🃟</div></td></tr><tr><td style="text-align: center;"> 1 </td><td style="text-align: center;"> 2 </td><td style="text-align: center;"> ... </td><td style="text-align: center;"> 10 </td><td style="text-align: center;"> 11 </td><td style="text-align: center;"> 12 </td><td style="text-align: center;"> 13 </td><td style="text-align: center;"> 14 </td><td style="text-align: center;"> 15 </td><td style="text-align: center;"> ... </td><td style="text-align: center;"> 23 </td><td style="text-align: center;"> 24 </td><td style="text-align: center;"> 25 </td><td style="text-align: center;"> 26 </td><td style="text-align: center;"> 27 </td><td style="text-align: center;"> 28 </td><td style="text-align: center;"> ... </td><td style="text-align: center;"> 36 </td><td style="text-align: center;"> 37 </td><td style="text-align: center;"> 38 </td><td style="text-align: center;"> 39 </td><td style="text-align: center;"> 40 </td><td style="text-align: center;"> 41 </td><td style="text-align: center;"> ... </td><td style="text-align: center;"> 49 </td><td style="text-align: center;"> 50 </td><td style="text-align: center;"> 51 </td><td style="text-align: center;"> 52 </td><td style="text-align: center;"> 53 </td><td style="text-align: center;"> 54 </td></tr></table>
+
+<hr />
+<table class="card-table"><tr class="copy-only"></tr><tr><td class="card-cell"><div class=card>7<br/>♠</div></td><td class="card-cell"><div class="card red-card">A<br/>♦</div></td><td class="card-cell"><div class=card>3<br/>♣</div></td><td class="card-cell"><div class=card>J<br/>♠</div></td><td class="card-cell"><div class="card red-card">2<br/>♥</div></td><td class="card-cell"><div class="card red-card">J<br/>♥</div></td><td class="card-cell"><div class="card red-card">7<br/>♦</div></td><td class="card-cell"><div class="card red-card">7<br/>♦</div></td><td class="card-cell"><div class="card red-card">9<br/>♥</div></td><td class="card-cell"><div class="card red-card">10<br/>♥</div></td><td class="card-cell"><div class=card>10<br/>♣</div></td><td class="card-cell"><div class="card red-card">3<br/>♦</div></td><td class="card-cell"><div class=card>8<br/>♠</div></td><td class="card-cell"><div class=card>4<br/>♠</div></td><td class="card-cell"><div class="card red-card">K<br/>♥</div></td><td class="card-cell"><div class="card red-card">5<br/>♦</div></td><td class="card-cell"><div class=card>6<br/>♣</div></td><td class="card-cell"><div class="card red-card">9<br/>♥</div></td><td class="card-cell"><div class="card red-card">10<br/>♥</div></td><td class="card-cell"><div class=card>2<br/>♠</div></td><td class="card-cell"><div class="card red-card">8<br/>♦</div></td><td class="card-cell"><div class=card>8<br/>♣</div></td><td class="card-cell"><div class="card red-card">A<br/>♦</div></td></tr></table>
+
+<p><button class="btn clipboard-button"></button></p>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+body {
+    width: auto;
+    max-width: none;
+}
+
+.bg {
+    display: none;
+}
+
+.content {
+    text-align: center;
+    font-size: 1.25rem;
+    max-width: 100%;
+    overflow-x:scroll;
+    padding: 0;
+    margin: auto;
+}
+
+table {
+    table-layout: fixed;
+}
+
+td, th {
+    padding: 0 0.3em;
+    line-height: 1.25;
+    white-space: nowrap;
+    min-width: 2.5em;
+    height: 2.5em;
+}
+
+td.U { /* unlocked */
+    background-color: #ccc;
+}
+td.W { /* wrong */
+    background-color: #dbb;
+}
+td.S { /* solved */
+    background-color: #060;
+    color: white;
+}
+td.b { /* backsolved from some metas */
+    background-color: #282;
+}
+td.B { /* backsolved from all metas */
+    background-color: #4a4;
+}
+td.F { /* free answer */
+    background-color: #cea;
+}
+td.H { /* hinted */
+    background-image: linear-gradient(to bottom right, transparent 50%, #bee 50%);
+}
+td.P { /* post-hunt solve */
+    opacity: 0.5;
+}
+
+.end:not(:last-child) {
+    border-right: 1px solid #e1e1e1;
+}
+
+td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #ddd;
+    z-index: 1;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: #ddd;
+    z-index: 2;
+    text-align: center;
+}
+
+table .hunt-icon {
+    width: 24px;
+}
+
+small {
+    display: block;
+}
+
+#hide {
+    width: 2rem;
+    height: 5rem;
+    margin: 0 1rem 0 0;
+    vertical-align: bottom;
+}
+
+[for=hide] {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 5rem;
+}
+
+:checked ~ table .finished {
+    display: none;
+}

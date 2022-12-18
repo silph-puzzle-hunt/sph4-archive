@@ -1,0 +1,291 @@
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>RED SUS</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../index.html">
+                    Home
+                </a>
+                <a  href="../rules.html">
+                    Rules
+                </a>
+                
+                <a  href="../story.html">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles.html">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams.html">
+                    Teams
+                </a>
+                <a  href="../faq.html">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup.html">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+
+
+
+<a href="../post-hunt-solve/red-sus.html" class="btn">Check your answer spoiler-free</a>
+
+
+<a href="https://silphpuzzlehunt.com/solution/red-sus" class="btn">View solution</a>
+
+
+<a href="../stats/red-sus.html" class="btn">Stats</a>
+
+
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    RED SUS
+    
+    
+</h1>
+
+<main class="clipboard-container">
+    
+
+    
+    <style>
+    .grid {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .grid-part {
+        display: block;
+        max-width: 40%;
+    }
+
+    .center-align {
+        text-align: center;
+    }
+
+    li {
+        margin-bottom: 0;
+        list-style-type: disc;
+    }
+
+    ul {
+        list-style-position: outside;
+        margin-left: 50px;
+    }
+</style>
+
+<p><font color='red'><h4>Fillomino</h4></font></p>
+<p>Rules</p>
+<ul>
+<li>Divide the grid into regions.</li>
+<li>If two regions are <font color='red'><b>adjacent</b></font>, they do not have the same size.</li>
+<li>A given number in a region indicates the size of the region.</li>
+<li>A region may contain any number of givens, including zero.</li>
+</ul>
+<div class="grid"><img src="../static/puzzle_resources/red-sus/fillomino.png" class="grid-part" /></div>
+
+<div class="center-align"><i>Extraction: extract all letters adjacent to exactly 3 borders.</i></div>
+
+<p><font color='red'><h4>Hashiwokakero</h4></font></p>
+<p>Rules</p>
+<p>Draw bridges between islands (numbers in circles) such that:</p>
+<ul>
+<li>Bridges start and end on distinct islands.</li>
+<li>Bridges are either horizontal or vertical.</li>
+<li>Bridges may not cross other bridges or islands.</li>
+<li>If there exist bridges between 2 islands, there are <font color='red'><b>either one or two</b></font> bridges between them.</li>
+<li>The number on the island indicate the number of bridges connected to it.</li>
+<li>All islands are connected via bridges (i.e. you can travel from any island to any other island via bridges).</li>
+</ul>
+<div class="grid"><img src="../static/puzzle_resources/red-sus/hashiwokakero.png" class="grid-part" /></div>
+
+<div class="center-align"><i>Extraction: extract all letters part of an odd number of bridges.</i></div>
+
+<p><font color='red'><h4>Heteromino</h4></font></p>
+<p>Rules</p>
+<ul>
+<li>Divide the white cells along the dotted lines into regions of size 3.</li>
+<li>Regions of the same shape and the <font color='red'><b>same</b></font> orientation are not orthogonally adjacent.</li>
+</ul>
+<div class="grid"><img src="../static/puzzle_resources/red-sus/heteromino.png" class="grid-part" /></div>
+
+<div class="center-align"><i>Extraction: extract all letters in the middle of polyominoes.</i></div>
+
+<p><font color='red'><h4>Icebarn</h4></font></p>
+<p>Rules</p>
+<ul>
+<li>Draw a directed path from IN to OUT via axis parallel lines connecting centers of cells (and the IN/OUT arrow).</li>
+<li>The directed path must pass through the arrows in the indicated direction.</li>
+<li>The directed path must pass through every icebarn at least once (An icebarn is a connected region of ice cells).</li>
+<li>The directed path may not turn on ice cells.</li>
+<li>The directed path may cross only on <font color='red'><b>ice</b></font> cells.</li>
+<li>When the path is crossing, the path must go straight.</li>
+</ul>
+<div class="grid"><img src="../static/puzzle_resources/red-sus/icebarn.png" class="grid-part" /></div>
+
+<div class="center-align"><i>Extraction: extract all letters on where the path makes a turn.</i></div>
+
+<p><font color='red'><h4>LITS</h4></font></p>
+<p>Rules</p>
+<ul>
+<li>Shade 4 cells within each region to form a tetromino (4 connected cells).</li>
+<li><font color='red'><b>Same</b></font> tetrominos may not be adjacent (2 tetrominos are the same if you can reflect and/or rotate one to form the other).</li>
+<li>All <font color='red'><b>shaded</b></font> cells must form a connected region.</li>
+<li>There may not be any 2x2 region of <font color='red'><b>shaded</b></font> cells.</li>
+</ul>
+<div class="grid"><img src="../static/puzzle_resources/red-sus/lits.png" class="grid-part" /></div>
+
+<div class="center-align"><i>Extraction: extract all letters on unshaded cells.</i></div>
+
+<p><font color='red'><h4>Masyu</h4></font></p>
+<p>Rules</p>
+<ul>
+<li>Draw a single non-intersecting loop connecting centers of cells via <font color='red'><b>axis-parallel</b></font> lines.</li>
+<li>The loop may only turn at center of cells.</li>
+<li>The loop must pass through the center of every circle.</li>
+<li>The loop must go straight through every white circle and make at least one turn before going a distance of 2 either before or after the white circle (or both).</li>
+<li>The loop must turn in every black circle and go straight for at least a distance of 2 before and after the black circle.</li>
+<li>The loop may enter and exit each cell at most once.</li>
+</ul>
+<div class="grid"><img src="../static/puzzle_resources/red-sus/masyu.png" class="grid-part" /></div>
+
+<div class="center-align"><i>Extraction: extract all letters on where the loop makes a turn.</i></div>
+
+<p><font color='red'><h4>Moon or Sun</h4></font></p>
+<p>Rules</p>
+<ul>
+<li>Draw a single non-intersecting loop connecting centers of cells via axis-parallel lines.</li>
+<li>A region of bolded lines is called a "room". The loop goes through each room <font color='red'><b>exactly once</b></font>.</li>
+<li>Whenever the loop visits a room, it must pass through either all of the suns and none of the moons or all of the moons and none of the suns in that room before leaving the room.</li>
+<li>The loop must visit every room at least once.</li>
+<li>The loop alternates between "visit all suns" and "visit all moons" whenever it enters a room.</li>
+</ul>
+<div class="grid"><img src="../static/puzzle_resources/red-sus/moon-or-sun.png" class="grid-part" /></div>
+
+<div class="center-align"><i>Extraction: extract all letters on the loop during the visit to all suns (circles) in the region.</i></div>
+
+<p><font color='red'><h4>Nurikabe</h4></font></p>
+<p>Rules</p>
+<p>Shade some cells such that:</p>
+<ul>
+<li>Number cells remain unshaded.</li>
+<li>A number indicates the amount of connected unshaded cells in the unshaded region the number is in.</li>
+<li>Each unshaded region contains <font color='red'><b>exactly one</b></font> number.</li>
+<li>All shaded cells are connected.</li>
+<li>There may not be a 2x2 region of shaded cells.</li>
+</ul>
+<div class="grid"><img src="../static/puzzle_resources/red-sus/nurikabe.png" class="grid-part" /></div>
+
+<div class="center-align"><i>Extraction: extract all letters on unshaded cells.</i></div>
+
+<p><font color='red'><h4>Star Battle</h4></font></p>
+<p>Rules</p>
+<p>Place some stars such that:</p>
+<ul>
+<li>Each row and column contains <font color='red'><b>exactly 2</b></font> stars.</li>
+<li>Each outlined region contains exactly 2 stars.</li>
+<li>Stars may not touch (2 stars are touching if the 2 cells containing them share at least a point).</li>
+</ul>
+<div class="grid"><img src="../static/puzzle_resources/red-sus/star-battle.png" class="grid-part" /></div>
+
+<div class="center-align"><i>Extraction: extract all letters on stars.</i></div>
+
+<p><font color='red'><h4>Sudoku</h4></font></p>
+<p>Rules</p>
+<p>Place numbers such that:</p>
+<ul>
+<li>Every row and column contains each number 1-9 <font color='red'><b>exactly once</b></font>.</li>
+<li>Every outlined 3x3 box contains each number 1-9 exactly once.</li>
+</ul>
+<div class="grid"><img src="../static/puzzle_resources/red-sus/sudoku.png" class="grid-part" /></div>
+
+<div class="center-align"><i>Extraction: extract all letters on even numbers.</i></div>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

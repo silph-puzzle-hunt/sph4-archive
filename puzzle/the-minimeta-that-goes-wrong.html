@@ -1,0 +1,193 @@
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>The Minimeta That Goes Wrong</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../index.html">
+                    Home
+                </a>
+                <a  href="../rules.html">
+                    Rules
+                </a>
+                
+                <a  href="../story.html">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles.html">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams.html">
+                    Teams
+                </a>
+                <a  href="../faq.html">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup.html">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+
+
+
+<a href="../post-hunt-solve/the-minimeta-that-goes-wrong.html" class="btn">Check your answer spoiler-free</a>
+
+
+<a href="https://silphpuzzlehunt.com/solution/the-minimeta-that-goes-wrong" class="btn">View solution</a>
+
+
+<a href="../stats/the-minimeta-that-goes-wrong.html" class="btn">Stats</a>
+
+
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    The Minimeta That Goes Wrong
+    
+    
+</h1>
+
+<main class="clipboard-container">
+    
+
+    
+    <script src="../static/puzzle_resources/the-minimeta-that-goes-wrong/func.js"></script>
+
+<style>
+    .feeders {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    table {
+        table-layout: fixed;
+        width: 100%;
+    }
+    td {
+        text-align: center;
+        border-bottom: 0px;
+        width: 25%;
+    }
+    .feeder-title {
+        cursor: pointer;
+    }
+    .blob {
+        border:1px solid;
+        border-radius:5px;
+        padding:10px 10px 10px 0px;
+        background-color: #eeeeee;
+    }
+</style>
+
+<div class="blob no-copy"><span style="float:left;"><img id='blob' src="../static/puzzle_resources/the-minimeta-that-goes-wrong/blobphoto.png" height='96' width='96'/></span><div style="margin-left: 15%";><p id='patter'>Hey, welcome to my minihunt! It's my first time assembling a hunt with all this coding and everything, so I sure hope nothing goes wrong!</p><p>It looks like you've solved <span id='count'>0</span> feeders so far. The metapuzzle unlocks at 12 solves. Click on a puzzle title to see the puzzle!</p></div></div>
+
+<div id='error-tracker'></div>
+
+<table class="feeders no-copy"><tr><td><h4><a class='feeder-title' onclick='show(1)'>Rebus</a></h4><div id="content-1"><input id="checker-1" name="checker" placeholder="Your guess"><br/><button id="validate-1" onclick='subcheck(document.getElementById("checker-1").value, 1)'><b>Check!</b></button></div><div id="sol-1"></div></td><td><h4><a class='feeder-title' onclick='show(2)'>Obligatory Codesheet Puzzle</a></h4><div id="content-2"><input id="checker-2" name="checker" placeholder="Your guess"><br/><button id="validate-2" onclick='subcheck(document.getElementById("checker-2").value, 2)'><b>Check!</b></button></div><div id="sol-2"></div></td><td><h4><a class='feeder-title' onclick='show(3)'>Capital Letters</a></h4><div id="content-3"><input id="checker-3" name="checker" placeholder="Your guess"><br/><button id="validate-3" onclick='subcheck(document.getElementById("checker-3").value, 3)'><b>Check!</b></button></div><div id="sol-3"></div></td><td><h4><a class='feeder-title' onclick='show(4)'>Word Search</a></h4><div id="content-4"><input id="checker-4" name="checker" placeholder="Your guess"><br/><button id="validate-4" onclick='subcheck(document.getElementById("checker-4").value, 4)'><b>Check!</b></button></div><div id="sol-4"></div></td></tr><tr><td><h4><a class='feeder-title' onclick='show(5)'>Original Content</a></h4><div id="content-5"><input id="checker-5" name="checker" placeholder="Your guess"><br/><button id="validate-5" onclick='subcheck(document.getElementById("checker-5").value, 5)'><b>Check!</b></button></div><div id="sol-5"></div></td><td><h4><a class='feeder-title' onclick='show(6)'>Extremely Hard Programming Puzzle</a></h4><div id="content-6"><input id="checker-6" name="checker" placeholder="Your guess"><br/><button id="validate-6" onclick='subcheck(document.getElementById("checker-6").value, 6)'><b>Check!</b></button></div><div id="sol-6"></div></td><td><h4><a class='feeder-title' onclick='show(7)'>Einstein Puzzle</a></h4><div id="content-7"><input id="checker-7" name="checker" placeholder="Your guess"><br/><button id="validate-7" onclick='subcheck(document.getElementById("checker-7").value, 7)'><b>Check!</b></button></div><div id="sol-7"></div></td><td><h4><a class='feeder-title' onclick='show(8)'>Text Adventure</a></h4><div id="content-8"><input id="checker-8" name="checker" placeholder="Your guess"><br/><button id="validate-8" onclick='subcheck(document.getElementById("checker-8").value, 8)'><b>Check!</b></button></div><div id="sol-8"></div></td></tr><tr><td><h4><a class='feeder-title' onclick='show(9)'>Error Correction</a></h4><div id="content-9"><input id="checker-9" name="checker" placeholder="Your guess"><br/><button id="validate-9" onclick='subcheck(document.getElementById("checker-9").value, 9)'><b>Check!</b></button></div><div id="sol-9"></div></td><td><h4><a class='feeder-title' onclick='show(10)'>Conundrum</a></h4><div id="content-10"><input id="checker-10" name="checker" placeholder="Your guess"><br/><button id="validate-10" onclick='subcheck(document.getElementById("checker-10").value, 10)'><b>Check!</b></button></div><div id="sol-10"></div></td><td><h4><a class='feeder-title' onclick='show(11)'>Cryptarithm</a></h4><div id="content-11"><input id="checker-11" name="checker" placeholder="Your guess"><br/><button id="validate-11" onclick='subcheck(document.getElementById("checker-11").value, 11)'><b>Check!</b></button></div><div id="sol-11"></div></td><td><h4><a class='feeder-title' onclick='show(12)'>Crossword</a></h4><div id="content-12"><input id="checker-12" name="checker" placeholder="Your guess"><br/><button id="validate-12" onclick='subcheck(document.getElementById("checker-12").value, 12)'><b>Check!</b></button></div><div id="sol-12"></div></td></tr></table>
+
+<p><hr class="no-copy"><div id='main-block-1' style='display:none;'><h1>Rebus</h1><center><p><img src="https://silphpuzzlehunt.com/static/puzzle_resources/the-minimeta-that-goes-wrong/cover_art_metroid_dread.png.png" alt='Cover art for Metroid Dread.'>
+        - <img src="https://silphpuzzlehunt.com/static/puzzle_resources/the-minimeta-that-goes-wrong/id_card_sample.png" alt='Sample of an ID card.'><span class="copy-only">'</span>+ <img src="https://silphpuzzlehunt.com/static/puzzle_resources/the-minimeta-that-goes-wrong/ap_bio_exam_front_page.png" alt='Front page of an AP Bio exam.'><span class="copy-only">'</span>+ <img src="https://silphpuzzlehunt.com/static/puzzle_resources/the-minimeta-that-goes-wrong/neapolitan_ice_cream.png" alt='A tub of Neapolitan ice cream.'>
+        - <img src="https://silphpuzzlehunt.com/static/puzzle_resources/the-minimeta-that-goes-wrong/sleep_apnea.png" alt='A diagram explaining sleep apnea.'></p></center></div><div id='main-block-2' style='display:none;'><h1>Obligatory Codesheet Puzzle</h1><p>Hey! I know like every single hunt has a puzzle where they use those codes and stuff, so I made my own one. Can you tell what code this is??? Wow, it's so puzzling!</p><p>Wait, what do you mean "international version"? There are versions of this??</p><p>-.-. . . - - .. .. / .-- . - - / ... . . - ...- . -.. / - .... . . .. . / . . - -.. / -... . .- -. / - .... . / ... . . - ..- - .. . . -. / - . . / - .... .. ... / ..... ..- ... . ... . - . / .. ... / ..... .- .. -. ... - .- -.- .. -. --. / - . .. .- -. ... .. . . .. .. ..... - .. . . -.</p></div><div id='main-block-3' style='display:none;'><h1>Capital Letters</h1><font color='red'><p>Errata #1: The puzzle extraction (where you extract a city name and have to find the country it's the capital of) was incorrect, sorry, I got the capital wrong. This has been fixed.</p><p>Errata #2: Wait, the original was correct? The puzzle has been reverted to the original version.</p><p>Errata #3: The person who sent in the correction insists their correction was correct, so Errata #1 has been re-applied.</p><p>Errata #4: Okay, and you're telling me the original was correct, too. Come on, they can't both be correct, a country can't have more than one capital.</p><p>Errata #5: Puzzle reverted to original version.</p><p>Errata #6: Okay, guys, Google is really confusing me now. How am I supposed to tell which of these three capitals is correct??</p><p>Errata #7: Puzzle deleted out of shame.</p></font></div><div id='main-block-4' style='display:none;'><h1>Word Search</h1><small><p>TO DO: make grid and put it here</p><p>TO DO: hint "first letter of found words in grid order" somehow</p><p>TO DO: is there a good way to make a grid where the words can overlap? I haven't found a good way yet</p><p>TO DO: add flavor text pun about how they had to "search" for the right "words" to write</p><p>TO DO: pat self on back for being so funny</p></small><ul><li>EDITING</li><li>ESSAY</li><li>IDIOM</li><li>IMAGINATION</li><li>LITERATURE</li><li>PAPERWORK</li><li>PROSE</li><li>REFLECTION</li><li>REVISION</li><li>TYPEWRITER</li><li>UPPERCASE</li><li>ZEN</li><li>ZEUGMA</li></ul></div><div id='main-block-5' style='display:none;'><h1>Original Content</h1><small><p>Note to self: Testsolvers couldn't figure out that each of the bigrams was the initials of one of my original characters in my fanfiction universe, but with one initial changed, and they had to extract the wrong letter from each pair.</p><p>Note to self: Get BETTER testsolvers.</p></small><ul><li>AH</li><li>EN</li><li>SA</li><li>DW</li><li>CA</li><li>LA</li><li>NM</li><li>AO</li><li>ON</li></ul></div><div id='main-block-6' style='display:none;'><h1>Extremely Hard Programming Puzzle</h1><p>We've found a mysterious piece of code! Can you figure out what it does?</p><pre>
+def f(a, b, c):
+    return a * b + c</p>
+<p>def g(a, b, c):
+    return f(a, a, a) * f(b, b, b) + f(c, c, c)</p>
+<p>def h(a, b, c):
+    return f(a, a, a) + g(b, b, b) * f(c, c, c)</p>
+<p>def ff(a):
+    return f(g(a, a, a), g(a, a, a), g(a, a, a))</p>
+<p>def gg(a):
+    return g(h(a, a, a), h(a, a, a), h(a, a, a))</p>
+<p>def hh(a):
+    return h(f(a, a, a), f(a, a, a), f(a, a, a))</p>
+<p>x = 69
+y = 420
+z = ff(gg(hh(g(f(x, x, y), g(x, y, x), h(y, x, x)))))</p>
+<p>p = ff(x) + gg(y) + hh(z)
+q = f(p, p, p)</p>
+<p>print('THE ANSWER TO THIS SUBPUZZLE IS "HACKERMAN"')
+</pre></div><div id='main-block-7' style='display:none;'><h1>Einstein Puzzle</h1><p>11 people played a round of archery. Based on the following clues, can you figure out who scored how much?</p><ul><li>Person 1 scored 13 points less than Person 2, who had the blue quiver.</li><li>Person 2 scored 5 points less than Person 3, who had the red bow.</li><li>Wait, none of us had a red bow! What?</li><li>Person 3 scored 4 points less than Person 4.</li><li>No, I remember it clearly, you and David were late and when you both showed up I remarked on the color of David's bow.</li><li>Person 4 scored 18 points more than Person 5.</li><li>Person 5 scored 13 points less than Person 6, who I swear also had a red bow?.</li><li>No, his bow was green and&mdash;oh, come on, now you've revealed our names!</li><li>Person 6 scored 17 points more than Person 7.</li><li>Person 7 scored 17 points less than Person 8.</li><li>Stop worrying so much, silly. What are they gonna do with a first name, stalk us?</li><li>Person 8 scored 13 points more than Person 9.</li><li>Don't call me silly, you arrogant nitwit!</li><li>I'll call you what I like, you petulant nerd!</li><li>Person 9 scored 11 points less than Person 10.</li><li>Oh yeah? Put 'em up! Right now! Let's go!</li><li>Person 10 scored 1 point more than Person 11.</li><li>Person 11 scored&mdash;hey! Back off! Ow!</li></ul></div><div id='main-block-8' style='display:none;'><h1>Text Adventure</h1><p>Okay, so, this was going to be a really cool text adventure, but then I realized I don't know how to code. But I had a really cool idea for one, it's like, this metacognitive and very meta kinda minimalistic piece, you're in a blank room, and like, you can only go in one direction out of the eight standard compass directions. And then the very next room is the exit, right? And it asks you what you've learnt but of course you've learnt nothing, because you've only moved once! And then I was gonna sneak in some reflective kinda thing about the human condition, and hint something like "it's about the journey, not the destination". Really hit 'em with the feels, ya know? And then the final answer to the subpuzzle is just the full name of the direction you just walked in, because that represents the journey, so it's trying to say that it's the journey that matters, not the destination. Anyway, yeah, that was the idea, too bad no one wanted to help me code my puzzle hunt for free to bring my artistic vision to life. Would've given them lots of exposure, too. Shame no one took up the offer, because this text adventure would have been groundbreaking. They'd have been talking about it for years to come. And with the person's name tied directly to it, too! (In small text beneath mine, maybe, but a credit is a credit.) Wow, your one shot at fame and you blew it. I'm such a great and generous puzzle writer for even OFFERING to let them work for me for free.</p></div><div id='main-block-9' style='display:none;'><h1>Error Correction</h1><p>Oh, shoot! I accidentally uploaded the solution to this puzzle instead of the actual puzzle. Um, um, don't look! I can fix this! Let me just cover up the solution first...</p><h1>????? ?????????? (????????)</h1><p>??? ?????? ???????? ? ?????? ?? "??? ?????" ????? ??????? ??????? ????? ???, ?? ??? ????? ?????, ??? ?????????.</p><p>??? ???????: ???? #10 ???? "<i>??? ??? ????: ??? ???????? ????????, ??? ?????? ?? ????????? ?? ? ????, ?? 6.022&times;10<span class="copy-only">^</span><sup>40</sup>?</i>". ???????, ?? ????????? ???? ????? ?? 6.022&times;10<span class="copy-only">^</span><sup>23</sup>. ?? ??? ??????? ??? ?????????? ?? ?????? (40 - 23 = 17) ??? ??????? ?? ??? ?1?26 ?? ??? ?.</p><p>????????? ???? ???? ??? ??? ??? ????? ????? ??? (????????!) ????? ?????? <b>???? ???? ??????</b>.</p></div><div id='main-block-10' style='display:none;'><h1>Conundrum</h1><ol><li>Okay! Every conundrum starts with some set of items that no normal person has easy access to in the quantity required, so that you can't actually simulate the process properly, so let's go and grab a bunch of plastic plates. I deliberately won't specify how many you need, so that you'll probably run out of them halfway through the process even if you do have a few.</li><li>So, now that you have your countably infinite collection of plastic plates in hand, it's time to begin! Lay them out in a long row, and start writing the alphabet on them, one letter per plate, left to right. Repeat for about three or four iterations of the alphabet. Or five, whatever, I'm not your boss. Wow, you really do have a lot of plastic plates. Perhaps I misjudged you.</li><li>Wait, no, let me finish! I meant this permutation of the alphabet: COMPLEXITYABDFGHJKNQRSUVWZ. Yeah, that's just the alphabet with the letters COMPLEXITY moved to the front. What are you gonna do about it, huh? Sue me? (Please don't, I spent all my money on plastic plates and can't afford legal representation.)</li><li>Okay, let's start at plate number 1. (Note: This conundrum uses negative-9-based indexing.) Pick up the plate, leaving an empty space, and move towards the right. Each time you come across a plate at a prime index, swap it with the plate you're holding. Right after making your 16th swap, put the plate you're holding into the empty space you originally created.</li><li>Hmm, there aren't enough items here. Okay, let's get some cherries out. Place one cherry on each plate, and an extra cherry on each plate which has a letter at a square position of the alphabet. (The alphabet in the new permutation I gave, I mean.) (Still negative-9-based indexing! Don't forget!!) (C-9Z16 is so convenient!!!)</li><li>Now it's time for a lesson in income inequality! Starting with the -9th plate, if a plate only has one cherry on it, move that cherry to the plate on its right. Continue until you've sent thirty plates below the poverty threshold (the poverty threshold being one cherry).</li><li>Preheat oven to 350&deg;F.</li><li>Snack time! For each plate that has three cherries on it, pick up the middle one and eat it. Spit out the pit onto the plate to the left of the plate you got the cherry on. I'm sure there's some allegorical meaning for this, but my editor is glaring at me.</li><li>Ew, there's pits on some of these plates. Oh, geez. Okay. I think admitting mistakes is a key part of growth as a person, so: this whole cherry thing was a mistake. Just get rid of all the cherries. I mean, leave the plates alone, but get rid of all the cherries. All the pits too, please. Why would you spit out pits indiscriminately like that? Nasty.</li><li>Hey, you know what would be a great idea? Getting a friend to solve this puzzle with! Grab a friend (not too violently).</li><li>Oh, geez, sorry, you should probably go turn off the oven. I was reading the wrong page for that one.</li><li>Starting at the -9th plate, play Rock, Paper, Scissors with your friend, but you have to alternate between Rock and Paper (starting with Rock), and your friend has to cycle through Scissors, Paper, Rock in that order (starting with Scissors). If someone wins a match, they have to eat one of the cherries from earlier. (Not the ones that were near the pits, though, that's just unhygienic. Ew.)</li><li>Play as many games as you had plates laid out. Ha, your plate-laying hubris has finally caught up with you! You thought you could lay out as many plates as you liked without consequence? Your fantasies can't ever be quenched, can they?! When will you learn? When will you learn??? That your actions have consequences???</li><li>Okay, count up how many cherries you ate, and call that number A. Do the same for how many cherries your friend ate, and call that number &Auml;. Call the sum of A and &Auml; Carl. Remember these numbers for the rest of your lives, and be forever haunted by the specters of your greed.</li><li>Finally, read off the answer to this subpuzzle from the leftmost ten plates.</li></ol></div><div id='main-block-11' style='display:none;'><h1>Cryptarithm</h1><p>Each digit in this puzzle represents a different letter. Wait, was it supposed to be the other way around?</p><h4>Clues</h4><ul><li></li><li></li><li></li><li>Wait, where are the clues?</li><li></li><li>Aw, shucks, I forgot to write the clues, didn't I.</li><li></li><li></li><li></li><li></li><li>Dang.</li><li></li><li></li></ul><p>Hmm, that didn't go as planned. Well, I was gonna tell you that the final answer string was <b>123 43123567489</b>, maybe that helps?</p></div><div id='main-block-12' style='display:none;'><h1>Crossword</h1><center><p><img src="../static/puzzle_resources/the-minimeta-that-goes-wrong/grid.png" width='40%'></p><p>Caesar shift the main diagonal by these amounts to get your final answer:<br/><span class="copy-only">'</span>+8, +2, +0, +13, +19, +6, +17, +8, +3.<br/>
+    This puzzle's answer has enumeration (1 3'1 4) and is the sad truth.</p></center><div style="width:60%; margin:0 auto;"><div class="six columns"><h5>Across</h5><ol><li value="1">Sound of screaming</li><li value="4">Sound of screaming</li><li value="7">Sound of screaming</li><li value="9">Sound of screaming</li><li value="10">Sound of screaming</li><li value="11">Sound of screaming</li><li value="12">Sound of screaming</li><li value="14">Sound of screaming</li><li value="15">Sound of screaming</li><li value="20">Sound of screaming</li><li value="21">Sound of screaming</li><li value="22">Sound of screaming</li><li value="23">Sound of screaming</li><li value="24">Sound of screaming</li><li value="25">Sound of screaming</li></ol></div><div class="six columns"><h5>Down</h5><ol><li value="1">Sound of screaming</li><li value="2">Sound of screaming</li><li value="3">Sound of screaming</li><li value="4">Sound of screaming</li><li value="5">Sound of screaming</li><li value="6">Sound of screaming</li><li value="8">Sound of screaming</li><li value="9">Sound of screaming</li><li value="13">Sound of screaming</li><li value="15">Sound of screaming</li><li value="16">Sound of screaming</li><li value="17">Sound of screaming</li><li value="18">Sound of screaming</li><li value="19">Sound of screaming</li><li value="20">Sound of screaming</li></ol></div></div></div><div id='meta'></div><button class="btn clipboard-button"></button></p>
+</main>
+
+<script src="../static/js/copyjack.js"></script>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+/************************************************************************************
+ * Fix this later, since only admin can see it
+ ************************************************************************************/
+@media screen {
+  .shortcuts {
+    border: 4px double #111;
+    background-color: white;
+    position: absolute;
+    padding: 1rem;
+    right: 60px;
+    min-width: auto;
+    z-index: 800;
+    display: none;
+  }
+
+  .shortcuts form {
+    margin: 0;
+  }
+
+  #shortcuts {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  [for='shortcuts'] {
+    display: inline;
+    cursor: pointer;
+  }
+
+  [for='shortcuts']:after {
+    content: '\25BC';
+  }
+
+  :checked ~ nav [for='shortcuts']:after {
+    content: '\25B2';
+  }
+
+  :checked ~ .shortcuts {
+    display: block;
+  }
+
+  .current-stat-label {
+    font-size: 24px;
+    vertical-align: middle;
+  }
+}
