@@ -1,0 +1,234 @@
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: Harmony</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../">
+                    Home
+                </a>
+                <a  href="../rules">
+                    Rules
+                </a>
+                
+                <a  href="../story">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams">
+                    Teams
+                </a>
+                <a  href="../faq">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="../puzzle/harmony" class="btn">Back to the puzzle</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    Solution: Harmony
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">SWISHED</span></div>
+    
+</h1>
+
+<main>
+    <h5>
+        Written by
+        
+moo
+
+    </h5>
+
+    
+    <p>Upon opening the puzzle, solvers are greeted with seven chess positions, with dashes along the side of each chessboard. The flavor-text (specifically "Queen" and "gambits") hints at the popular Netflix show <em>The Queen's Gambit</em>. Indeed, the star of that show is named Beth Harmon, and the puzzle title references that. </p>
+<p>The flavor-text again emphasizes that we need to find the Queen's next move. To do so, we will have to find the games from which each of the positions occurred in <em>The Queen's Gambit</em>. The best article for doing so is <a href="https://www.chess.com/article/view/queens-gambit-every-chess-position">here</a>, which should show up relatively quickly as solvers search for it.  The opponent's names fit in the blanks on the side of each position, written from top to bottom; by using the row that the next move is played on, we can extract a letter from each position, as follows (note, this table uses <a href="https://en.wikipedia.org/wiki/Algebraic_notation_(chess)">algebraic notation</a>):</p>
+<table>
+<thead>
+<tr>
+<th>Opponent's Name</th>
+<th>Next move played</th>
+<th>Extracted Letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beltik</td>
+<td>Bf5</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Diedrich</td>
+<td>Rac8</td>
+<td>H</td>
+</tr>
+<tr>
+<td>Duhamel</td>
+<td>Qd7</td>
+<td>D</td>
+</tr>
+<tr>
+<td>Laev</td>
+<td>Rxd3</td>
+<td>E</td>
+</tr>
+<tr>
+<td>Shaibel</td>
+<td>Qxf7</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Townes</td>
+<td>Nb3</td>
+<td>W</td>
+</tr>
+<tr>
+<td>Watts</td>
+<td>Nd3</td>
+<td>S</td>
+</tr>
+</tbody>
+</table>
+<p>The opponent's names are given in alphabetical order; rearranging the extracted letters by the order in which the games are played in the show gives the final answer <strong>SWISHED</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Opponent's Name</th>
+<th>Next move played</th>
+<th>Extracted Letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shaibel</td>
+<td>Qxf7</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Townes</td>
+<td>Nb3</td>
+<td>W</td>
+</tr>
+<tr>
+<td>Beltik</td>
+<td>Bf5</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Watts</td>
+<td>Nd3</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Diedrich</td>
+<td>Rac8</td>
+<td>H</td>
+</tr>
+<tr>
+<td>Laev</td>
+<td>Rxd3</td>
+<td>E</td>
+</tr>
+<tr>
+<td>Duhamel</td>
+<td>Qd7</td>
+<td>D</td>
+</tr>
+</tbody>
+</table>
+
+    
+
+    
+
+    
+
+    
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

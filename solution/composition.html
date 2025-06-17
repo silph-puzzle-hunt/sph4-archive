@@ -1,0 +1,213 @@
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: Composition</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../">
+                    Home
+                </a>
+                <a  href="../rules">
+                    Rules
+                </a>
+                
+                <a  href="../story">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams">
+                    Teams
+                </a>
+                <a  href="../faq">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="../puzzle/composition" class="btn">Back to the puzzle</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    Solution: Composition
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">DREAMINESS</span></div>
+    
+</h1>
+
+<main>
+    <h5>
+        Written by
+        
+Deusovi and Level 51
+
+    </h5>
+
+    
+    <p>The puzzle has a lot of emoji... but also a lot of weird characters with dotted lines. Looking them up, you'll find that these are <em>ideographic description characters</em>. They're used with Chinese characters, as a way of describing how certain characters are made up of others. For example, ⿰口犬 = 吠, and ⿴囗人 = 囚.</p>
+<p>You can nest these within each other, <a href="https://en.wikipedia.org/wiki/Polish_notation">using prefix notation</a>: ⿱⿰⼒⼝馬 represents the character 駕.</p>
+<p>So, this puzzle asks you to do the same thing, but with emoji instead! If you go through the laborious process of constructing the very large square image (or more likely, gradually remove bits without assembling the full thing), you'll notice the overall structure: it consists of 11 nested images.</p>
+<p>The outer 10 images all represent paintings:</p>
+<table>
+<thead>
+<tr>
+<th>Characters</th>
+<th>Painting Title</th>
+<th>Artist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⿻🏠⿰🧍‍♀️⿱[...]⿰🔱🧍‍♂️</td>
+<td>American Gothic</td>
+<td>WOOD</td>
+</tr>
+<tr>
+<td>⿱⿱⿰⿰⿰🥫🥫⿰🥫🥫⿰⿰🥫🥫⿰🥫[...]⿰⿰⿰🥫🥫⿰🥫🥫⿰⿰🥫🥫⿰🥫🥫⿱⿰⿰⿰🥫🥫⿰🥫🥫⿰⿰🥫🥫⿰🥫🥫⿰⿰⿰🥫🥫⿰🥫🥫⿰⿰🥫🥫⿰🥫🥫</td>
+<td>Campbell's Soup Cans</td>
+<td>WARHOL</td>
+</tr>
+<tr>
+<td>⿻⿰☁️[...]⿻🤵🍏</td>
+<td>The Son of Man</td>
+<td>MAGRITTE</td>
+</tr>
+<tr>
+<td>⿻⿱⿰🌕[...]⛰️⿱🦁⿰⿱😴🪕🏺</td>
+<td>The Sleeping Gypsy</td>
+<td>ROUSSEAU</td>
+</tr>
+<tr>
+<td>⿰⿻⿰🧍🧍😱[...]</td>
+<td>The Scream</td>
+<td>MUNCH</td>
+</tr>
+<tr>
+<td>⿻⿰⛰️[...]⿱⿱⿱👨‍🦯⛰️🌫️⛰️</td>
+<td>Wanderer Above the Sea of Fog</td>
+<td>FRIEDRICH</td>
+</tr>
+<tr>
+<td>⿺⿳⬜⬜⿲🟦⬜⿱⬜🟨⿱[...]🟥</td>
+<td>Composition with Red, Blue, and Yellow</td>
+<td>MONDRIAN</td>
+</tr>
+<tr>
+<td>⿲⿻🌬️🌬️⿱🧍‍♀️🦪⿱[...]⿻🧍‍♀️👗</td>
+<td>The Birth of Venus</td>
+<td>BOTTICELLI</td>
+</tr>
+<tr>
+<td>⿻⿰⛰️[...]⿻⛵⿰⿷🌊⛵⛵</td>
+<td>The Great Wave off Kanagawa</td>
+<td>HOKUSAI</td>
+</tr>
+<tr>
+<td>⿱⿰🖼️[...]⿱👵🪑</td>
+<td>Arrangement in Grey and Black No. 1</td>
+<td>WHISTLER</td>
+</tr>
+</tbody>
+</table>
+<p>The innermost part is a criss-cross grid, made up of black, yellow, and white squares. It can be filled with the names of the artists:</p>
+<p><center><img src=../static/puzzle_resources/solutions/composition/grid_s.png width=50%></center></p>
+<p>The highlighted letters, in order of the paintings, spell <strong>DREAMINESS</strong>.</p>
+
+    
+
+    
+    <hr>
+    <h5>Author&rsquo;s Notes</h5>
+    <p><strong>Deusovi</strong>: Thanks to Level 51 for doing all the actual assembly on this puzzle while I agonized over how to make it perfect.</p>
+<p>Also, it's weird that this is the second hunt in a row I've written a puzzle relating to Chinese characters, despite the fact that I don't speak a word of the language, isn't it?</p>
+<p><strong>Level 51</strong>: haha oyster shell woman go brrrr</p>
+    
+
+    
+
+    
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

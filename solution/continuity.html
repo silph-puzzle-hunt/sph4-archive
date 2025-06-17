@@ -1,0 +1,190 @@
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: Continuity</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../">
+                    Home
+                </a>
+                <a  href="../rules">
+                    Rules
+                </a>
+                
+                <a  href="../story">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams">
+                    Teams
+                </a>
+                <a  href="../faq">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="../puzzle/continuity" class="btn">Back to the puzzle</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    Solution: Continuity
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">SLIDESHOW</span></div>
+    
+</h1>
+
+<main>
+    <h5>
+        Written by
+        
+betaveros
+
+    </h5>
+
+    
+    <p>Solve the <a href="https://en.wikipedia.org/wiki/Hidato">Hidatos</a>. Also reorder the grids so that, for each of the three shapes, its position is adjacent between each grid and the next. The shapes then trace out 1, 2, and 3.</p>
+<style>
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .grid th:first-child,
+    .grid td:first-child {
+        padding-left: 12px; }
+    .grid th:last-child,
+    .grid td:last-child {
+        padding-right: 12px; }
+
+    .grid td {
+        border: 1px solid #000000;
+        text-align: center;
+        vertical-align: center;
+        height: 36px;
+        min-width: 36px;
+    }
+</style>
+
+<table class="grid"><tr><td>H</td><td>★I</td><td>■X</td><td>Y</td><td>V</td></tr><tr><td>⬤A</td><td>G</td><td>J</td><td>W</td><td>U</td></tr><tr><td>B</td><td>F</td><td>R</td><td>K</td><td>T</td></tr><tr><td>C</td><td>E</td><td>Q</td><td>S</td><td>L</td></tr><tr><td>D</td><td>P</td><td>O</td><td>N</td><td>M</td></tr></table>
+
+<table class="grid"><tr><td>C</td><td>⬤D</td><td>★A</td><td>■I</td><td>J</td></tr><tr><td>E</td><td>B</td><td>H</td><td>K</td><td>S</td></tr><tr><td>F</td><td>G</td><td>L</td><td>R</td><td>T</td></tr><tr><td>O</td><td>M</td><td>Q</td><td>U</td><td>X</td></tr><tr><td>N</td><td>P</td><td>V</td><td>W</td><td>Y</td></tr></table>
+
+<table class="grid"><tr><td>Y</td><td>E</td><td>D</td><td>N</td><td>■O</td></tr><tr><td>X</td><td>⬤F</td><td>M</td><td>★C</td><td>P</td></tr><tr><td>W</td><td>L</td><td>G</td><td>Q</td><td>B</td></tr><tr><td>K</td><td>V</td><td>H</td><td>R</td><td>A</td></tr><tr><td>J</td><td>I</td><td>U</td><td>T</td><td>S</td></tr></table>
+
+<table class="grid"><tr><td>Y</td><td>K</td><td>M</td><td>N</td><td>P</td></tr><tr><td>X</td><td>L</td><td>J</td><td>Q</td><td>■O</td></tr><tr><td>W</td><td>⬤V</td><td>R</td><td>★I</td><td>A</td></tr><tr><td>U</td><td>S</td><td>E</td><td>B</td><td>H</td></tr><tr><td>T</td><td>D</td><td>C</td><td>F</td><td>G</td></tr></table>
+
+<table class="grid"><tr><td>L</td><td>K</td><td>J</td><td>G</td><td>H</td></tr><tr><td>W</td><td>M</td><td>Y</td><td>I</td><td>F</td></tr><tr><td>V</td><td>X</td><td>★N</td><td>■C</td><td>E</td></tr><tr><td>U</td><td>⬤A</td><td>B</td><td>O</td><td>D</td></tr><tr><td>T</td><td>S</td><td>R</td><td>Q</td><td>P</td></tr></table>
+
+<table class="grid"><tr><td>I</td><td>J</td><td>K</td><td>W</td><td>A</td></tr><tr><td>H</td><td>L</td><td>V</td><td>B</td><td>X</td></tr><tr><td>G</td><td>M</td><td>C</td><td>★U</td><td>Y</td></tr><tr><td>F</td><td>D</td><td>■N</td><td>T</td><td>R</td></tr><tr><td>E</td><td>⬤O</td><td>Q</td><td>Q</td><td>S</td></tr></table>
+
+<table class="grid"><tr><td>H</td><td>G</td><td>U</td><td>T</td><td>S</td></tr><tr><td>F</td><td>I</td><td>V</td><td>W</td><td>R</td></tr><tr><td>C</td><td>E</td><td>J</td><td>Q</td><td>X</td></tr><tr><td>D</td><td>B</td><td>P</td><td>★K</td><td>Y</td></tr><tr><td>⬤A</td><td>O</td><td>■N</td><td>M</td><td>L</td></tr></table>
+
+<table class="grid"><tr><td>U</td><td>S</td><td>A</td><td>B</td><td>Y</td></tr><tr><td>T</td><td>V</td><td>R</td><td>X</td><td>C</td></tr><tr><td>K</td><td>L</td><td>W</td><td>Q</td><td>D</td></tr><tr><td>J</td><td>G</td><td>M</td><td>E</td><td>P</td></tr><tr><td>H</td><td>⬤I</td><td>★F</td><td>■N</td><td>O</td></tr></table>
+
+<table class="grid"><tr><td>A</td><td>V</td><td>W</td><td>X</td><td>Y</td></tr><tr><td>S</td><td>B</td><td>U</td><td>H</td><td>I</td></tr><tr><td>R</td><td>T</td><td>C</td><td>J</td><td>G</td></tr><tr><td>Q</td><td>N</td><td>K</td><td>D</td><td>F</td></tr><tr><td>P</td><td>★O</td><td>⬤M</td><td>L</td><td>■E</td></tr></table>
+
+<table><tr><td>⬤</td><td>■</td><td>★</td></tr><tr><td><svg height="200" width="200" viewBox="-0.2 -0.2 5.4 5.4"><rect x="0" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="0" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="0" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="0" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="0" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><path d="M0.5 1.5L1.5 0.5L1.5 4.5L0.5 4.5L2.5 4.5" fill="none" stroke="#c00" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td><svg height="200" width="200" viewBox="-0.2 -0.2 5.4 5.4"><rect x="0" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="0" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="0" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="0" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="0" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><path d="M2.5 0.5L4.5 0.5L4.5 1.5L2.5 3.5L2.5 4.5L4.5 4.5" fill="none" stroke="#c00" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round"/></svg></td><td><svg height="200" width="200" viewBox="-0.2 -0.2 5.4 5.4"><rect x="0" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="0" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="0" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="1" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="0" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="2" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="0" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="3" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="0" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="1" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="2" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="3" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><rect x="4" y="4" width="1" height="1" fill="none" stroke="#000" stroke-width="0.05"/><path d="M1.5 0.5L2.5 0.5L3.5 1.5L3.5 2.5L2.5 2.5L3.5 2.5L3.5 3.5L2.5 4.5L1.5 4.5" fill="none" stroke="#c00" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round"/></svg></td></tr></table>
+
+<p>In this way, solvers can obtain three ordered letters from each grid. Each sequence can be "continued" with a unique fourth letter to obtain a common English word.</p>
+<table><tr><td>⬤ = 1</td><td>■ = 2</td><td>★ = 3</td><td>Continuation</td></tr><tr><td>A</td><td>X</td><td>I</td><td><strong>S</strong></td></tr><tr><td>D</td><td>I</td><td>A</td><td><strong>L</strong></td></tr><tr><td>F</td><td>O</td><td>C</td><td><strong>I</strong></td></tr><tr><td>V</td><td>O</td><td>I</td><td><strong>D</strong></td></tr><tr><td>A</td><td>C</td><td>N</td><td><strong>E</strong></td></tr><tr><td>O</td><td>N</td><td>U</td><td><strong>S</strong></td></tr><tr><td>A</td><td>N</td><td>K</td><td><strong>H</strong></td></tr><tr><td>I</td><td>N</td><td>F</td><td><strong>O</strong></td></tr><tr><td>M</td><td>E</td><td>O</td><td><strong>W</strong></td></tr></table>
+
+<p>Those letters spell <strong>SLIDESHOW</strong>, the answer.</p>
+
+    
+
+    
+    <hr>
+    <h5>Author&rsquo;s Notes</h5>
+    <p>I wrote this puzzle about a week before hunt, thinking of how a shape might appear to move in a continuous path if it were depicted in positions in sequential "slides" by brainstorming off the answer, and then adding vaguely thematic mechanics until it seemed reasonable. In hindsight, the first Hidato step is probably underclued for an intro round puzzle and I might have considered adding an example or other clue to how it worked. The puzzle is fairly cheeseable after the Hidatos — my first testsolver skipped both ordering steps and just solved the puzzle by moving columns around until he noticed something and then anagramming the continuation letters; but I figured it was good enough for an intro round puzzle.</p>
+    
+
+    
+
+    
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

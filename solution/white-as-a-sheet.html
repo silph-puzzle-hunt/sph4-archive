@@ -1,0 +1,330 @@
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: White as a Sheet</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../">
+                    Home
+                </a>
+                <a  href="../rules">
+                    Rules
+                </a>
+                
+                <a  href="../story">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams">
+                    Teams
+                </a>
+                <a  href="../faq">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="../puzzle/white-as-a-sheet" class="btn">Back to the puzzle</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    Solution: White as a Sheet
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">WASTING</span></div>
+    
+</h1>
+
+<main>
+    <h5>
+        Written by
+        
+Level 51
+
+    </h5>
+
+    
+    <style>     
+.crossword {
+    margin: 0 auto;
+}
+.crossword td, .crossword tr:last-child td {
+    padding: 0.25em 0.5em;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+
+.block {
+    background-color: #000000;
+}
+
+.cell {
+    border: 1px solid black;
+}
+
+.coordinate {
+    border: none;
+    font-weight: bold;
+}
+
+.notes {
+    font-color: white;
+}
+</style>
+
+<p>The puzzle page is completely blank, except for a link that sends solvers to a... also completely blank Google Sheets spreadsheet, or so it seems. This is a minimeta-style puzzle comprising seven minipuzzles; each is a separate tab in the linked spreadsheet.</p>
+<h4>Tab 1: Keyboards</h4>
+<p>Each of the slightly offset square patterns on the left represents a different keyboard layout, and we can observe that columns X, Y, and Z each contain four references to the layouts on the left, one per layout per column. Overlaying a typical QWERTY keyboard layout onto the topmost pattern indeed produces the letters X, Y, and Z in the respective columns, suggesting that those references always refer to X, Y, and Z in the corresponding layouts. The next three layouts similarly correspond to Dvorak, Workman, and Colemak respectively; overlaying all four layouts correctly produces the answer <strong>BECHAMEL</strong> from the references in column AA.</p>
+<h4>Tab 2: Pascal</h4>
+<p>This sheet simulates Pascal's triangle; each cell is the concatenation of the cell to its left and above it, and thus represents some number of copies of cell A1. Six cells have different formulas, instead giving a series of question marks with two in brackets, representing directly making some number of copies of A1. Finding this number for each of the six cells, we notice that it has the same number of digits as there are question marks in the formula. Extracting the two digits that correspond to the question marks in brackets, and converting via A1Z26, gives the subpuzzle answer <strong>RAPIDS</strong>.</p>
+<h4>Tab 3: Star Battle</h4>
+<p>This sheet comprises an upper and lower half; some examination of the formulas in the lower half indicate that they will produce a letter when something is filled into the corresponding square in the upper half, so we can consider it extraction and leave it alone. We might attempt filling things into the upper half; we notice that cells turn green when they're filled with exactly one character (besides the hyphen "-"). Some further experimentation reveals that some cells sometimes turn red. It turns out there are a few conditions for this:</p>
+<ul>
+<li>There are more than two cells filled in a row or a column.</li>
+<li>Two filled cells are adjacent (including diagonal adjacency).</li>
+<li>Sometimes, three cells might turn red at the same time even though they're not in the same row or column.</li>
+</ul>
+<p>Some thought about logic puzzles, or perhaps viewing the conditional formatting programmed into this sheet, reveals that the upper half of the sheet is simulating a Star Battle logic puzzle, where regional restrictions cause the strange behavior of three cells sometimes turning red. We can either derive the regions from viewing the conditional formatting or from experimenting with the board to find out when cells turn red. Either way, solving the logic puzzle and extracting the corresponding letters from the lower half of the sheet spells out SUBANSWER'S OVAL OFFICE, so the answer to this subpuzzle is <strong>OVAL OFFICE</strong>.</p>
+<h4>Tab 4: Pokemon</h4>
+<p>There are 151 rows in this tab, and the cells in column A are by and large grouped into groups of 1, 2 or 3 via border coloring. However, there's a noticeable instance where cell A133 looks "paired" with cell A134, A135, and A136. Some thought about what 151 could imply indicates that this represents the evolutionary lines of the first generation of Pok&eacute;mon, where Pok&eacute;mon 133, Eevee, evolves into Vaporeon, Jolteon, or Flareon. Cell D1 highlights eight cells from column A; looking up the respective Pok&eacute;mon reveals that they are, in order, Flareon, Arbok, Scyther, Tentacool, Farfetch'd, Omastar, Onix, and Dewgong. Their initials spell out this subpuzzle's answer, <strong>FAST FOOD</strong>.</p>
+<h4>Tab 5: Crossword</h4>
+<p>The most suspicious thing about this tab is the strange column widths from column L onwards. Each of them seems to be a multiple of 10; dividing by 10 gets us numbers from 1 to 19, which we can convert via A1Z26 to read as NAMED RANGES. There are fourteen named ranges in this spreadsheet, and all of them appear on the left-hand side of this tab.</p>
+<p>There are two different types of named ranges here: one type covers seven cells and appears either vertically or horizontally. There are eight of these, which form a crossword grid in the region from C2 to I8. The other type covers two cells and appear only horizontally, in one column; there are six of these from A1:B1 to A6:B6.</p>
+<p>First, we can treat the titles of the named ranges as crossword clues, and fill out the grid accordingly.</p>
+<table class="crossword"><tr><td class="coordinate"></td><td class="coordinate">C</td><td class="coordinate">D</td><td class="coordinate">E</td><td class="coordinate">F</td><td class="coordinate">G</td><td class="coordinate">H</td><td class="coordinate">I</td></tr><tr><td class="coordinate">2</td><td class="cell">L</td><td class="cell">I</td><td class="cell">M</td><td class="cell">I</td><td class="cell">T</td><td class="cell">E</td><td class="cell">D</td></tr><tr><td class="coordinate">3</td><td class="cell">O</td><td class="block"></td><td class="cell">I</td><td class="block"></td><td class="cell">Y</td><td class="block"></td><td class="cell">E</td></tr><tr><td class="coordinate">4</td><td class="cell">C</td><td class="cell">A</td><td class="cell">N</td><td class="cell">A</td><td class="cell">P</td><td class="cell">E</td><td class="cell">S</td></tr><tr><td class="coordinate">5</td><td class="cell">A</td><td class="block"></td><td class="cell">I</td><td class="block"></td><td class="cell">E</td><td class="block"></td><td class="cell">P</td></tr><tr><td class="coordinate">6</td><td class="cell">T</td><td class="cell">A</td><td class="cell">B</td><td class="cell">A</td><td class="cell">S</td><td class="cell">C</td><td class="cell">O</td></tr><tr><td class="coordinate">7</td><td class="cell">E</td><td class="block"></td><td class="cell">A</td><td class="block"></td><td class="cell">E</td><td class="block"></td><td class="cell">T</td></tr><tr><td class="coordinate">8</td><td class="cell">S</td><td class="cell">T</td><td class="cell">R</td><td class="cell">A</td><td class="cell">T</td><td class="cell">U</td><td class="cell">S</td></tr></table>
+
+<p><br /></p>
+<p>Each of the other six named range titles clue a letter-number pair. These are each spreadsheet coordinates that are cells in the crossword, allowing us to extract one letter from the crossword per clue. This gives the subpuzzle answer <strong>STATIC</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Named range clue</th>
+<th>Answer</th>
+<th>Extraction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WhatFarEastMovementFeelsLike</td>
+<td>G6</td>
+<td>S</td>
+</tr>
+<tr>
+<td>HighEndIntelProcessorIntroducedIn2008</td>
+<td>I7</td>
+<td>T</td>
+</tr>
+<tr>
+<td>DAndDPlayersCube</td>
+<td>D6</td>
+<td>A</td>
+</tr>
+<tr>
+<td>EsportsGroupFoundedByCarlosRodriguez</td>
+<td>G2</td>
+<td>T</td>
+</tr>
+<tr>
+<td>AnnualVideoGameTradeEvent</td>
+<td>E3</td>
+<td>I</td>
+</tr>
+<tr>
+<td>PlasticExplosiveFavoredByTheMythbusters</td>
+<td>C4</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<h4>Tab 6: Formula</h4>
+<p>This is a very small sheet, with a blank cell A1 and a very long formula in cell B1. Solvers must deconstruct the formula in cell B1 to figure out exactly what it does. Here's a breakdown of what it does.</p>
+<p><code>IFERROR</code><br />
+This is wrapped around the whole formula to suppress any errors from being shown.</p>
+<p><code>IF</code><br />
+This starts a conditional statement, containing three parameters: a predicate, a value to output if the predicate is true, and a value to output if the predicate is false. Skipping to the end, we can see that both values are empty strings, but we could modify them to output various things for checking purposes later.</p>
+<p><code>AND</code><br />
+The predicate begins with an AND statement, implying that it's only true if all conditional statements inside the AND are true. There are exactly three of them, separated by commas. Let's look at each one:</p>
+<h5>Condition 1: <code>COLUMN(INDIRECT(LEFT(A1,3)&amp;1))&gt;12870</code></h5>
+<p><code>COLUMN</code> returns the column number of a cell. For example, <code>COLUMN(F1)</code> returns 6, since column F is the sixth column. <code>INDIRECT</code> creates a reference to a cell from a string; this string is <code>LEFT(A1, 3)</code>, which is the first three letters of the input word, plus "1". Therefore, the column represented by the first three letters of the input word must be later than the 12870th column. Some calculation shows that the 12870th column is RZZ, which implies that the first letter of the input word must be S or later.</p>
+<h5>Condition 2: <code>CONCATENATE(ARRAYFORMULA(COUNTIF(MID(A1,SEQUENCE(LEN(A1)),1),MID(A1,SEQUENCE(LEN(A1)),1))))="113321123"</code></h5>
+<p>This is the hardest part of this subpuzzle, but it also gives essential information for solving it. Some ways to approach this are to extract this portion of the formula, applying it to various words of our choice, and seeing what it outputs. Here, we'll break down the formula into individual portions. This time, it mostly makes more sense to go from the inside out, so let's start there. One thing to note is the <code>ARRAYFORMULA</code>, which allows functions to act on arrays of cells instead of single cells.</p>
+<p><code>SEQUENCE(LEN(A1))</code><br />
+<code>SEQUENCE</code> generates an array from 1 to its parameter P; here, P is <code>LEN(A1)</code>, or the length of string A1. For example, if A1 is the word "TEST", this is just the sequence [1, 2, 3, 4], represented as an array.</p>
+<p><code>MID(A1,SEQUENCE(LEN(A1)),1)</code><br />
+<code>MID</code> has a string parameter and two numerical parameters N and M; it returns the M characters starting at position N in the string. Since <code>MID</code> is inside an <code>ARRAYFORMULA</code>, it can accept a range of values of N. Here, A1 is the input string, and M is simply 1, but N is the sequence derived in the previous step. This therefore returns an array comprising each of the letters in A1, but as an array of characters instead of a single string.</p>
+<p><code>COUNTIF</code><br />
+<code>COUNTIF</code> usually takes an array to query and a single query, and returns the number of items in the array that satisfy the query. However, since it's inside an <code>ARRAYFORMULA</code>, it can instead accept an array of queries. For each query, we're checking how many items in the array version of our input string match each of its letters. Consider the example array [T, E, S, T]; the first query, T, would return 2 since there are two Ts in this array, the second and third queries, E and S, would return 1 each, and the last query, T again, would also return 2.</p>
+<p><code>ARRAYFORMULA</code><br />
+This is merely the modifier that has allowed our previous couple of functions to act on arrays rather than single parameters.</p>
+<p><code>CONCATENATE</code><br />
+This implies we're receiving an array of data. The function simply concatenates all the data it receives into one long string.</p>
+<p>With all this in mind, we can determine that we're looking for a string which outputs 113321123 from this formula. That means it's a nine letter word, its first, second, sixth, and seventh letters must be unique in the word, its fifth and eighth letters must match, and its third, fourth, and ninth letters must also match.</p>
+<h5>Condition 3: <code>CODE(LEFT(A1))=CODE(RIGHT(A1))+1</code></h5>
+<p><code>CODE</code> returns the ASCII codepoint represented by a character. This condition is equivalent to checking that <code>LEFT(A1)</code>, which is A1's first letter, is exactly one ahead of <code>RIGHT(A1)</code>, which is A1's last letter, in the alphabet, without wrapping. For example, FREE and TENS satisfy this, but SENT and ABUZZ do not.</p>
+<h5>All conditions</h5>
+<p>In combination, these conditions require the word to have a first letter S or later, a letter pattern of ABCCDEFDC, and a last letter which is one behind its first letter in the alphabet. Using a cryptogram solver like <a href="https://quipqiup.com/">quipqiup</a> with a query like <code>ABCCDEFDC</code> shows that the only common English word that satisfies these conditions is <strong>SURRENDER</strong>.</p>
+<h4>Tab 7: Columns</h4>
+<p>This sheet features columns in three different widths, encoding Morse code with the narrowest columns representing dots, the medium-width columns representing dashes, and the widest columns representing pauses between letters. We can decipher this to COLFOURTWONINETWO; column 4292 in a Google Sheets spreadsheet is <strong>FIB</strong>, which is this subpuzzle's answer.</p>
+<h4>Putting it all together</h4>
+<p>We have seven subpuzzle answers. Each of them relates to a phrase of the form "white (something)", as shown in the table below. Additionally, we haven't used the tab names yet, which each are a certain number of a different whitespace character. Indexing into the various white things by the number of characters in the respective title, and sorting by decreasing length of whitespace character, we extract the final answer to this puzzle, <strong>WASTING</strong>. (Note that the link on the puzzle page comprises precisely these seven whitespace characters, arranged in decreasing length, as a further hint towards the ordering.)</p>
+<table>
+<thead>
+<tr>
+<th>Answer</th>
+<th>"White" association</th>
+<th>Character</th>
+<th>Number of characters</th>
+<th>Extracted letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RAPIDS</td>
+<td>WATER</td>
+<td>em space</td>
+<td>1</td>
+<td>W</td>
+</tr>
+<tr>
+<td>BECHAMEL</td>
+<td>SAUCE</td>
+<td>en space</td>
+<td>2</td>
+<td>A</td>
+</tr>
+<tr>
+<td>OVAL OFFICE</td>
+<td>HOUSE</td>
+<td>three-per-em space</td>
+<td>4</td>
+<td>S</td>
+</tr>
+<tr>
+<td>FAST FOOD</td>
+<td>CASTLE</td>
+<td>four-per-em space</td>
+<td>4</td>
+<td>T</td>
+</tr>
+<tr>
+<td>FIB</td>
+<td>LIE</td>
+<td>medium mathematical space</td>
+<td>2</td>
+<td>I</td>
+</tr>
+<tr>
+<td>STATIC</td>
+<td>NOISE</td>
+<td>six-per-em space</td>
+<td>1</td>
+<td>N</td>
+</tr>
+<tr>
+<td>SURRENDER</td>
+<td>FLAG</td>
+<td>hair space</td>
+<td>4</td>
+<td>G</td>
+</tr>
+</tbody>
+</table>
+
+    
+
+    
+    <hr>
+    <h5>Author&rsquo;s Notes</h5>
+    <p>I've enjoyed the aesthetic of puzzles that give solvers very little visible information, like Galactic Puzzle Hunt's <a href="https://2020.galacticpuzzlehunt.com/puzzle/this-puzzle-intentionally-left-blank#left">This Puzzle Intentionally Left Blank</a>, but I found that they're often very technical to solve, and don't parallelize well across multiple solvers. This puzzle is the result of wanting to create a more accessible version of a "blank" puzzle that we could put earlier on in our hunt and hopefully have more teams work on and solve.</p>
+<p>The Star Battle was the first subpuzzle to be written, and was inspired by a friend's demonstration that it was possible to code an Akari interface purely in Google Sheets formulas. I decided to adapt the idea to a puzzle type without any givens in cells, and so created this Star Battle. The original intention was to break up the conditional formatting formulas so the only way to determine regions was via experimentation, but I didn't want that one subpuzzle to be much more difficult than the other subpuzzles. (Also, it looked like a lot of work.)</p>
+    
+
+    
+
+    
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

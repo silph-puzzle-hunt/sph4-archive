@@ -1,0 +1,297 @@
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: Indirect Anagrams</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../">
+                    Home
+                </a>
+                <a  href="../rules">
+                    Rules
+                </a>
+                
+                <a  href="../story">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams">
+                    Teams
+                </a>
+                <a  href="../faq">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="../puzzle/indirect-anagrams" class="btn">Back to the puzzle</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    Solution: Indirect Anagrams
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">FASTEN</span></div>
+    
+</h1>
+
+<main>
+    <h5>
+        Written by
+        
+kt3 and Level 51
+
+    </h5>
+
+    
+    <p>We are presented with a set of cryptic clues (seemingly).</p>
+<p>These clues look cursed and unsolvable until we notice the initialism of the clues, which spells TOM SEVEN ANAGRAPHS and points us to <a href="https://www.youtube.com/watch?v=qTBAW-Eh0tM">this video</a>. The video introduces the concept of anagraphs and more importantly provides a canonical breakdown of each letter at around 10:44. Now these clues look cursed and solvable.</p>
+<p>One good observation is that each clue follows a certain format: definition, anagrind, fodder clue (in this order strictly). The key observation for extraction is that each anagrind (which is a degree of freedom in constructing each clue) has the same length as the answers. Taking the letter shared in common between each anagrind and answer spells out JOIN RICKROLLER SIX, as detailed in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>Definition</th>
+<th>Anagrind</th>
+<th>Fodder clue</th>
+<th>Fodder</th>
+<th>Answer</th>
+<th>Extract</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Traitor</td>
+<td>jazzy</td>
+<td>wildlife observation expedition</td>
+<td>safari</td>
+<td>judas</td>
+<td>J</td>
+</tr>
+<tr>
+<td>Outrageously crazy</td>
+<td>sort</td>
+<td>show of disapproval</td>
+<td>boo</td>
+<td>loco</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Muddy animal</td>
+<td>mix</td>
+<td>quick punch</td>
+<td>jab</td>
+<td>pig</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Salmon</td>
+<td>bent</td>
+<td>feather pen</td>
+<td>quill</td>
+<td>pink</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Eighty-one or zero, perhaps</td>
+<td>absurd</td>
+<td>animals with humps</td>
+<td>camels</td>
+<td>square</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Venomous creatures</td>
+<td>twisted</td>
+<td>the most frightening</td>
+<td>scariest</td>
+<td>spiders</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Empty out</td>
+<td>crazy</td>
+<td>platonic solid</td>
+<td>cube</td>
+<td>clear</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Nightclub offering</td>
+<td>wacky</td>
+<td>Bohemian dance</td>
+<td>polka</td>
+<td>vodka</td>
+<td>K</td>
+</tr>
+<tr>
+<td>Apple, for example</td>
+<td>broke</td>
+<td>old record</td>
+<td>vinyl</td>
+<td>fruit</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Not able to be reduced</td>
+<td>cooked</td>
+<td>beehive, for example</td>
+<td>hairdo</td>
+<td>atomic</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Appraise</td>
+<td>silly</td>
+<td>belly button</td>
+<td>navel</td>
+<td>value</td>
+<td>L</td>
+</tr>
+<tr>
+<td>Guy, perhaps</td>
+<td>oddly</td>
+<td>not alive</td>
+<td>dead</td>
+<td>cable</td>
+<td>L</td>
+</tr>
+<tr>
+<td>Region</td>
+<td>crude</td>
+<td>design on a car, perhaps</td>
+<td>decal</td>
+<td>place</td>
+<td>E</td>
+</tr>
+<tr>
+<td>Assassin</td>
+<td>Doctor</td>
+<td>Pulse</td>
+<td>lentil</td>
+<td>killer</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Pest</td>
+<td>busted</td>
+<td>shaping tool</td>
+<td>chisel</td>
+<td>insect</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Half-wits</td>
+<td>insane</td>
+<td>request</td>
+<td>solicit</td>
+<td>idiots</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Simpson's or St. Petersburg's</td>
+<td>complex</td>
+<td>green light</td>
+<td>approval</td>
+<td>paradox</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<p>The extracted cluephrase is another clue (minus the indicator to leave out extraneous info) that asks us to anagraph "astley". The solution to this anagraph is "fasten", so the puzzle answer is <strong>FASTEN</strong>.</p>
+
+    
+
+    
+    <hr>
+    <h5>Author&rsquo;s Notes</h5>
+    <p><strong>kt3</strong>: We saw quite a lot of teams get stuck at the final cluephrase because the format break tripped them up. In hindsight, it might have been apt to add an indicator like "feeble" that shares only one letter with the final answer. Still, I am happy with the positive feedback we received despite it, especially one particular story a team shared with us related to the video creator.</p>
+    
+
+    
+
+    
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

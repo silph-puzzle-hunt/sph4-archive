@@ -1,0 +1,280 @@
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: Six Feet Under</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../">
+                    Home
+                </a>
+                <a  href="../rules">
+                    Rules
+                </a>
+                
+                <a  href="../story">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams">
+                    Teams
+                </a>
+                <a  href="../faq">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="../puzzle/six-feet-under" class="btn">Back to the puzzle</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    Solution: Six Feet Under
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">OPENING CEREMONY</span></div>
+    
+</h1>
+
+<main>
+    <h5>
+        Written by
+        
+Level 51
+
+    </h5>
+
+    
+    <p>Solvers are presented with a sentence and a long chain of footnotes, which starts off normally but gradually becomes a little deranged. But a little derangement is pretty normal in puzzle hunts, so we should look elsewhere for the break-in. (Also, the very last footnote mentions says, "Wow, I really have to be careful about what puzzle-like stuff I say in these footnotes! Otherwise you might read some meaning where there isn't any.", strongly implying that the content of the footnotes themselves isn't too important.)</p>
+<p>One natural thing to do might be to follow a few footnote chains down to the end. Doing so allows us to observe three features of this mess of footnotes:</p>
+<ul>
+<li>Footnotes do not form loops, and each footnote is pointed to by exactly one other footnote. In graph theory terms, the footnotes form a <a href="https://en.wikipedia.org/wiki/Tree_(data_structure)">tree</a>.</li>
+<li>Every chain of footnotes always ends in a footnote attached to the word "end".</li>
+<li>Many of the words with footnotes attached to them are repeated. For example, "first" has a footnote on it 14 times.</li>
+</ul>
+<p>We now turn our attention to the words with footnotes attached to them, since there seems to be a discernible pattern among them that we can attempt to pin down. Noting that many words are repeated, solvers may list out all words with footnotes attached to them. Doing so reveals that there are exactly 28 such words in this puzzle; this includes the "READY" from the placeholder text at the start, which notably doesn't appear again, the "end" that ends every footnote, and 26 other words. If we treat "READY" as a start character and "end" as an end character, we might deduce that, via the other 26 word, each footnote chain encodes a word, with each footnoted word corresponding to one character. In fact, this structure represents a <a href="https://en.wikipedia.org/wiki/Trie">trie</a> (though this specific realization is not required to solve this puzzle).</p>
+<p>But what words do these footnotes encode? We could notate all the possible chains and run it through a cryptogram solver such as <a href="https://quipqiup.com/">quipqiup</a> in order to find the correct mapping. Alternatively, if solving manually, long footnote chains are good for breaking in to the mapping. For example, the chain ending in footnote 155 has the letter pattern ABCBCDBA, which basically matches only REMEMBER. This lets us incrementally discover the mapping by solving words one at a time.</p>
+<p>Once we have the mapping, we can figure out what words are encoded by these footnotes. As it turns out, the words are exactly the set of words in the placeholder text, plus four additional words: FOOTNOTES, LAST, TERMINAL, and WORDS. Noting that T, F, L, and W are represented by "first", "second", "third", and "last" in this puzzle, we can order this message as TERMINAL FOOTNOTES LAST WORDS.</p>
+<p>This cluephrase points us to the last words of the terminal footnotes—that is, the footnotes at the end of each footnote chain. These last words are almost all words from the word-to-letter mapping, except the ones at the end of the chains representing the four words in our last instruction, which are "abandon", "ignore", "exclude", and "pass", so we should discard these. The rest of the footnote chains each correspond to one of the words in the placeholder text, giving us an ordering on their extracted letters; this spells out ANSWER IS HUNT'S FIRST PUZZLE'S TITLE. The title of the first puzzle in this hunt was Opening Ceremony, so the answer is <strong>OPENING CEREMONY</strong>.</p>
+
+    
+
+    
+    <hr>
+    <h5>Author&rsquo;s Notes</h5>
+    <p>This was the first idea I came up with that made it into this hunt, all the way back in May; after spending altogether too much time programming the previous semester, my head was full of data structures and they kept making their way into puzzle ideas. I really liked the idea of generating a tree from footnotes, but had no idea what to do with it until I talked with chaotic and he suggested using a trie specifically. From there, the rest of the setup seemed quite natural, though I did fret about teams prematurely discovering the ending footnotes before getting the instruction and then getting lost. In practice, the repeated footnoted words and the "end" endings are far more noticeable and interesting.</p>
+<p>Writing the actual content for this took several days, in an attempt to keep the actual text content fairly varied but still hopefully indicate that it wasn't particularly puzzle-relevant. This was probably the greatest ratio of effort expended on non-essential puzzle elements to effort expended on essential puzzle elements I've experienced in a long time, but I think it was probably worth it.</p>
+    
+
+    
+
+    
+    <hr>
+    <h4>Mapping of footnote words to letters</h4>
+<table>
+<thead>
+<tr>
+<th>Footnote word</th>
+<th>Represented letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>READY</td>
+<td>^ (start character)</td>
+</tr>
+<tr>
+<td>TIME</td>
+<td>A</td>
+</tr>
+<tr>
+<td>FICTIONAL</td>
+<td>B</td>
+</tr>
+<tr>
+<td>UP</td>
+<td>C</td>
+</tr>
+<tr>
+<td>BIT</td>
+<td>D</td>
+</tr>
+<tr>
+<td>WORDS</td>
+<td>E</td>
+</tr>
+<tr>
+<td>SECOND</td>
+<td>F</td>
+</tr>
+<tr>
+<td>HUH</td>
+<td>G</td>
+</tr>
+<tr>
+<td>ABOUT</td>
+<td>H</td>
+</tr>
+<tr>
+<td>NOW</td>
+<td>I</td>
+</tr>
+<tr>
+<td>QUICK</td>
+<td>J</td>
+</tr>
+<tr>
+<td>PLACEHOLDER</td>
+<td>K</td>
+</tr>
+<tr>
+<td>THIRD</td>
+<td>L</td>
+</tr>
+<tr>
+<td>BLANK</td>
+<td>M</td>
+</tr>
+<tr>
+<td>READ</td>
+<td>N</td>
+</tr>
+<tr>
+<td>HUNT</td>
+<td>O</td>
+</tr>
+<tr>
+<td>RUSHING</td>
+<td>P</td>
+</tr>
+<tr>
+<td>DEADLINE</td>
+<td>Q</td>
+</tr>
+<tr>
+<td>ANY</td>
+<td>R</td>
+</tr>
+<tr>
+<td>PUZZLE</td>
+<td>S</td>
+</tr>
+<tr>
+<td>FIRST</td>
+<td>T</td>
+</tr>
+<tr>
+<td>PURE</td>
+<td>U</td>
+</tr>
+<tr>
+<td>CORRUPTION</td>
+<td>V</td>
+</tr>
+<tr>
+<td>LAST</td>
+<td>W</td>
+</tr>
+<tr>
+<td>TOOLS</td>
+<td>X</td>
+</tr>
+<tr>
+<td>VERY</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>LIFE</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>END</td>
+<td>$ (end character)</td>
+</tr>
+</tbody>
+</table>
+    
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

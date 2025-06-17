@@ -1,0 +1,380 @@
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: ⭐ Alliance</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../">
+                    Home
+                </a>
+                <a  href="../rules">
+                    Rules
+                </a>
+                
+                <a  href="../story">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams">
+                    Teams
+                </a>
+                <a  href="../faq">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="../puzzle/star-alliance" class="btn">Back to the puzzle</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    Solution: ⭐ Alliance
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">FIREBIRD XL</span></div>
+    
+</h1>
+
+<main>
+    <h5>
+        Written by
+        
+lydian
+
+    </h5>
+
+    
+    <style>
+    .center {
+        text-align: center;
+    }
+
+    #sample {
+        max-width: 30%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    #diagram {
+        max-width: 80%;
+        margin: 0px auto;
+        display: block;
+    }
+
+    main.table {
+        margin: 0 auto;
+        display: block;
+        width: fit-content;
+    }
+
+    .main th, .main td {
+        text-align: center;
+        font-size: 8pt;
+        border: none;
+        padding: 0;
+    }
+
+    .main .small {
+        font-size: 8pt;
+        line-height: 8pt;
+    }
+
+    .main .smaller {
+        font-size: 6pt;
+        line-height: 6pt;
+    }
+
+    .main .spacer {
+        padding: 5px;
+    }
+
+    table img {
+        max-width: 90px;
+    }
+
+    .main .header {
+        border: solid 2px black;
+    }
+
+    .main .left {
+        border-left: solid 2px black;
+    }
+
+    .main .right {
+        border-right: solid 2px black;
+    }
+
+    .main .bottom {
+        border-bottom: solid 2px black;
+    }
+
+    td {
+        text-align: center;
+    }
+</style>
+
+<p>The given example should provide solvers some insight on how to approach this puzzle. The red lines are all related to airlines, and indicate IATA airport codes that are serviced by the given airline. The emphasis on trigrams, the title, and the given airlines are helpful pointers to realize this connection; it can be confirmed by noting that LATAM services ARI, and Delta Airlines services PSC. The cyan lines, on the other hand, connect two adjacent constellations as represented by their IAU designation. Once again, the title and trigrams are helpful, as well as the example, since Aries (abbreviated ARI) and Pisces (abbreviated PSC) are adjacent (and are two of the more well-known constellations). With this understanding, it's possible to solve for the Greek letters. A more in-depth walkthrough may be found further down this page, but the following diagram identifies every trigram in the large diagram.</p>
+<p><center><img src="../static/puzzle_resources/solutions/star-alliance/solution-diagram.png" width=75% /></center></p>
+<p>With the Greek letters identified, solvers may turn to the second half of the puzzle, where each Greek letter has a list of ⭐s (with γ appearing twice). Solvers may notice the red and cyan lines from before return. Just like before, solvers must interpret the trigrams differently for the red and cyan parts of the puzzle. The cyan part is easier to figure out, as it refers to constellations; in fact, the number of ⭐s for each Greek letter in the cyan right-hand side matches the number of IAU formally named stars in the respective constellation. As for the red, we are also looking for ⭐s in airports; with enough Google searches involving "airports" and "stars", solvers may realize many airports have STARs&mdash;Standard Terminal Aviation Routes&mdash;which always follow the form of a string of letters alongside a number. Using these numbers, solvers may index into the star names using the STAR numbers. In order of the Roman numerals, this spells out the answer: <strong>FIREBIRD XL</strong>, which is&mdash;not unfittingly&mdash;a model plane!</p>
+<table class="main"><tr><th colspan="5" class="header"><img src="../static/puzzle_resources/star-alliance/alpha.png" /></th><th class="spacer"></th><th colspan="5" class="header"><img src="../static/puzzle_resources/star-alliance/beta.png" /></th><th class="spacer"></th><th colspan="5" class="header"><img src="../static/puzzle_resources/star-alliance/gamma.png" /></th><th class="spacer"></th><th class="spacer bottom" style="padding: 5px 10px"></th><th class="spacer bottom" style="padding: 5px 10px"></th><th class="spacer"></th><th colspan="5" class="header"><img src="../static/puzzle_resources/star-alliance/delta.png" /></th><th class="spacer"></th><th colspan="5" class="header"><img src="../static/puzzle_resources/star-alliance/epsilon.png" /></th><th class="spacer"></th><th colspan="5" class="header"><img src="../static/puzzle_resources/star-alliance/gamma-2.png" /></th><th class="spacer"></th><th colspan="5" class="header"><img src="../static/puzzle_resources/star-alliance/zeta.png" /></th><th class="spacer"></th><th colspan="5" class="header"><img src="../static/puzzle_resources/star-alliance/eta.png" /></th><th class="spacer"></th></tr><tr><td class="left" colspan="3">AGUDE 5</td><td class="right" colspan="2">(I)</td><td></td><td class="left" colspan="3">CLANG 7</td><td class="right" colspan="2">(IV)</td><td></td><td class="left" colspan="3">BLUBELL 4</td><td class="right" colspan="2">(VIII)</td><td></td><td class="right"></td><td></td><td></td><td class="left" colspan="3">ALADFAR</td><td class="right" colspan="2">(I)</td><td></td><td class="left" colspan="3">CUJAM</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">AINALRAMI</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">ACAMAR</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">DOFIDA</td><td class="right" colspan="2"></td><td></td></tr><tr><td class="left" colspan="3">ENCEE 2</td><td class="right" colspan="2">(II)</td><td></td><td class="left" colspan="3">GIIBS 3</td><td class="right" colspan="2">(V)</td><td></td><td class="left" colspan="3">CESAN 4</td><td class="right" colspan="2"></td><td></td><td class="right"></td><td></td><td></td><td class="left" colspan="3">CHASOŇ</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">FRANZ</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">ALBALDAH</td><td class="right" colspan="2">(V)</td><td></td><td class="left" colspan="3">ACHERNAR</td><td class="right" colspan="2">(VII)</td><td></td><td class="left" colspan="3">HADAR</td><td class="right" colspan="2"></td><td></td></tr><tr><td class="left" colspan="3">GOPHER 1</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">JAKKS 2</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">HUDZY 4</td><td class="right" colspan="2">(IX)</td><td></td><td class="right"></td><td></td><td></td><td class="left" colspan="3">SHELIAK</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">HUNOR</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">ALNASL</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">ANGETENAR</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">MENKENT</td><td class="right" colspan="2"></td><td></td></tr><tr><td class="left bottom" colspan="3">TWOLF 3</td><td class="right bottom" colspan="2">(III)</td><td></td><td class="left" colspan="3">KOLTS 2</td><td class="right" colspan="2">(VI)</td><td></td><td class="left" colspan="3">OHIIO 4</td><td class="right" colspan="2"></td><td></td><td class="right"></td><td></td><td></td><td class="left" colspan="3">SULAFAT</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">IRENA</td><td class="right" colspan="2"></td><td></td><td class="left small" colspan="3">ARKAB POSTERIOR</td><td class="right" colspan="2"></td><td></td><td class="left smaller" colspan="3">AYEYARWADY</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">NYAMIEN</td><td class="right" colspan="2"></td><td></td></tr><tr><td colspan=6></td><td class="left" colspan="3">RACYR 5</td><td class="right" colspan="2">(VII)</td><td></td><td class="left" colspan="3">TKNIQ 3</td><td class="right" colspan="2">(X)</td><td></td><td colspan="2">A</td><td></td><td class="left" colspan="3">VEGA</td><td class="right" colspan="2"></td><td></td><td class="left smaller" colspan="3">KORNEPHOROS</td><td class="right" colspan="2">(III)</td><td></td><td class="left" colspan="3">ARKAB PRIOR</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">AZHA</td><td class="right" colspan="2"></td><td></td><td class="left small" colspan="3">PROXIMA CENTAURI</td><td class="right" colspan="2">(IX)</td><td></td></tr><tr><td colspan=6></td><td class="left" colspan="3">SMUKE 2</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">TSHRT 1</td><td class="right" colspan="2"></td><td></td><td colspan="2">↓</td><td></td><td class="left bottom" colspan="3">XIHE</td><td class="right bottom" colspan="2">(II)</td><td></td><td class="left" colspan="3">MAASYM</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">ASCELLA</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">BEEMIM</td><td class="right" colspan="2"></td><td></td><td class="left small" colspan="3">RIGIL KENTAURUS</td><td class="right" colspan="2"></td><td></td></tr><tr><td colspan=6></td><td class="left bottom" colspan="3">SNKPT 2</td><td class="right bottom" colspan="2"></td><td></td><td class="left bottom" colspan="3">WAPPL 6</td><td class="right bottom" colspan="2"></td><td></td><td colspan="2">Z</td><td></td><td colspan=6></td><td class="left" colspan="3">MARSIC</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">BELEL</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">BEID</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">TOLIMAN</td><td class="right" colspan="2"></td><td></td></tr><tr><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="right"></td><td></td><td></td><td colspan=6></td><td class="left" colspan="3">OGMA</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">GUMALA</td><td class="right" colspan="2"></td><td></td><td class="left smaller" colspan="3">CHAOPHRAYA</td><td class="right" colspan="2"></td><td></td><td class="left bottom" colspan="3">UKLUN</td><td class="right bottom" colspan="2">(X)</td><td></td></tr><tr><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="right"></td><td></td><td></td><td colspan=6></td><td class="left" colspan="3">PIPOLTR</td><td class="right" colspan="2"></td><td></td><td class="left small" colspan="3">KAUS AUSTRALIS</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">CURSA</td><td class="right" colspan="2"></td><td></td><td colspan=6></td></tr><tr><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="right"></td><td></td><td></td><td colspan=6></td><td class="left" colspan="3">RASALGETHI</td><td class="right" colspan="2">(IV)</td><td></td><td class="left" colspan="3">KAUS BOREALIS</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">KEID</td><td class="right" colspan="2">(VIII)</td><td></td><td colspan=6></td></tr><tr><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="right"></td><td></td><td></td><td colspan=6></td><td class="left bottom" colspan="3">SARIN</td><td class="right bottom" colspan="2"></td><td></td><td class="left" colspan="3">KAUS MEDIA</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">KOEIA</td><td class="right" colspan="2"></td><td></td><td colspan=6></td></tr><tr><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="right"></td><td></td><td></td><td colspan=6></td><td colspan=6></td><td class="left" colspan="3">NUNKI</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">MONTUNO</td><td class="right" colspan="2"></td><td></td><td colspan=6></td></tr><tr><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="right"></td><td></td><td></td><td colspan=6></td><td colspan=6></td><td class="left" colspan="3">PINCOYA</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">MOUHOUN</td><td class="right" colspan="2"></td><td></td><td colspan=6></td></tr><tr><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="right"></td><td></td><td></td><td colspan=6></td><td colspan=6></td><td class="left" colspan="3">POLIS</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">RAN</td><td class="right" colspan="2"></td><td></td><td colspan=6></td></tr><tr><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="right"></td><td></td><td></td><td colspan=6></td><td colspan=6></td><td class="left" colspan="3">RUKBAT</td><td class="right" colspan="2"></td><td></td><td class="left" colspan="3">SCEPTRUM</td><td class="right" colspan="2"></td><td></td><td colspan=6></td></tr><tr><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="right"></td><td></td><td></td><td colspan=6></td><td colspan=6></td><td class="left" colspan="3">SIKA</td><td class="right" colspan="2">(VI)</td><td></td><td class="left" colspan="3">THEEMIN</td><td class="right" colspan="2"></td><td></td><td colspan=6></td></tr><tr><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="right"></td><td></td><td></td><td colspan=6></td><td colspan=6></td><td class="left bottom" colspan="3">TEREBELLUM</td><td class="right bottom" colspan="2"></td><td></td><td class="left" colspan="3">TOJIL</td><td class="right" colspan="2"></td><td></td><td colspan=6></td></tr><tr><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="right"></td><td></td><td></td><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="left" colspan="3">ZAURAK</td><td class="right" colspan="2"></td><td></td><td colspan=6></td></tr><tr><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="right bottom"></td><td class="bottom"></td><td></td><td colspan=6></td><td colspan=6></td><td colspan=6></td><td class="left bottom" colspan="3">ZIBAL</td><td class="right bottom" colspan="2"></td><td></td><td colspan=6></td></tr></table>
+
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>Roman numeral</th>
+<th>Airport STAR</th>
+<th>Constellation star</th>
+<th>Extraction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>AGUDE 5</td>
+<td>ALADFAR</td>
+<td>F</td>
+</tr>
+<tr>
+<td>II</td>
+<td>ENCEE 2</td>
+<td>XIHE</td>
+<td>I</td>
+</tr>
+<tr>
+<td>III</td>
+<td>TWOLF 3</td>
+<td>KORNEPHOROS</td>
+<td>R</td>
+</tr>
+<tr>
+<td>IV</td>
+<td>CLANG 7</td>
+<td>RASALGETHI</td>
+<td>E</td>
+</tr>
+<tr>
+<td>V</td>
+<td>GIIBS 3</td>
+<td>ALBALDAH</td>
+<td>B</td>
+</tr>
+<tr>
+<td>VI</td>
+<td>KOLTS 2</td>
+<td>SIKA</td>
+<td>I</td>
+</tr>
+<tr>
+<td>VII</td>
+<td>RACYR 5</td>
+<td>ACHERNAR</td>
+<td>R</td>
+</tr>
+<tr>
+<td>VIII</td>
+<td>BLUBELL 4</td>
+<td>KEID</td>
+<td>D</td>
+</tr>
+<tr>
+<td>IX</td>
+<td>HUDZY 4</td>
+<td>PROXIMA CENTAURI</td>
+<td>X</td>
+</tr>
+<tr>
+<td>X</td>
+<td>TKNIQ 3</td>
+<td>UKLUN</td>
+<td>L</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+
+    
+
+    
+    <hr>
+    <h5>Author&rsquo;s Notes</h5>
+    <p>First of all, I want to apologize for the inconsistencies with the puzzle. The dataset used is very messy and there is <em>not</em> a clean source for most of these, so if you got caught up in some inconsistency, I really apologize. One that was pointed out during hunt was that Heráklion <em>is</em> a seasonal destination of SAS, but it's listed in neither their site nor the Wikipedia page at the time of writing the puzzle and Author's Notes, so I thought it might be for the best to leave the puzzle as is to avoid further confusion, even if changing it would be technically correct. I'm sure there are many more errors of similar nature, but this is the nature of a puzzle with this sort of dataset, unfortunately...</p>
+<p>So, ever since I saw the feeder FIREBIRD XL I thought doing something aviation-related would be cute. It's a topic that vaguely interests me, and this feeder was so funky, I couldn't <em>not</em> write for it... but I really struggled to come up with an idea even though I had been eyeing it ever since I testsolved the metas back in late March. After a long time and writing a lot of other puzzles, I finally&mdash;now in November (about a month before the hunt began)&mdash;floated the idea of using matching trigrams between airports and constellations past Level, as it just seemed like a <em>neat</em> idea. He liked the idea and suggested I use STARs too, and from there, the puzzle was born... with a caveat.</p>
+<p>You see, the original idea was slightly different... extracting the ⭐s was all the same, but instead of the red lines representing airlines, they represented direct flights between airports. When writing for the puzzle, I exclusively used one particular site, and since the puzzle only managed to be testsolved once throughout November, I didn't realize how deep a rabbit hole I was digging the puzzle into. Not only was the website seemingly off in a few flights (missing some, and including some that didn't exist), it also left out a lot of details, such as seasonal flights, flights on hold during the COVID-19 pandemic, and many other caveats that come with this sort of data. And I, naïvely, didn't notice the issue until it was <em>almost</em> too late.</p>
+<p>When we were holding a testsolve session the Thursday before the hunt, someone realized that one of the direct flights in the puzzle just seemed to completely not exist, and I couldn't find anything about it aside from the one site I had used to construct the entire puzzle. I panicked and told the people testsolving to put things on hold while I would go fix the puzzle... little did I know, the more I searched and checked different sources, the more flaws started appearing.</p>
+<p>Since this was less than 48 hours before the hunt, Level suggesting just adding flavor text and outright hinting or giving away the site used to construct the puzzle, which would have been a serviceable solution considering the urgency of the situation, but I would have been incredibly unhappy using a source that I now knew for a fact was incorrect. Plus, clueing the site directly would spoil one of the ahas and make the puzzle incredibly inelegant. It was better than having a broken puzzle, of course, but I still really didn't want <em>that</em> to be the outcome of this puzzle. After sleeping horribly from Thursday to Friday, I spent all Friday morning rewriting the puzzle in its current version, hoping that airports serviced by airlines would be a less messy dataset than just direct flights in general. The puzzle was testsolved successfully Friday afternoon, and shipped to the site while I was asleep.</p>
+<p>This change did help the puzzle in a few key ways. For one, it made the search much less frustrating and time consuming, as you only had to do it once upfront and then just worry about connecting the constellations, not to mention that this dataset is <em>slightly</em> less volatile and also tied in the title "⭐ Alliance" a bit more flavorfully. It also allowed me to not give a single trigram, which I thought was pretty cool.</p>
+<p>But this still isn't perfect. The problem mentioned above is one huge concern, as well as the fact this puzzle will most likely age like milk. I realized some errors during the hunt: some of the ???s given were completely unnecessary (in particular, ARA, NOR, and PAV), I forgot CRA was also served by Wizz, and I had included an ambiguous node due to Serpens having two parts, which I didn't notice when writing. I guess these latter few are moreso a product of having rewritten half the puzzle the day before.</p>
+<p>All in all, I really love some of the ideas I've made use of here, the matching trigrams, the ⭐ connection, and the fact that this puzzle combines two very fascinating topics to me (although, one more than the other (and yes, it's the constellations)), and lastly the title being by far my favorite puzzle title I've came up with... I think it makes up for all the issues it came with.</p>
+<p>After testsolving, lovemathboy apparently clicked through a lot of Nutrimatic pages to see if the answer was nutrimatic-able without getting the STARs. This is what he found:</p>
+<p><center><img src="../static/puzzle_resources/solutions/star-alliance/nutri.png" width=50% /></center></p>
+<p>Another funny anecdote I came across when researching for this puzzle was finding out that the Cairo regional airport is not located in Egypt, but is, rather, in fact, in the US.</p>
+<p>All in all, this puzzle gave me a lot of headaches, but I hope you thought it was worth your while. Thank you θ flying with us :)</p>
+<p><center><img src="../static/puzzle_resources/solutions/star-alliance/bonus.png" width=25% /></center></p>
+    
+
+    
+
+    
+    <hr>
+    <h3>Full walkthrough</h3>
+<p>To start, let's determine all airports that share a trigram with a constellation (as all trigrams have a cyan line connecting them with another) that are serviced by the given airlines:</p>
+<p>Aeroméxico Connect:</p>
+<ul>
+<li>CEN</li>
+</ul>
+<p>Air Wisconsin:</p>
+<ul>
+<li>CAE</li>
+<li>CHA</li>
+<li>ERI</li>
+<li>IND</li>
+</ul>
+<p>Mokulele Airlines:</p>
+<ul>
+<li>LUP</li>
+</ul>
+<p>Scandinavian Airlines:</p>
+<ul>
+<li>BOO</li>
+<li>LYR</li>
+</ul>
+<p>Silver Airways:</p>
+<ul>
+<li>CAE</li>
+</ul>
+<p>Spirit Airlines:</p>
+<ul>
+<li>CAP</li>
+<li>IND</li>
+</ul>
+<p>Wizz Air:</p>
+<ul>
+<li>BOO</li>
+<li>CRA</li>
+<li>HER</li>
+<li>PSA</li>
+</ul>
+<p>With this:</p>
+<ul>
+<li><strong>β</strong> must be <strong>IND</strong>, as that's the only airport that shares a trigram with a constellation and is serviced by both Air Wisconsin and Spirit Airlines.</li>
+<li>The ??? encircled by Mokulele Airlines must be LUP, as that's the only airport that shares a trigram with a constellation and is serviced by it.</li>
+<li><strong>η</strong> must be <strong>CEN</strong>, as that's the only airport that shares a trigram with a constellation and is serviced by both Aeroméxico Connect.</li>
+<li>The ??? encircled by Silver Airways must be CAE, as that's the only airport that shares a trigram with a constellation and is serviced by it.               </li>
+<li>The ??? encircled by both Scandinavian Airlines and Wizz Air must be BOO, as that's the only airport that shares a trigram with a constellation and is serviced by both.</li>
+</ul>
+<p><center><img src="../static/puzzle_resources/solutions/star-alliance/partial-1.png" width=60% /></center></p>
+<ul>
+<li><strong>ζ</strong> must be <strong>ERI</strong>, as that's the only trigram whose airport is serviced by Air Wisconsin, and whose constellation neighbors CAE (Caelus).</li>
+<li><strong>δ</strong> must be <strong>LYR</strong>, as that's the only airport left that shares a trigram with a constellation now that BOO has been used up.</li>
+<li><strong>ε</strong> must be <strong>HER</strong>, as that's the only trigram whose airport is serviced by Wizz Air, and whose constellation neighbors BOO (Boötes).</li>
+</ul>
+<p><center><img src="../static/puzzle_resources/solutions/star-alliance/partial-2.png" width=60% /></center></p>
+<ul>
+<li>There are a few paths that connect IND (Indus) to LUP (Lupus), however, all of them pass through: one of MIC (Microscopium), TEL (Telescopium), PAV (Pavo), or OCT (Octans); one of SGR (Sagittarius), CRA (Corona Australis), ARA (Ara), or APS (Apus); and one of SCO (Scorpius), NOR (Norma), or CIR (Circinus), respectively, going from IND to LUP. Let's label these, respectively, group 1, group 2, and group 3.</li>
+<li>The only one from the group 1 that connects to at least three of group 2 is TEL, so TEL must be in the slot immediately to the right of CAE.</li>
+<li>The only one from the group 2 that connects to at least two in the group 3 is ARA, so ARA must be in the slot immediately to the right of α.</li>
+<li>The ??? between ARA and γ is part of group 2 and connects to another two group 2 members, now that ARA has been used up, it must be one of SGR, CRA, or APS, however, out of these, only CRA connects to other two group 2 members, so CRA must be in the slot between ARA and γ, and <strong>γ</strong> must be <strong>SGR</strong>.</li>
+<li>Between SGR and LUP must be SCO, so SCO must be in the slot between them.</li>
+<li>The only constellation connected to ARA, SCO, and LUP is NOR, so NOR must be in the slot between ARA and LUP.</li>
+<li>Now that TEL has been used up the only other constellation that connects IND and ARA is PAV, so PAV must be in the slot immediately to the right of IND.</li>
+<li>Now that TEL has been used up the only other constellation that connects IND and SGR is MIC, so <strong>α</strong> must be <strong>MIC</strong>.</li>
+<li>The only constellation connected to SGR, SCO, and HER is OPH, so OPH must be in the slot between SCO and HER.</li>
+</ul>
+<p><center><img src="../static/puzzle_resources/solutions/star-alliance/solution-diagram.png" width=60% /></center></p>
+<p>And with that, we have determined what trigrams each Greek letter corresponds to:</p>
+<ul>
+<li><strong>α</strong>: MIC</li>
+<li><strong>β</strong>: IND</li>
+<li><strong>γ</strong>: SGR</li>
+<li><strong>δ</strong>: LYR</li>
+<li><strong>ε</strong>: HER</li>
+<li><strong>ζ</strong>: ERI</li>
+<li><strong>η</strong>: CEN</li>
+</ul>
+    
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

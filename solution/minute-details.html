@@ -1,0 +1,1144 @@
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: Minute Details</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../">
+                    Home
+                </a>
+                <a  href="../rules">
+                    Rules
+                </a>
+                
+                <a  href="../story">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams">
+                    Teams
+                </a>
+                <a  href="../faq">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="../puzzle/minute-details" class="btn">Back to the puzzle</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    Solution: Minute Details
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">SIGN CONVENTION</span></div>
+    
+</h1>
+
+<main>
+    <h5>
+        Written by
+        
+chaotic_iak
+
+    </h5>
+
+    
+    <p>We are presented with a grid of letters resembling a circle, and a list of words. Is this word search? It is indeed a word search, and all the words can be found in the grid. But the grid looks much larger than necessary. What gives?</p>
+<p>As clued by the title ("Minute" Details) and the flavor text spelling out the current time (the time when the page is loaded), the contents of this puzzle change depending on the time; specifically, depending on the current minute. The grid remains the same, but there are 60 lists, one for each minute. Loading the page on different minutes gives different lists. For the rest of this solution, each list is indexed by the minute it appears; for example, on the hour (xx:00), the list with ID 0 is loaded.</p>
+<p>Many words turn out to be duplicated throughout the lists. In fact, each word appears periodically, with a period of 3, 4, or 5 minutes, offset from the hour. For example, the word AMEN appears in all lists with ID 0 mod 4 (= 0, 4, 8, 12, 16, ...), while the word ACHE appears in all lists with ID 4 mod 5 (= 4, 9, 14, 19, 24, ...). Here, the x mod y syntax just means "gives remainder x when divided by y", the same usage as in modular arithmetic in mathematics. Note that AMEN and ACHE are both in the list with ID 4 and thus appear together at xx:04. (They also appear together at xx:24 and xx:44.)</p>
+<p>It is thus possible to figure out, for each word, what period and what offset it has. Perhaps the simplest method is to retrieve 10 consecutive lists, allowing each word to repeat in at least two lists so we can figure out its period and then its offset. More efficient approaches are possible.</p>
+<table>
+<thead>
+<tr>
+<th align="center">0 mod 3</th>
+<th align="center">1 mod 3</th>
+<th align="center">2 mod 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">ALPS</td>
+<td align="center">BURN</td>
+<td align="center">DELI</td>
+</tr>
+<tr>
+<td align="center">DAZE</td>
+<td align="center">COLA</td>
+<td align="center">FAWN</td>
+</tr>
+<tr>
+<td align="center">ENDS</td>
+<td align="center">EASY</td>
+<td align="center">HOME</td>
+</tr>
+<tr>
+<td align="center">EVER</td>
+<td align="center">FEUD</td>
+<td align="center">HOWL</td>
+</tr>
+<tr>
+<td align="center">HONE</td>
+<td align="center">FLOW</td>
+<td align="center">IOTA</td>
+</tr>
+<tr>
+<td align="center">PAIR</td>
+<td align="center">OUCH</td>
+<td align="center">ISLE</td>
+</tr>
+<tr>
+<td align="center">PIER</td>
+<td align="center">RAFT</td>
+<td align="center">REEF</td>
+</tr>
+<tr>
+<td align="center">SNAP</td>
+<td align="center">SKEW</td>
+<td align="center">SLUR</td>
+</tr>
+<tr>
+<td align="center">SUMO</td>
+<td align="center">TRIO</td>
+<td align="center">THEE</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">0 mod 4</th>
+<th align="center">1 mod 4</th>
+<th align="center">2 mod 4</th>
+<th align="center">3 mod 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">AMEN</td>
+<td align="center">CURB</td>
+<td align="center">EACH</td>
+<td align="center">AUNT</td>
+</tr>
+<tr>
+<td align="center">DISC</td>
+<td align="center">DUSK</td>
+<td align="center">MAIN</td>
+<td align="center">CRAP</td>
+</tr>
+<tr>
+<td align="center">GUTS</td>
+<td align="center">FINE</td>
+<td align="center">PAWN</td>
+<td align="center">LAVA</td>
+</tr>
+<tr>
+<td align="center">IRON</td>
+<td align="center">HARM</td>
+<td align="center">PINK</td>
+<td align="center">OMEN</td>
+</tr>
+<tr>
+<td align="center">RICE</td>
+<td align="center">ICED</td>
+<td align="center">PULL</td>
+<td align="center">ONCE</td>
+</tr>
+<tr>
+<td align="center">TIKI</td>
+<td align="center">OVER</td>
+<td align="center">RAGE</td>
+<td align="center">PING</td>
+</tr>
+<tr>
+<td align="center">TUBE</td>
+<td align="center">ROOK</td>
+<td align="center">SHOT</td>
+<td align="center">TAXI</td>
+</tr>
+<tr>
+<td align="center">WAVE</td>
+<td align="center">TILE</td>
+<td align="center">VOTE</td>
+<td align="center">VAIN</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">0 mod 5</th>
+<th align="center">1 mod 5</th>
+<th align="center">2 mod 5</th>
+<th align="center">3 mod 5</th>
+<th align="center">4 mod 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">CAMP</td>
+<td align="center">FIRE</td>
+<td align="center">BEAR</td>
+<td align="center">CAFE</td>
+<td align="center">ACHE</td>
+</tr>
+<tr>
+<td align="center">CLUE</td>
+<td align="center">FORT</td>
+<td align="center">BEER</td>
+<td align="center">DEER</td>
+<td align="center">IDLE</td>
+</tr>
+<tr>
+<td align="center">CRUD</td>
+<td align="center">MIDI</td>
+<td align="center">FILE</td>
+<td align="center">LEAF</td>
+<td align="center">MISO</td>
+</tr>
+<tr>
+<td align="center">ECHO</td>
+<td align="center">NECK</td>
+<td align="center">GOLD</td>
+<td align="center">MESH</td>
+<td align="center">QUIT</td>
+</tr>
+<tr>
+<td align="center">FAIR</td>
+<td align="center">PUSH</td>
+<td align="center">INFO</td>
+<td align="center">NULL</td>
+<td align="center">SALT</td>
+</tr>
+<tr>
+<td align="center">MISS</td>
+<td align="center">ROWS</td>
+<td align="center">OXEN</td>
+<td align="center">OPEN</td>
+<td align="center">SEAL</td>
+</tr>
+<tr>
+<td align="center">OUST</td>
+<td align="center">SOAR</td>
+<td align="center">RUSE</td>
+<td align="center">PLEA</td>
+<td align="center">WARE</td>
+</tr>
+</tbody>
+</table>
+<p>If we try to find all the 94 distinct words on the grid, we will find the words come in pairs. Each pair of words intersects at one letter; other than that, there is no intersection. Reading all the intersection letters in standard reading order (top-to-bottom, on each line left-to-right) gives SEMAPHORE OF INTERSECTING WORDS IN EACH PAIR OF PERIODS. This also serves as a clue that the words are periodic, if we have not figured that out. (There are many fake pairs of words; this is meant to defeat word search solvers.)</p>
+<p>We find out each pair of words takes two words from different periods. Returning to our example, AMEN and ACHE intersect together; AMEN has period 4 and ACHE has period 5. Each pair of periods (3+4, 3+5, and 4+5) intersect exactly once at any given minute. The AMEN-ACHE pair forms the intersection of the 4+5 pair of periods for minute xx:04.</p>
+<p>In addition, the intersection of each pair of words is always on the ends of those words. This allows us to read the pair as a semaphore. The AMEN-ACHE pair gives the semaphore E.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Word 1</th>
+<th align="center">Word 2</th>
+<th align="center">Found 1</th>
+<th align="center">Found 2</th>
+<th align="center">Intersection</th>
+<th align="center">Semaphore</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">GUTS</td>
+<td align="center">SOAR</td>
+<td align="center">0 mod 4</td>
+<td align="center">1 mod 5</td>
+<td align="center">S</td>
+<td align="center">R</td>
+</tr>
+<tr>
+<td align="center">EACH</td>
+<td align="center">HOME</td>
+<td align="center">2 mod 4</td>
+<td align="center">2 mod 3</td>
+<td align="center">E</td>
+<td align="center">H</td>
+</tr>
+<tr>
+<td align="center">MAIN</td>
+<td align="center">MISS</td>
+<td align="center">2 mod 4</td>
+<td align="center">0 mod 5</td>
+<td align="center">M</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center">AUNT</td>
+<td align="center">COLA</td>
+<td align="center">3 mod 4</td>
+<td align="center">1 mod 3</td>
+<td align="center">A</td>
+<td align="center">S</td>
+</tr>
+<tr>
+<td align="center">CRAP</td>
+<td align="center">PAIR</td>
+<td align="center">3 mod 4</td>
+<td align="center">0 mod 3</td>
+<td align="center">P</td>
+<td align="center">Y</td>
+</tr>
+<tr>
+<td align="center">HONE</td>
+<td align="center">MESH</td>
+<td align="center">0 mod 3</td>
+<td align="center">3 mod 5</td>
+<td align="center">H</td>
+<td align="center">S</td>
+</tr>
+<tr>
+<td align="center">MISO</td>
+<td align="center">OMEN</td>
+<td align="center">4 mod 5</td>
+<td align="center">3 mod 4</td>
+<td align="center">O</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center">OVER</td>
+<td align="center">RUSE</td>
+<td align="center">1 mod 4</td>
+<td align="center">2 mod 5</td>
+<td align="center">R</td>
+<td align="center">T</td>
+</tr>
+<tr>
+<td align="center">ENDS</td>
+<td align="center">FIRE</td>
+<td align="center">0 mod 3</td>
+<td align="center">1 mod 5</td>
+<td align="center">E</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center">OPEN</td>
+<td align="center">TRIO</td>
+<td align="center">3 mod 5</td>
+<td align="center">1 mod 3</td>
+<td align="center">O</td>
+<td align="center">C</td>
+</tr>
+<tr>
+<td align="center">FAIR</td>
+<td align="center">REEF</td>
+<td align="center">0 mod 5</td>
+<td align="center">2 mod 3</td>
+<td align="center">F</td>
+<td align="center">I</td>
+</tr>
+<tr>
+<td align="center">IOTA</td>
+<td align="center">TAXI</td>
+<td align="center">2 mod 3</td>
+<td align="center">3 mod 4</td>
+<td align="center">I</td>
+<td align="center">M</td>
+</tr>
+<tr>
+<td align="center">NECK</td>
+<td align="center">VAIN</td>
+<td align="center">1 mod 5</td>
+<td align="center">3 mod 4</td>
+<td align="center">N</td>
+<td align="center">I</td>
+</tr>
+<tr>
+<td align="center">QUIT</td>
+<td align="center">THEE</td>
+<td align="center">4 mod 5</td>
+<td align="center">2 mod 3</td>
+<td align="center">T</td>
+<td align="center">E</td>
+</tr>
+<tr>
+<td align="center">FILE</td>
+<td align="center">RAGE</td>
+<td align="center">2 mod 5</td>
+<td align="center">2 mod 4</td>
+<td align="center">E</td>
+<td align="center">U</td>
+</tr>
+<tr>
+<td align="center">DEER</td>
+<td align="center">RICE</td>
+<td align="center">3 mod 5</td>
+<td align="center">0 mod 4</td>
+<td align="center">R</td>
+<td align="center">I</td>
+</tr>
+<tr>
+<td align="center">ALPS</td>
+<td align="center">SEAL</td>
+<td align="center">0 mod 3</td>
+<td align="center">4 mod 5</td>
+<td align="center">S</td>
+<td align="center">C</td>
+</tr>
+<tr>
+<td align="center">EASY</td>
+<td align="center">TUBE</td>
+<td align="center">1 mod 3</td>
+<td align="center">0 mod 4</td>
+<td align="center">E</td>
+<td align="center">S</td>
+</tr>
+<tr>
+<td align="center">CLUE</td>
+<td align="center">DISC</td>
+<td align="center">0 mod 5</td>
+<td align="center">0 mod 4</td>
+<td align="center">C</td>
+<td align="center">E</td>
+</tr>
+<tr>
+<td align="center">FORT</td>
+<td align="center">TILE</td>
+<td align="center">1 mod 5</td>
+<td align="center">1 mod 4</td>
+<td align="center">T</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center">IRON</td>
+<td align="center">ISLE</td>
+<td align="center">0 mod 4</td>
+<td align="center">2 mod 3</td>
+<td align="center">I</td>
+<td align="center">T</td>
+</tr>
+<tr>
+<td align="center">FAWN</td>
+<td align="center">NULL</td>
+<td align="center">2 mod 3</td>
+<td align="center">3 mod 5</td>
+<td align="center">N</td>
+<td align="center">S</td>
+</tr>
+<tr>
+<td align="center">GOLD</td>
+<td align="center">PING</td>
+<td align="center">2 mod 5</td>
+<td align="center">3 mod 4</td>
+<td align="center">G</td>
+<td align="center">T</td>
+</tr>
+<tr>
+<td align="center">FLOW</td>
+<td align="center">WARE</td>
+<td align="center">1 mod 3</td>
+<td align="center">4 mod 5</td>
+<td align="center">W</td>
+<td align="center">M</td>
+</tr>
+<tr>
+<td align="center">ECHO</td>
+<td align="center">OUCH</td>
+<td align="center">0 mod 5</td>
+<td align="center">1 mod 3</td>
+<td align="center">O</td>
+<td align="center">H</td>
+</tr>
+<tr>
+<td align="center">BEAR</td>
+<td align="center">SLUR</td>
+<td align="center">2 mod 5</td>
+<td align="center">2 mod 3</td>
+<td align="center">R</td>
+<td align="center">U</td>
+</tr>
+<tr>
+<td align="center">DUSK</td>
+<td align="center">FEUD</td>
+<td align="center">1 mod 4</td>
+<td align="center">1 mod 3</td>
+<td align="center">D</td>
+<td align="center">P</td>
+</tr>
+<tr>
+<td align="center">ROWS</td>
+<td align="center">SKEW</td>
+<td align="center">1 mod 5</td>
+<td align="center">1 mod 3</td>
+<td align="center">S</td>
+<td align="center">L</td>
+</tr>
+<tr>
+<td align="center">INFO</td>
+<td align="center">TIKI</td>
+<td align="center">2 mod 5</td>
+<td align="center">0 mod 4</td>
+<td align="center">I</td>
+<td align="center">S</td>
+</tr>
+<tr>
+<td align="center">BURN</td>
+<td align="center">PAWN</td>
+<td align="center">1 mod 3</td>
+<td align="center">2 mod 4</td>
+<td align="center">N</td>
+<td align="center">R</td>
+</tr>
+<tr>
+<td align="center">EVER</td>
+<td align="center">WAVE</td>
+<td align="center">0 mod 3</td>
+<td align="center">0 mod 4</td>
+<td align="center">E</td>
+<td align="center">A</td>
+</tr>
+<tr>
+<td align="center">ACHE</td>
+<td align="center">AMEN</td>
+<td align="center">4 mod 5</td>
+<td align="center">0 mod 4</td>
+<td align="center">A</td>
+<td align="center">E</td>
+</tr>
+<tr>
+<td align="center">CAMP</td>
+<td align="center">CURB</td>
+<td align="center">0 mod 5</td>
+<td align="center">1 mod 4</td>
+<td align="center">C</td>
+<td align="center">R</td>
+</tr>
+<tr>
+<td align="center">HARM</td>
+<td align="center">HOWL</td>
+<td align="center">1 mod 4</td>
+<td align="center">2 mod 3</td>
+<td align="center">H</td>
+<td align="center">I</td>
+</tr>
+<tr>
+<td align="center">PINK</td>
+<td align="center">SNAP</td>
+<td align="center">2 mod 4</td>
+<td align="center">0 mod 3</td>
+<td align="center">P</td>
+<td align="center">C</td>
+</tr>
+<tr>
+<td align="center">LAVA</td>
+<td align="center">PLEA</td>
+<td align="center">3 mod 4</td>
+<td align="center">3 mod 5</td>
+<td align="center">A</td>
+<td align="center">M</td>
+</tr>
+<tr>
+<td align="center">ICED</td>
+<td align="center">IDLE</td>
+<td align="center">1 mod 4</td>
+<td align="center">4 mod 5</td>
+<td align="center">I</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="center">PIER</td>
+<td align="center">ROOK</td>
+<td align="center">0 mod 3</td>
+<td align="center">1 mod 4</td>
+<td align="center">R</td>
+<td align="center">E</td>
+</tr>
+<tr>
+<td align="center">OXEN</td>
+<td align="center">SUMO</td>
+<td align="center">2 mod 5</td>
+<td align="center">0 mod 3</td>
+<td align="center">O</td>
+<td align="center">I</td>
+</tr>
+<tr>
+<td align="center">FINE</td>
+<td align="center">LEAF</td>
+<td align="center">1 mod 4</td>
+<td align="center">3 mod 5</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+<tr>
+<td align="center">PULL</td>
+<td align="center">PUSH</td>
+<td align="center">2 mod 4</td>
+<td align="center">1 mod 5</td>
+<td align="center">P</td>
+<td align="center">A</td>
+</tr>
+<tr>
+<td align="center">CAFE</td>
+<td align="center">VOTE</td>
+<td align="center">3 mod 5</td>
+<td align="center">2 mod 4</td>
+<td align="center">E</td>
+<td align="center">E</td>
+</tr>
+<tr>
+<td align="center">BEER</td>
+<td align="center">RAFT</td>
+<td align="center">2 mod 5</td>
+<td align="center">1 mod 3</td>
+<td align="center">R</td>
+<td align="center">U</td>
+</tr>
+<tr>
+<td align="center">DELI</td>
+<td align="center">MIDI</td>
+<td align="center">2 mod 3</td>
+<td align="center">1 mod 5</td>
+<td align="center">I</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="center">ONCE</td>
+<td align="center">OUST</td>
+<td align="center">3 mod 4</td>
+<td align="center">0 mod 5</td>
+<td align="center">O</td>
+<td align="center">U</td>
+</tr>
+<tr>
+<td align="center">CRUD</td>
+<td align="center">DAZE</td>
+<td align="center">0 mod 5</td>
+<td align="center">0 mod 3</td>
+<td align="center">D</td>
+<td align="center">P</td>
+</tr>
+<tr>
+<td align="center">SALT</td>
+<td align="center">SHOT</td>
+<td align="center">4 mod 5</td>
+<td align="center">2 mod 4</td>
+<td align="center">S</td>
+<td align="center">O</td>
+</tr>
+</tbody>
+</table>
+<p>There are 20 pairs of words for the 4+5 pair of periods, corresponding to 0, 1, 2, ..., 19 mod 20. The AMEN-ACHE pair fills the role of 4 mod 20. As there are 20 pairs of words, there are 20 letters indicated by semaphore, so we obtain a 20-letter message. (The message starts from 0 mod 20, which is what we get if we start reading from the hour, xx:00.) Back to our example, the AMEN-ACHE pair, being 0 mod 4 and 4 mod 5, becomes 4 mod 20; it is the 5th letter in the 4+5 pair of periods message. (Recall that we start counting from 0 mod 20, so the first letter is 0 mod 20.)</p>
+<p>Similarly, there are 15 pairs of words for the 3+5 pair of periods, giving a 15-letter message. There are 12 pairs of words for the 3+4 pair of periods, giving a 12-letter message.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Word 1</th>
+<th align="center">Word 2</th>
+<th align="center">Found 1</th>
+<th align="center">Found 2</th>
+<th align="center">Intersection</th>
+<th align="center">Semaphore</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">DISC</td>
+<td align="center">CLUE</td>
+<td align="center">0 mod 4</td>
+<td align="center">0 mod 5</td>
+<td align="center">C</td>
+<td align="center">E</td>
+</tr>
+<tr>
+<td align="center">TILE</td>
+<td align="center">FORT</td>
+<td align="center">1 mod 4</td>
+<td align="center">1 mod 5</td>
+<td align="center">T</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center">RAGE</td>
+<td align="center">FILE</td>
+<td align="center">2 mod 4</td>
+<td align="center">2 mod 5</td>
+<td align="center">E</td>
+<td align="center">U</td>
+</tr>
+<tr>
+<td align="center">LAVA</td>
+<td align="center">PLEA</td>
+<td align="center">3 mod 4</td>
+<td align="center">3 mod 5</td>
+<td align="center">A</td>
+<td align="center">M</td>
+</tr>
+<tr>
+<td align="center">AMEN</td>
+<td align="center">ACHE</td>
+<td align="center">0 mod 4</td>
+<td align="center">4 mod 5</td>
+<td align="center">A</td>
+<td align="center">E</td>
+</tr>
+<tr>
+<td align="center">CURB</td>
+<td align="center">CAMP</td>
+<td align="center">1 mod 4</td>
+<td align="center">0 mod 5</td>
+<td align="center">C</td>
+<td align="center">R</td>
+</tr>
+<tr>
+<td align="center">PULL</td>
+<td align="center">PUSH</td>
+<td align="center">2 mod 4</td>
+<td align="center">1 mod 5</td>
+<td align="center">P</td>
+<td align="center">A</td>
+</tr>
+<tr>
+<td align="center">PING</td>
+<td align="center">GOLD</td>
+<td align="center">3 mod 4</td>
+<td align="center">2 mod 5</td>
+<td align="center">G</td>
+<td align="center">T</td>
+</tr>
+<tr>
+<td align="center">RICE</td>
+<td align="center">DEER</td>
+<td align="center">0 mod 4</td>
+<td align="center">3 mod 5</td>
+<td align="center">R</td>
+<td align="center">I</td>
+</tr>
+<tr>
+<td align="center">ICED</td>
+<td align="center">IDLE</td>
+<td align="center">1 mod 4</td>
+<td align="center">4 mod 5</td>
+<td align="center">I</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="center">MAIN</td>
+<td align="center">MISS</td>
+<td align="center">2 mod 4</td>
+<td align="center">0 mod 5</td>
+<td align="center">M</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center">VAIN</td>
+<td align="center">NECK</td>
+<td align="center">3 mod 4</td>
+<td align="center">1 mod 5</td>
+<td align="center">N</td>
+<td align="center">I</td>
+</tr>
+<tr>
+<td align="center">TIKI</td>
+<td align="center">INFO</td>
+<td align="center">0 mod 4</td>
+<td align="center">2 mod 5</td>
+<td align="center">I</td>
+<td align="center">S</td>
+</tr>
+<tr>
+<td align="center">FINE</td>
+<td align="center">LEAF</td>
+<td align="center">1 mod 4</td>
+<td align="center">3 mod 5</td>
+<td align="center">F</td>
+<td align="center">F</td>
+</tr>
+<tr>
+<td align="center">SHOT</td>
+<td align="center">SALT</td>
+<td align="center">2 mod 4</td>
+<td align="center">4 mod 5</td>
+<td align="center">S</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="center">ONCE</td>
+<td align="center">OUST</td>
+<td align="center">3 mod 4</td>
+<td align="center">0 mod 5</td>
+<td align="center">O</td>
+<td align="center">U</td>
+</tr>
+<tr>
+<td align="center">GUTS</td>
+<td align="center">SOAR</td>
+<td align="center">0 mod 4</td>
+<td align="center">1 mod 5</td>
+<td align="center">S</td>
+<td align="center">R</td>
+</tr>
+<tr>
+<td align="center">OVER</td>
+<td align="center">RUSE</td>
+<td align="center">1 mod 4</td>
+<td align="center">2 mod 5</td>
+<td align="center">R</td>
+<td align="center">T</td>
+</tr>
+<tr>
+<td align="center">VOTE</td>
+<td align="center">CAFE</td>
+<td align="center">2 mod 4</td>
+<td align="center">3 mod 5</td>
+<td align="center">E</td>
+<td align="center">E</td>
+</tr>
+<tr>
+<td align="center">OMEN</td>
+<td align="center">MISO</td>
+<td align="center">3 mod 4</td>
+<td align="center">4 mod 5</td>
+<td align="center">O</td>
+<td align="center">N</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">Word 1</th>
+<th align="center">Word 2</th>
+<th align="center">Found 1</th>
+<th align="center">Found 2</th>
+<th align="center">Intersection</th>
+<th align="center">Semaphore</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">DAZE</td>
+<td align="center">CRUD</td>
+<td align="center">0 mod 3</td>
+<td align="center">0 mod 5</td>
+<td align="center">D</td>
+<td align="center">P</td>
+</tr>
+<tr>
+<td align="center">SKEW</td>
+<td align="center">ROWS</td>
+<td align="center">1 mod 3</td>
+<td align="center">1 mod 5</td>
+<td align="center">S</td>
+<td align="center">L</td>
+</tr>
+<tr>
+<td align="center">SLUR</td>
+<td align="center">BEAR</td>
+<td align="center">2 mod 3</td>
+<td align="center">2 mod 5</td>
+<td align="center">R</td>
+<td align="center">U</td>
+</tr>
+<tr>
+<td align="center">HONE</td>
+<td align="center">MESH</td>
+<td align="center">0 mod 3</td>
+<td align="center">3 mod 5</td>
+<td align="center">H</td>
+<td align="center">S</td>
+</tr>
+<tr>
+<td align="center">FLOW</td>
+<td align="center">WARE</td>
+<td align="center">1 mod 3</td>
+<td align="center">4 mod 5</td>
+<td align="center">W</td>
+<td align="center">M</td>
+</tr>
+<tr>
+<td align="center">REEF</td>
+<td align="center">FAIR</td>
+<td align="center">2 mod 3</td>
+<td align="center">0 mod 5</td>
+<td align="center">F</td>
+<td align="center">I</td>
+</tr>
+<tr>
+<td align="center">ENDS</td>
+<td align="center">FIRE</td>
+<td align="center">0 mod 3</td>
+<td align="center">1 mod 5</td>
+<td align="center">E</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center">RAFT</td>
+<td align="center">BEER</td>
+<td align="center">1 mod 3</td>
+<td align="center">2 mod 5</td>
+<td align="center">R</td>
+<td align="center">U</td>
+</tr>
+<tr>
+<td align="center">FAWN</td>
+<td align="center">NULL</td>
+<td align="center">2 mod 3</td>
+<td align="center">3 mod 5</td>
+<td align="center">N</td>
+<td align="center">S</td>
+</tr>
+<tr>
+<td align="center">ALPS</td>
+<td align="center">SEAL</td>
+<td align="center">0 mod 3</td>
+<td align="center">4 mod 5</td>
+<td align="center">S</td>
+<td align="center">C</td>
+</tr>
+<tr>
+<td align="center">OUCH</td>
+<td align="center">ECHO</td>
+<td align="center">1 mod 3</td>
+<td align="center">0 mod 5</td>
+<td align="center">O</td>
+<td align="center">H</td>
+</tr>
+<tr>
+<td align="center">DELI</td>
+<td align="center">MIDI</td>
+<td align="center">2 mod 3</td>
+<td align="center">1 mod 5</td>
+<td align="center">I</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="center">SUMO</td>
+<td align="center">OXEN</td>
+<td align="center">0 mod 3</td>
+<td align="center">2 mod 5</td>
+<td align="center">O</td>
+<td align="center">I</td>
+</tr>
+<tr>
+<td align="center">TRIO</td>
+<td align="center">OPEN</td>
+<td align="center">1 mod 3</td>
+<td align="center">3 mod 5</td>
+<td align="center">O</td>
+<td align="center">C</td>
+</tr>
+<tr>
+<td align="center">THEE</td>
+<td align="center">QUIT</td>
+<td align="center">2 mod 3</td>
+<td align="center">4 mod 5</td>
+<td align="center">T</td>
+<td align="center">E</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="center">Word 1</th>
+<th align="center">Word 2</th>
+<th align="center">Found 1</th>
+<th align="center">Found 2</th>
+<th align="center">Intersection</th>
+<th align="center">Semaphore</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">EVER</td>
+<td align="center">WAVE</td>
+<td align="center">0 mod 3</td>
+<td align="center">0 mod 4</td>
+<td align="center">E</td>
+<td align="center">A</td>
+</tr>
+<tr>
+<td align="center">FEUD</td>
+<td align="center">DUSK</td>
+<td align="center">1 mod 3</td>
+<td align="center">1 mod 4</td>
+<td align="center">D</td>
+<td align="center">P</td>
+</tr>
+<tr>
+<td align="center">HOME</td>
+<td align="center">EACH</td>
+<td align="center">2 mod 3</td>
+<td align="center">2 mod 4</td>
+<td align="center">E</td>
+<td align="center">H</td>
+</tr>
+<tr>
+<td align="center">PAIR</td>
+<td align="center">CRAP</td>
+<td align="center">0 mod 3</td>
+<td align="center">3 mod 4</td>
+<td align="center">P</td>
+<td align="center">Y</td>
+</tr>
+<tr>
+<td align="center">EASY</td>
+<td align="center">TUBE</td>
+<td align="center">1 mod 3</td>
+<td align="center">0 mod 4</td>
+<td align="center">E</td>
+<td align="center">S</td>
+</tr>
+<tr>
+<td align="center">HOWL</td>
+<td align="center">HARM</td>
+<td align="center">2 mod 3</td>
+<td align="center">1 mod 4</td>
+<td align="center">H</td>
+<td align="center">I</td>
+</tr>
+<tr>
+<td align="center">SNAP</td>
+<td align="center">PINK</td>
+<td align="center">0 mod 3</td>
+<td align="center">2 mod 4</td>
+<td align="center">P</td>
+<td align="center">C</td>
+</tr>
+<tr>
+<td align="center">COLA</td>
+<td align="center">AUNT</td>
+<td align="center">1 mod 3</td>
+<td align="center">3 mod 4</td>
+<td align="center">A</td>
+<td align="center">S</td>
+</tr>
+<tr>
+<td align="center">ISLE</td>
+<td align="center">IRON</td>
+<td align="center">2 mod 3</td>
+<td align="center">0 mod 4</td>
+<td align="center">I</td>
+<td align="center">T</td>
+</tr>
+<tr>
+<td align="center">PIER</td>
+<td align="center">ROOK</td>
+<td align="center">0 mod 3</td>
+<td align="center">1 mod 4</td>
+<td align="center">R</td>
+<td align="center">E</td>
+</tr>
+<tr>
+<td align="center">BURN</td>
+<td align="center">PAWN</td>
+<td align="center">1 mod 3</td>
+<td align="center">2 mod 4</td>
+<td align="center">N</td>
+<td align="center">R</td>
+</tr>
+<tr>
+<td align="center">IOTA</td>
+<td align="center">TAXI</td>
+<td align="center">2 mod 3</td>
+<td align="center">3 mod 4</td>
+<td align="center">I</td>
+<td align="center">M</td>
+</tr>
+</tbody>
+</table>
+<p>The messages are: ENUMERATION IS FOUR TEN, PLUS MINUS CHOICE, and A PHYSICS TERM. A physics term that is about choosing plus or minus, with an enumeration of (4 10), is <strong>SIGN CONVENTION</strong>.</p>
+
+    
+
+    
+    <hr>
+    <h5>Author&rsquo;s Notes</h5>
+    <p>The main inspiration for this puzzle is from two observations: that an hour has 60 minutes, and we can write 60 as 3×4×5. This means I can have 3 things that cycle every 3 minutes, 4 things that cycle every 4 minutes, and 5 things that cycle every 5 minutes. You will be able to see three of the things at once (one from each). And with only 12 things, I can make content for an entire hour.</p>
+<p>Turns out, just a single mechanic is not easy to build a puzzle around for. A minihunt-style puzzle (like <a href="../puzzle/the-minimeta-that-goes-wrong">The Minimeta That Goes Wrong</a>) is possible, where the 12 things are small independent puzzles, but this doesn't leverage the use of time well enough. The various things should interact somehow, so that this presentation based on the minute of the clock is actually useful.</p>
+<p>In the end, I used a word search; the things that cycle are partial word lists before they are combined for each minute, so it is also a puzzle to separate what the partial word lists are. Looking at intersections of words from different periods is chosen precisely to highlight the interaction between periods. For example, the partial word lists with period 3 minutes and those with period 4 minutes form something that repeats only every 12 minutes, allowing 12 places to hide clues (read: a 12-letter clue phrase) for the final answer. The same applies for the other pairs too.</p>
+<p>As for creating the puzzle, there was surprisingly not too much coding; I had a lot of manual work instead. After I settled on the structure of the puzzle together with all the appropriate messages, I made four passes. First, I put down where the words would be; I had to make sure I had enough pairs for each letter appearing in the messages. I had way more pairs than needed, because I knew I would also put fake words to defeat automated word search solvers. Second, I chose which pairs would be real, and placed the intersection message. Third, I filled the chosen pairs with words agreeing on the pre-determined intersection letter. I also put the fake pairs and made sure no word was repeated. And lastly, I filled the rest of the grid. For this last step, I also coded a solver to make sure all words remained uniquely found. And yes, in each step I did it all manually. Once the grid was made, I put the real words into partial word lists properly, then assembled the actual word lists from these.</p>
+<p>Am I happy with the puzzle? So-so, I'm fairly happy with the idea and concept. Silph Puzzle Hunt is essentially a sequel of Smogon Puzzle Hunt, and I looked at the differences. The fact that SmogonPH was conducted entirely over Discord, using PDFs for the puzzles, meant most puzzles had to be static; when SilphPH was confirmed to be using a website, it inspired me to make a dynamically changing puzzle, even if it was as simple as "different contents at different times". The concept of different contents at each minute plus the interactions between periods are fascinating. On the other hand, the execution might not be as well as it could; in the end, I have a 30×30 grid containing 94 short words, and it might be quite painful to find all of them manually. Plus all the fake words might have become red herrings. There were also quite a lot of steps; it might be possible to remove one.</p>
+<p>But overall, I'm still happy I made this. Given I'm usually a logic puzzle guy, making something that is not a logic puzzle is new territory for me, and it seems the general response to the puzzle has been positive.</p>
+    
+
+    
+
+    
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

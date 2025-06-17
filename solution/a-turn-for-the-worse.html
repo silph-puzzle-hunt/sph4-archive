@@ -1,0 +1,220 @@
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: METAMETA: A Turn For The Worse</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../">
+                    Home
+                </a>
+                <a  href="../rules">
+                    Rules
+                </a>
+                
+                <a  href="../story">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams">
+                    Teams
+                </a>
+                <a  href="../faq">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="../puzzle/a-turn-for-the-worse" class="btn">Back to the puzzle</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    Solution: METAMETA: A Turn For The Worse
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">FEED AN ODIUM ADDICTION</span></div>
+    
+</h1>
+
+<main>
+    <h5>
+        Written by
+        
+Level 51 and Deusovi
+
+    </h5>
+
+    
+    <style>
+    th:first-child,
+    td:first-child {
+        padding-left: 12px; }
+    th:last-child,
+    td:last-child {
+        padding-right: 12px; }
+
+    .final td {
+        text-align: center;
+        height: 36px;
+        width: 36px;
+    }
+
+    .vis {
+        border: 1px solid #000000;
+    }
+
+    .invis {
+        vertical-align: top;
+        border: none;
+    }
+
+    .team {
+        text-align: right;
+        border: none;
+    }
+</style>
+
+<p>This metametapuzzle uses the answers to every Round 2 puzzle, as well as the three Round 2 leader metas.</p>
+<p>Solvers are presented with some boxes and Caesar shifts on the metameta page, as well as the map on the main page, which now has various turn symbols added to it. The addition of these symbols, alongside the fact that the placement of the Puzzl&eacute;stops on the map page hasn't been used yet, implies that the map is important for this puzzle.</p>
+<p>We don't have anything that matches the enumeration in the Caesar shift boxes just yet, so we should focus our attention on the map first. There are a few possible ways to use the map, but the turns on the map imply that, at the very least, paths are drawn in the grid. Perhaps after some experimentation, solvers could attempt to create paths by writing their answers into the grid, turning if and only if they reach a turn symbol. If we assume all turn symbols must be used, there's a unique way to place all answers onto the grid. For simplicity, the image below represents each junction in the given map as one cell.</p>
+<p><center><img src=../static/puzzle_resources/solutions/a-turn-for-the-worse/map_ff.png height='600' width='600'></center></p>
+<p>Entering the feeders into the grid reveals three phrases: COOLER RIVAL from Spark's answers, DC DEBUT from Blanche's answers, and INNERMOST RING from Candela's answers. Comparing these answers to the corresponding meta answers, we notice that the extracted phrases can be used to "extend" the meta answers to clue new phrases.</p>
+<table>
+<thead>
+<tr>
+<th>Leader</th>
+<th>Meta answer</th>
+<th>Extracted phrase</th>
+<th>Total phrase</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spark</td>
+<td>RUN RIOT</td>
+<td>COOLER RIVAL</td>
+<td>RUN RIOT COOLER RIVAL</td>
+<td>BLIZZARD (a punnily "cooler" rival of Riot Games)</td>
+</tr>
+<tr>
+<td>Blanche</td>
+<td>BLAST AC</td>
+<td>DC DEBUT</td>
+<td>BLAST AC/DC DEBUT</td>
+<td>HIGH VOLTAGE (AC/DC's debut album)</td>
+</tr>
+<tr>
+<td>Candela</td>
+<td>INFER NO</td>
+<td>INNERMOST RING</td>
+<td>INFERNO INNERMOST RING</td>
+<td>TREACHERY (the innermost circle in Dante's <em>Inferno</em>)</td>
+</tr>
+</tbody>
+</table>
+<p>These newly generated phrases finally fit the enumerations of the boxes on the puzzle page, and we can shift them accordingly.</p>
+<table class="final"><tbody><tr><td class="team">⚡</td><td class="vis">F</td><td class="vis">E</td><td class="vis">E</td><td class="vis">D</td><td class="vis">&#128683;</td><td class="vis">A</td><td class="vis">N</td><td class="vis">O</td></tr><tr><td class="invis"></td><td class="invis">B<br>+4</td><td class="invis">L<br>-7</td><td class="invis">I<br>-4</td><td class="invis">Z<br>+4</td><td class="invis">Z (&#128683;)</td><td class="invis">A<br>+0</td><td class="invis">R<br>-4</td><td class="invis">D<br>+11</td></tr></tbody></table>
+
+<table class="final"><tbody><tr><td class="team">❄️</td><td class="vis">D</td><td class="vis">I</td><td class="vis">&#128683;</td><td class="vis">U</td><td class="invis"></td><td class="vis">&#128683;</td><td class="vis">M</td><td class="vis">&#128683;</td><td class="vis">&#128683;</td><td class="vis">A</td><td class="vis">D</td><td class="vis">D</td></tr><tr><td class="invis"></td><td class="invis">H<br>-4</td><td class="invis">I<br>+0</td><td class="invis">G (&#128683;)</td><td class="invis">H<br>+13</td><td class="invis"></td><td class="invis">V (&#128683;)</td><td class="invis">O<br>-2</td><td class="invis">L (&#128683;)</td><td class="invis">T (&#128683;)</td><td class="invis">A<br>+0</td><td class="invis">G<br>-3</td><td class="invis">E<br>-1</td></tr></tbody></table>
+
+<table class="final"><tbody><tr><td class="team">🔥</td><td class="vis">I</td><td class="vis">&#128683;</td><td class="vis">C</td><td class="vis">T</td><td class="vis">&#128683;</td><td class="vis">I</td><td class="vis">O</td><td class="vis">&#128683;</td><td class="vis">N</td></tr><tr><td class="invis"></td><td class="invis">T<br>-11</td><td class="invis">R (&#128683;)</td><td class="invis">E<br>-2</td><td class="invis">A<br>-7</td><td class="invis">C (&#128683;)</td><td class="invis">H<br>+1</td><td class="invis">E<br>+10</td><td class="invis">R (&#128683;)</td><td class="invis">Y<br>-11</td></tr></tbody></table>
+
+<p>The final answer to this metameta explains what we've done by generating all this malice: <strong>FEED AN ODIUM ADDICTION</strong>. Guess Shuppy really does like eating hatred that much!</p>
+
+    
+
+    
+    <hr>
+    <h5>Author&rsquo;s Notes</h5>
+    <p>You might be surprised to learn that this puzzle was ideated almost from scratch the Friday before the hunt was meant to begin. Deusovi had come up with the idea to write answers across the grid for thematic parallelism much earlier on, but it was only that Friday when I noticed the meta answers could be semantically extended, long after all the metas had been planned independently of each other and any hypothetical metastructure. I came up with some extending phrases and tried to brainstorm ways the map could be used to generate them... and then I realized that it was actually possible to spell out almost everything I needed with only orthogonal snaking paths.</p>
+<p>Apart from some small alterations to the extending phrases (INNERMOST RING instead of INNER CIRCLE and COOLER RIVAL instead of COOL COMPETITOR), everything proceeded to fall together magically. The letter extraction is a bit more constrained than it might seem&mdash;it's actually non-trivial to extract what you want even if you have all the letters in your feeders, and the fact that the answer set managed to make the extending phrases, <em>using only feeders from the respective meta</em>, despite being predetermined long ago, convinced me that this puzzle is actually an act of the divine. This is the highest payoff:effort ratio I've ever gotten from a puzzle construction.</p>
+    
+
+    
+
+    
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

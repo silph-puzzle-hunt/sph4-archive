@@ -1,0 +1,305 @@
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: META: Getting Going</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../">
+                    Home
+                </a>
+                <a  href="../rules">
+                    Rules
+                </a>
+                
+                <a  href="../story">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams">
+                    Teams
+                </a>
+                <a  href="../faq">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="../puzzle/getting-going" class="btn">Back to the puzzle</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    Solution: META: Getting Going
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">ROCKETEERING</span></div>
+    
+</h1>
+
+<main>
+    <h5>
+        Written by
+        
+Level 51
+
+    </h5>
+
+    
+    <p>The following puzzles and answers feed into this metapuzzle:</p>
+<table>
+<thead>
+<tr>
+<th>Puzzle title</th>
+<th>Puzzle answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Opening Ceremony</td>
+<td>BEGINNING</td>
+</tr>
+<tr>
+<td>Kids These Days</td>
+<td>DONT WANNA</td>
+</tr>
+<tr>
+<td>Quick Fix</td>
+<td>WANDERER</td>
+</tr>
+<tr>
+<td>Now I Know My 🐝🐝🐝s</td>
+<td>NEVER MIND</td>
+</tr>
+<tr>
+<td>If You Give...</td>
+<td>SWALLOWS</td>
+</tr>
+<tr>
+<td>Harmony</td>
+<td>SWISHED</td>
+</tr>
+<tr>
+<td>Color-Coded</td>
+<td>GREENWICH</td>
+</tr>
+<tr>
+<td>Connections</td>
+<td>ETHERNET</td>
+</tr>
+<tr>
+<td>Natural Order</td>
+<td>FALSE POSITIVE</td>
+</tr>
+<tr>
+<td>Continuity</td>
+<td>SLIDESHOW</td>
+</tr>
+<tr>
+<td>Chimera</td>
+<td>TELESCOPE</td>
+</tr>
+<tr>
+<td>Medal Ceremony</td>
+<td>RUNNERS</td>
+</tr>
+</tbody>
+</table>
+<p>The puzzle does not appear to come with much information, except for the flavortext and the conspicuously marked map all the puzzles appear on. Perhaps with the aid of the map's odd 19-by-19 size and the aid of the nine conspicuous roundabout points on the board, solvers might realize that this Pokemon GO map is actually a Go board!</p>
+<p>But how should we get things onto the board? The flavortext provides this hint, in the form of the odd mention of "[man's] triumph over machine". Googling some combination of man, machine, and Go should eventually direct solvers to the high-profile series between AlphaGo and Lee Sedol, where Lee Sedol lost 4-1 but notably won Game 4. (This is confirmed by the "alpha" stage in the flavortext.)</p>
+<p>Since the flavor mentions man's triumph, we can check out the one game he did win. The board state for this game is documented in many places, such as Wikipedia; each starting square coincides with a point where a piece was played in the game, which might help assure teams that they're on the right track.</p>
+<p>Per the flavortext's mention of "walking in all directions", we next note that each feeder answer contains exactly 4 cardinal directions (this is most noticeable in some of the shorter answers, like SWALLOWS or SWISHED). Treating these as directions from the starting points gives us paths of length 5, where every point passed over was <em>also</em> played on during the game, either with a black piece or a white piece.</p>
+<p><center><img src=../static/puzzle_resources/solutions/getting-going/schema.png width=60%></center></p>
+<p>Taking black as 1 and white as 0, these give us strings of five-bit binary. Finally, we can sort the points by the order in which the plays at the starting points were made during the game. In this order, the five-bit binary decodes to give the meta answer <strong>ROCKETEERING</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Puzzle answer</th>
+<th>Move #</th>
+<th>Directions</th>
+<th>Binary</th>
+<th>Letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TELESCOPE</td>
+<td>7</td>
+<td>EESE</td>
+<td>10010</td>
+<td>R</td>
+</tr>
+<tr>
+<td>GREENWICH</td>
+<td>36</td>
+<td>EENW</td>
+<td>01111</td>
+<td>O</td>
+</tr>
+<tr>
+<td>NEVER MIND</td>
+<td>38</td>
+<td>NEEN</td>
+<td>00011</td>
+<td>C</td>
+</tr>
+<tr>
+<td>SLIDESHOW</td>
+<td>48</td>
+<td>SESW</td>
+<td>01011</td>
+<td>K</td>
+</tr>
+<tr>
+<td>DONT WANNA</td>
+<td>52</td>
+<td>NWNN</td>
+<td>00101</td>
+<td>E</td>
+</tr>
+<tr>
+<td>SWISHED</td>
+<td>53</td>
+<td>SWSE</td>
+<td>10100</td>
+<td>T</td>
+</tr>
+<tr>
+<td>SWALLOWS</td>
+<td>72</td>
+<td>SWWS</td>
+<td>00101</td>
+<td>E</td>
+</tr>
+<tr>
+<td>BEGINNING</td>
+<td>84</td>
+<td>ENNN</td>
+<td>00101</td>
+<td>E</td>
+</tr>
+<tr>
+<td>ETHERNET</td>
+<td>95</td>
+<td>EENE</td>
+<td>10010</td>
+<td>R</td>
+</tr>
+<tr>
+<td>RUNNERS</td>
+<td>100</td>
+<td>NNES</td>
+<td>01001</td>
+<td>I</td>
+</tr>
+<tr>
+<td>WANDERER</td>
+<td>110</td>
+<td>WNEE</td>
+<td>01110</td>
+<td>N</td>
+</tr>
+<tr>
+<td>FALSE POSITIVE</td>
+<td>130</td>
+<td>SESE</td>
+<td>00111</td>
+<td>G</td>
+</tr>
+</tbody>
+</table>
+
+    
+
+    
+    <hr>
+    <h5>Author&rsquo;s Notes</h5>
+    <p>While brainstorming ideas for a first-round meta, I noticed that we hadn't yet used the GO-Go pun that I had wanted to use, and I figured the first-round meta might not be a bad time to bust it out, since that's when the hunt's general themes are first brought to light. The five-bit binary extraction idea was pretty natural, and the rest of the puzzle was designed to enable it, with the choice of match being one I thought was more likely to be known by people not super into Go.</p>
+    
+
+    
+
+    
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

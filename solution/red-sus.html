@@ -1,0 +1,222 @@
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: RED SUS</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../">
+                    Home
+                </a>
+                <a  href="../rules">
+                    Rules
+                </a>
+                
+                <a  href="../story">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams">
+                    Teams
+                </a>
+                <a  href="../faq">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="../puzzle/red-sus" class="btn">Back to the puzzle</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    Solution: RED SUS
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">ENVIRONMENT</span></div>
+    
+</h1>
+
+<main>
+    <h5>
+        Written by
+        
+lovemathboy and chaotic_iak
+
+    </h5>
+
+    
+    <style>
+    table {
+        display: block;
+        margin: 10px auto;
+        width: fit-content;
+    }
+
+    .redden {
+        color: red;
+        font-weight: bold;
+    }
+
+    td.redden {
+        border: none;
+        text-align: center;
+    }
+
+    .genre {
+        border: none;
+        border-right: 1px solid black;
+        color: red;
+        font-weight: bold;
+    }
+
+    .corner {
+        border: none;
+        border-right: 1px solid black;
+        border-top: 1px solid black;
+    }
+
+    .final {
+        border: none;
+        border-top: 1px solid black;
+        font-weight: bold;
+    }
+</style>
+
+<p>This puzzle contains 10 logic puzzles listed in alphabetical order. However, within each ruleset, some words or phrases are written in <span class="redden">red</span> instead. These phrases should be interpreted as giving rules that are strictly incorrect.</p>
+<h4>Fillomino (by chaotic_iak)</h4>
+<p>"If two regions are <span class="redden">adjacent</span>, they do not have the same size": If two regions are not adjacent, they do not have the same size. It's easier to think about the contrapositive of this rule, which is "If two regions have the same size, then they are adjacent." Hence, all regions of the same size are pairwise adjacent.</p>
+<p><center><img src=../static/puzzle_resources/solutions/red-sus/fillomino1.png width=40%><img src=../static/puzzle_resources/solutions/red-sus/fillomino2.png width=40%><p>Extracted word: <span class="redden">SENTIMENTAL</span></p></center></p>
+<h4>Hashiwokakero (by lovemathboy)</h4>
+<p>"If there exist bridges between 2 islands, there are <span class="redden">either one or two</span> bridges between them": If there's a bridge between islands, then there must be at least 3 bridges between the islands.</p>
+<p><center><img src=../static/puzzle_resources/solutions/red-sus/hashiwokakero1.png width=40%><img src=../static/puzzle_resources/solutions/red-sus/hashiwokakero2.png width=40%><p>Extracted word: <span class="redden">SMORGASBORD</span></p></center></p>
+<h4>Heteromino (by chaotic_iak)</h4>
+<p>"Regions of the same shape and the <span class="redden">same</span> orientation are not orthogonally adjacent.": Pretty self-explanatory ruleset, each triomino can only be adjacent to a triomino with a different shape or a triomino with the same shape and orientation.</p>
+<p><center><img src=../static/puzzle_resources/solutions/red-sus/heteromino1.png width=40%><img src=../static/puzzle_resources/solutions/red-sus/heteromino2.png width=40%><p>Extracted word: <span class="redden">ACCOUNTANCY</span></p></center></p>
+<h4>Icebarn (by lovemathboy)</h4>
+<p>"The directed path may cross only on <span class="redden">ice</span> cells.": The path is allowed to cross on non-ice cells and not allowed to cross on ice cells.</p>
+<p><center><img src=../static/puzzle_resources/solutions/red-sus/icebarn1.png width=40%><img src=../static/puzzle_resources/solutions/red-sus/icebarn2.png width=40%><p>Extracted word: <span class="redden">IRREVERENCE</span></p></center></p>
+<h4>LITS (by lovemathboy)</h4>
+<p>"<span class="redden">Same</span> tetrominoes may not be adjacent.": Different tetrominoes may not be adjacent. Another way to phrase this is if 2 tetrominoes are adjacent, then they are the same shape.
+"All <span class="redden">shaded</span> cells must form a connected region": Pretty self-explanatory, every non-shaded cell must form a connected region.
+"There may not be any 2x2 region of <span class="redden">shaded</span> cells": Also self-explanatory, no 2x2 region of non-shaded cells are allowed.</p>
+<p><center><img src=../static/puzzle_resources/solutions/red-sus/lits1.png width=40%><img src=../static/puzzle_resources/solutions/red-sus/lits2.png width=40%><p>Extracted word: <span class="redden">GRANDFATHER</span></p></center></p>
+<h4>Masyu (by lovemathboy)</h4>
+<p>"Draw a single non-intersecting loop connecting centers of cells via <span class="redden">axis-parallel</span> lines.": The loop must still go from center to center, but each loop segment cannot be axis-parallel.</p>
+<p><center><img src=../static/puzzle_resources/solutions/red-sus/masyu1.png width=40%><img src=../static/puzzle_resources/solutions/red-sus/masyu2.png width=40%><p>Extracted word: <span class="redden">CONSPICUOUS</span></p></center></p>
+<h4>Moon or Sun (by lovemathboy)</h4>
+<p>"A region of bolded lines is called a "room". The loop goes through each room <span class="redden">exactly once</span>.": In combination with another rule, this implies the loop must visit each room at least once. In rooms with both moons and suns, this rule implies one visit must visit all suns and no moons while another visit must visit all moons and no suns. However, if a room lacks a type of clue, the loop can make multiple "visit all shapes of that type" visits to that room.</p>
+<p><center><img src=../static/puzzle_resources/solutions/red-sus/moon-or-sun1.png width=40%><img src=../static/puzzle_resources/solutions/red-sus/moon-or-sun2.png width=40%><p>Extracted word: <span class="redden">MANUFACTURE</span></p></center></p>
+<h4>Nurikabe (by lovemathboy)</h4>
+<p>"Each unshaded region contains <span class="redden">exactly one</span> number.": Each region must contain either 0 or at least 2 numbers. Since a number depicts the size of the region it's in, all numbers within the region must be the same.</p>
+<p><center><img src=../static/puzzle_resources/solutions/red-sus/nurikabe1.png width=40%><img src=../static/puzzle_resources/solutions/red-sus/nurikabe2.png width=40%><p>Extracted word: <span class="redden">OXYGENATION</span></p></center></p>
+<h4>Star Battle (by lovemathboy)</h4>
+<p>"Each row and column contains <span class="redden">exactly 2</span> stars": Each row and column can contain any number of stars except for 2.</p>
+<p><center><img src=../static/puzzle_resources/solutions/red-sus/star-battle1.png width=40%><img src=../static/puzzle_resources/solutions/red-sus/star-battle2.png width=40%><p>Extracted word: <span class="redden">DIMENSIONAL</span></p></center></p>
+<h4>Sudoku (by lovemathboy)</h4>
+<p>"Every row and column contains each number 1-9 <span class="redden">exactly once</span>.": Each row and column must contain each number 1-9 at least twice or none at all. Since each box contains each number from 1-9 exactly once, this implies 3 rows with the boxes must contain each number from 1-9 exactly 3 times. If a number appears exactly twice in a row, there will be no other way to pair up the last remaining occurrence of that number. Hence, this implies each row and column must either contain exactly 3 of a number or none of that number.</p>
+<p><center><img src=../static/puzzle_resources/solutions/red-sus/sudoku1.png width=40%><img src=../static/puzzle_resources/solutions/red-sus/sudoku2.png width=40%><p>Extracted word: <span class="redden">PRECIPITATE</span></p></center></p>
+<h4>Extraction</h4>
+<p>Each of the extracted answers is an 11-letter word. However, every single letter is in red, which suggests we should interpret each letter as incorrect, and that the corresponding position in the final answer will be a letter that isn't that letter.</p>
+<table><tr><td class="genre">Fillomino</td><td class="redden">S</td><td class="redden">E</td><td class="redden">N</td><td class="redden">T</td><td class="redden">I</td><td class="redden">M</td><td class="redden">E</td><td class="redden">N</td><td class="redden">T</td><td class="redden">A</td><td class="redden">L</td></tr><tr><td class="genre">Hashiwokakero</td><td class="redden">S</td><td class="redden">M</td><td class="redden">O</td><td class="redden">R</td><td class="redden">G</td><td class="redden">A</td><td class="redden">S</td><td class="redden">B</td><td class="redden">O</td><td class="redden">R</td><td class="redden">D</td></tr><tr><td class="genre">Heteromino</td><td class="redden">A</td><td class="redden">C</td><td class="redden">C</td><td class="redden">O</td><td class="redden">U</td><td class="redden">N</td><td class="redden">T</td><td class="redden">A</td><td class="redden">N</td><td class="redden">C</td><td class="redden">Y</td></tr><tr><td class="genre">Icebarn</td><td class="redden">I</td><td class="redden">R</td><td class="redden">R</td><td class="redden">E</td><td class="redden">V</td><td class="redden">E</td><td class="redden">R</td><td class="redden">E</td><td class="redden">N</td><td class="redden">C</td><td class="redden">E</td></tr><tr><td class="genre">LITS</td><td class="redden">G</td><td class="redden">R</td><td class="redden">A</td><td class="redden">N</td><td class="redden">D</td><td class="redden">F</td><td class="redden">A</td><td class="redden">T</td><td class="redden">H</td><td class="redden">E</td><td class="redden">R</td></tr><tr><td class="genre">Masyu</td><td class="redden">C</td><td class="redden">O</td><td class="redden">N</td><td class="redden">S</td><td class="redden">P</td><td class="redden">I</td><td class="redden">C</td><td class="redden">U</td><td class="redden">O</td><td class="redden">U</td><td class="redden">S</td></tr><tr><td class="genre">Moon or Sun</td><td class="redden">M</td><td class="redden">A</td><td class="redden">N</td><td class="redden">U</td><td class="redden">F</td><td class="redden">A</td><td class="redden">C</td><td class="redden">T</td><td class="redden">U</td><td class="redden">R</td><td class="redden">E</td></tr><tr><td class="genre">Nurikabe</td><td class="redden">O</td><td class="redden">X</td><td class="redden">Y</td><td class="redden">G</td><td class="redden">E</td><td class="redden">N</td><td class="redden">A</td><td class="redden">T</td><td class="redden">I</td><td class="redden">O</td><td class="redden">N</td></tr><tr><td class="genre">Star Battle</td><td class="redden">D</td><td class="redden">I</td><td class="redden">M</td><td class="redden">E</td><td class="redden">N</td><td class="redden">S</td><td class="redden">I</td><td class="redden">O</td><td class="redden">N</td><td class="redden">A</td><td class="redden">L</td></tr><tr><td class="genre">Sudoku</td><td class="redden">P</td><td class="redden">R</td><td class="redden">E</td><td class="redden">C</td><td class="redden">I</td><td class="redden">P</td><td class="redden">I</td><td class="redden">T</td><td class="redden">A</td><td class="redden">T</td><td class="redden">E</td></tr><tr><td class="corner">Final answer</td><td class="final">E</td><td class="final">N</td><td class="final">V</td><td class="final">I</td><td class="final">R</td><td class="final">O</td><td class="final">N</td><td class="final">M</td><td class="final">E</td><td class="final">N</td><td class="final">T</td></tr></table>
+
+<p>The only reasonable 11-letter answer that fits the final answer is <strong>ENVIRONMENT</strong>, which you can find via a <a href="https://nutrimatic.org/?q=%5B%5Essaigcodp%5D%5B%5Eemcrroxir%5D%5B%5Enocranyme%5D%5B%5Etroensgec%5D%5B%5Eiguvdpeni%5D%5B%5Emanefinsp%5D%5B%5Eestracaii%5D%5B%5Enbaetutot%5D%5B%5Etonnhoina%5D%5B%5Earcceuoat%5D%5B%5Eldyersnle%5D&amp;go=Go&gt;">Nutrimatic query</a>.</p>
+
+    
+
+    
+    <hr>
+    <h5>Author&rsquo;s Notes</h5>
+    <p><strong>lovemathboy</strong>: I love writing logic puzzles with cursed rulesets... so this puzzle was born. As a fun fact, Moon or Sun was so cursed that I interpreted my own ruleset wrongly... </p>
+<p><center><img src=../static/puzzle_resources/solutions/red-sus/oops.png width=40%></center></p>
+<p>Also, it can't be a lmb puzzle without an alignment chart at the end :)</p>
+<p><center><img src=../static/puzzle_resources/solutions/red-sus/alignment-chart.png width=70%></center></p>
+<p><strong>chaotic_iak</strong>: lovemathboy asked me to help write some cursed logic puzzles, so I did. After thinking about my favorite genres, I thought of Fillomino and this rule change, then I realized it could actually make for an interesting puzzle, so I decided to tackle it. Later on, lovemathboy already came up with nine other puzzles, but one of them (a Slitherlink) was rather weak (read: not cursed enough) and I saw a lack of region division puzzles, so I decided to write another, giving the Heteromino. Also, it would be strange if an author only writes one of the ten logic puzzles.</p>
+    
+
+    
+
+    
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>

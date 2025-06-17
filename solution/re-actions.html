@@ -1,0 +1,308 @@
+
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title>Solution: Re-actions</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta property="og:title" content="Silph Puzzle Hunt">
+    <meta property="og:description" content="December 4–13, 2021">
+    <meta property="og:image" content="https://silphpuzzlehunt.com/static/images/logo-prev.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#2df6ff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/base.css">
+    
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.min.js"></script>
+    <script src="../static/js/sorttable.js"></script>
+    <script src="../static/js/tray.js"></script>
+    <script src="../static/js/notify.js"></script>
+    <script src="../static/js/time.js"></script>
+    <script>
+        // convenience
+        function goToUrl(link) {
+            location.href = link;
+        }
+    </script>
+    
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="../static/images/favicon.png">
+    
+    
+<script>
+  /* FIXME */
+</script>
+
+    
+</head>
+
+<body>
+    
+    <nav>
+        <span class="tray">
+            <div class="top-tabs">
+                <a  href="../">
+                    Home
+                </a>
+                <a  href="../rules">
+                    Rules
+                </a>
+                
+                <a  href="../story">
+                    Story
+                </a>
+                
+                
+                <a 
+                    class="selected-tab"  href="../puzzles">
+                    Puzzles
+                </a>
+                
+                <a  href="../teams">
+                    Teams
+                </a>
+                <a  href="../faq">
+                    FAQ
+                </a>
+                
+                
+                <a  href="../wrapup">
+                    Wrap-Up
+                </a>
+                
+            </div>
+        </span>
+        <div class="actions">
+            <div class="top-left-actions">
+                
+<a href="../puzzle/re-actions" class="btn">Back to the puzzle</a>
+
+            </div>
+
+            <div class="top-right-actions">
+                
+            </div>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="content">
+        
+
+<h1>
+    
+    Solution: Re-actions
+    <div class="solved-title-marker">Answer: <span class="solved-title-answer">SULFUR QUENCHING</span></div>
+    
+</h1>
+
+<main>
+    <h5>
+        Written by
+        
+Level 51 and Deusovi
+
+    </h5>
+
+    
+    <style>
+rt {
+    font-size: 8pt;
+}
+
+.fade {
+    color: #aaaaaa;
+}
+</style>
+
+<!-- massive apologies in advance to whoever invented ruby annotations. i have butchered them for my own diabolical purposes. -->
+
+<p>Solvers are presented with a crossword grid, two cryptic clues, and a list of supposedly "alphabetized" fragments of clues. There seem to be way too many fragments to assemble clues, but since we have some seemingly complete clues, we can definitely solve them.</p>
+<table><tr><th>Clue</th><th>Clue solution</th><th>Answer</th></tr><tr><td>1A</td><td><ruby>Spanish capital<rt>definition</rt></ruby>&ensp;<ruby>'s<rt>connector</rt></ruby>&ensp;<ruby>mouth nearly<rt>MA(-w)</rt></ruby>&ensp;<ruby>disheartens soothsayer<rt>DR(-u)ID</rt></ruby></td><td>MADRID</td></tr><tr><td>1D</td><td><ruby>Ironic?<rt>METALLIC</rt></ruby>&ensp;<ruby>One<rt>A</rt></ruby>&ensp;<ruby>Ulrich's band<rt>definition</rt></ruby></td><td>METALLICA</td></tr></table>
+
+<p>Solvers might notice that two sets of fragments have been labeled for use in two clues: 4-Across and 2-Down. The 2-Down construction seems simple, and we can ascertain that is indeed a solvable clue:</p>
+<table><tr><th>Clue</th><th>Clue solution</th><th>Answer</th></tr><tr><td>2D</td><td><ruby>Very competitive<rt>definition</rt></ruby>&ensp;<ruby>game patched ruins after sun has faded<rt>anagram&emsp14;PATCHEDRUINS&emsp14;after&emsp14;deleting&emsp14;SUN&emsp14;=&emsp14;DIRTCHEAP</rt></ruby></td><td>DIRT-CHEAP</td></tr></table>
+
+<p>However, clue 4-Across, from the fragments "Provide color gradient" and "commentary on suspiciously quiet pariah", proves harder to parse. Solvers might be able to get the answer to the clue, but the parse seems to be a little strange; the words "gradient" and "suspiciously" don't seem to do anything.</p>
+<p>At this point, solvers might turn to the flavortext for a clue on how this puzzle works. In this puzzle, each cryptic clue indicates how to assemble the successive clue from fragments: each letter in the cryptic parse of a clue represents a word in a fragment, and the "pieces" of the cryptic parse are the "fragments" the clues must be assembled from. For example, we can consider the transition from the earlier mentioned 1-Across to 4-Across, which creates the clue "Provide color commentary on quiet pariah" from the fragments "Provide color gradient" and "commentary on suspiciously quiet pariah":</p>
+<p>4-Across: <ruby>Provide<rt>M</rt></ruby>&ensp;<ruby>color<rt>A</rt></ruby>&ensp;<span class="fade"><ruby>gradient<rt>(-w)</rt></ruby></span>&ensp;+&ensp;<ruby>commentary<rt>D</rt></ruby>&ensp;<ruby>on<rt>R</rt></ruby>&ensp;<span class="fade"><ruby>suspiciously<rt>(-u)</rt></ruby></span>&ensp;<ruby>quiet<rt>I</rt></ruby>&ensp;<ruby>pariah<rt>D</rt></ruby></p>
+<p>Other clue types work similarly; for example, anagrams provide a permutation from the original letters to their order in the clue answer that must be replicated on the words in the next fragment.</p>
+<p>One small edge case is when multiple words are acted on as a whole unit; for example, 2-Down takes PATCHED RUINS, deletes SUN, and anagrams the result. In this case, both words correspond to the same fragment when constructing the next clue, though they are separated by ellipsis to show the structural divide. To illustrate this, we can examine how 2-Down generates 3-Down from the fragment "Lover (Latin) looking back at a brain ... Question authority without even flinching", representing PATCHED RUINS:</p>
+<p>3-Down: <ruby>Brain,<rt>D</rt></ruby>&ensp;<ruby>without<rt>I</rt></ruby>&ensp;<ruby>question,<rt>R</rt></ruby>&ensp;<ruby>looking<rt>T</rt></ruby>&ensp;<ruby>back<rt>C</rt></ruby>&ensp;<ruby>at<rt>H</rt></ruby>&ensp;<ruby>a<rt>E</rt></ruby>&ensp;<ruby>Latin<rt>A</rt></ruby>&ensp;<ruby>lover?<rt>P</rt></ruby>&ensp;<span class="fade"><ruby>flinching<rt>(-s)</rt></ruby></span>&ensp;<span class="fade"><ruby>authority<rt>(-u)</rt></ruby></span>&ensp;<span class="fade"><ruby>even<rt>(-n)</rt></ruby></span></p>
+<p>Applying this concept repeatedly as we continue through the crossword, we can fill the whole grid, including the unclued center Across entry, as shown below. This unclued entry spells ALPHA UNUSED WORDS.</p>
+<p><center><img src=../static/puzzle_resources/solutions/re-actions/grid_s.png height='576' width='542'></center></p>
+<p>While we were solving the cryptic clues, some words were deleted from the clues, like "flinching", "authority", and "even" from the 3-Down construction shown above. Due to the successor-guiding mechanic, each word in a fragment corresponds to a letter in the parse of the preceding clue; for example, "flinching" corresponds to the S that gets deleted when solving 2-Down. We can take all these discarded words and their corresponding letters, and order them by alphabetical order of the words. Doing so, the corresponding letters spell out the phrase PUZZLE ANSWER IS SULFUR QUENCHING, so the final answer to this puzzle is <strong>SULFUR QUENCHING</strong>.</p>
+
+    
+
+    
+    <hr>
+    <h5>Author&rsquo;s Notes</h5>
+    <p><strong>Level 51</strong>: One of the weaknesses I've observed about cryptic crosswords in hunt puzzles is that, about halfway through solving a cryptic, it becomes much more efficient to simply mash through the rest of the crossword by comparing crossing clues and going off definition halves alone. I actually really enjoy finding parses, so it feels a bit lame to me that the optimal way to solve becomes to just ignore the cryptic part of the cryptic clues. With that in mind, I came up with this gimmick as a way to make it actually useful to fully solve clues. Deusovi came up with the structure to fit the mechanic into and convinced me that it was possible to solve about 20 clues' worth of fragments at once; I had originally planned to limit it to fragments of about 10 clues. We each wrote about half the clues; if you found a clue cruel, there's about a 70% chance I'm responsible for it.</p>
+<p>If I could go back and write this puzzle again, I'd probably make sure that earlier clues were easier to solve, to make the central mechanic easier to figure out&mdash;SHOUTCAST in 4-Across is a bit of an obscure word, and 2-Down is just a hard clue to parse. I thought the puzzle after getting the gimmick was quite reasonable, though, and it was nice to not have to hold back on clue difficulty. I'm very proud of the end result.</p>
+<p><strong>Deusovi</strong>: I <em>really</em> enjoy pushing the boundaries of "inferrability" in puzzles&mdash;how much you can guess when some information has been obscured, or how far you can go on "unsteady footing". This puzzle was fun to write because it played with this in a different way. You could <em>technically</em> piece together a few clues without the clues before them&mdash;ADAMANTLY and AIRSTRIP are the two we saw teams getting most often. But this required a bit of a leap of faith, because you didn't know how the actual clue looked.</p>
+<p>As for the actual construction process, it was about even between Level 51 and me: I filled the left half and he filled the right, and after a few tweaks we each wrote about half the clues. I tried to not go too overboard in terms of difficulty, but there were some tricky phrasings I couldn't pass up; if you found a clue cruel, there's about a 60% chance I'm responsible for it.</p>
+<p>In signposting the puzzle, we tried to make the gimmick tricky to get, but possible. We had a significant number of teams who needed a slightly bigger push to get started with the central gimmick. But either way, that "aha" seemed very rewarding (in the "oh god do we actually have to do this" way that only a good puzzle can provide). I'm really happy with how the puzzle turned out overall!</p>
+    
+
+    
+
+    
+    <hr>
+    <h3>Full clues and parses</h3>
+<h4>Across</h4>
+<p><table><tr><th>Clue</th><th>Clue solution</th><th>Answer</th></tr><tr><td>1A</td><td><ruby>Spanish capital<rt>definition</rt></ruby>&ensp;<ruby>'s<rt>connector</rt></ruby>&ensp;<ruby>mouth nearly<rt>MA(-w)</rt></ruby>&ensp;<ruby>disheartens soothsayer<rt>DR(-u)ID</rt></ruby></td><td>MADRID</td></tr><tr><td>4A</td><td><ruby>Provide color commentary<rt>definition</rt></ruby>&ensp;<ruby>on<rt>connector</rt></ruby>&ensp;<ruby>quiet<rt>SH</rt></ruby>&ensp;<ruby>pariah<rt>OUTCAST</rt></ruby></td><td>SHOUTCAST</td></tr><tr><td>10A</td><td><ruby>First character<rt>A</rt></ruby>&ensp;<ruby>in<rt>contained&emsp14;by</rt></ruby>&ensp;<ruby>almost three<rt>THRE(-e)</rt></ruby>&ensp;<ruby>decades<rt>TENS</rt></ruby>&ensp;<ruby>to create<rt>connector</rt></ruby>&ensp;<ruby>cows<rt>definition</rt></ruby></td><td>THREATENS</td></tr><tr><td>11A</td><td><ruby>Fuel for a big rig<rt>definition</rt></ruby>&ensp;<ruby>won't go on<rt>DIES</rt></ruby>&ensp;<ruby>train<rt>EL</rt></ruby></td><td>DIESEL</td></tr><tr><td>12A</td><td><ruby>Bridge covering impedance in idle<rt>CROSS&emsp14;replacing&emsp14;Z&emsp14;in&emsp14;LAZE</rt></ruby>&ensp;<ruby>game<rt>definition</rt></ruby></td><td>LACROSSE</td></tr><tr><td>13A</td><td><ruby>Sputter<rt>definition</rt></ruby>&ensp;<ruby>"mercy!"<rt>UNCLE</rt></ruby>&ensp;<ruby>over<rt>containing</rt></ruby>&ensp;<ruby>torture device<rt>RACK</rt></ruby>&ensp;<ruby>after peacekeepers leave<rt>delete&emsp14;UN</rt></ruby></td><td>CRACKLE</td></tr><tr><td>15A</td><td><ruby>Well-read scholars losing head<rt>(-l)ITERATI</rt></ruby>&ensp;<ruby>over<rt>ON</rt></ruby>&ensp;<ruby>repetitive process<rt>definition</rt></ruby></td><td>ITERATION</td></tr><tr><td>16A</td><td><ruby>Turned<rt>definition</rt></ruby>&ensp;<ruby>north<rt>N</rt></ruby>&ensp;<ruby>upon breaking into<rt>contained&emsp14;by</rt></ruby>&ensp;<ruby>right<rt>R</rt></ruby>&ensp;<ruby>type of rock<rt>ACID</rt></ruby></td><td>RANCID</td></tr><tr><td>25A</td><td><ruby>Fights<rt>definition</rt></ruby>&ensp;<ruby>in<rt>connector</rt></ruby>&ensp;<ruby>small<rt>S</rt></ruby>&ensp;<ruby>game of chance<rt>CRAPS</rt></ruby></td><td>SCRAPS</td></tr><tr><td>26A</td><td><ruby>Rot<rt>ERODE</rt></ruby>&ensp;<ruby>overcomes<rt>containing</rt></ruby>&ensp;<ruby>castle<rt>R</rt></ruby>&ensp;<ruby>monster<rt>ORC</rt></ruby>&ensp;<ruby>500, e.g.<rt>definition</rt></ruby></td><td>ERROR CODE</td></tr><tr><td>27A</td><td><ruby>She speaks<rt>definition</rt></ruby>&ensp;<ruby>of<rt>connector</rt></ruby>&ensp;<ruby>alternative<rt>OR</rt></ruby>&ensp;<ruby>Ahri opening<rt>A(-hri)</rt></ruby>&mdash;<ruby>it's for kids<rt>TRIX</rt></ruby></td><td>ORATRIX</td></tr><tr><td>28A</td><td><ruby>Tells everyone about<rt>AIRS</rt></ruby>&ensp;<ruby>misstep<rt>TRIP</rt></ruby>&ensp;<ruby>at<rt>connector</rt></ruby>&ensp;<ruby>touchdown location<rt>definition</rt></ruby></td><td>AIRSTRIP</td></tr><tr><td>30A</td><td><ruby>A<rt>A</rt></ruby>&ensp;<ruby>hawk,<rt>TOUT</rt></ruby>&ensp;<ruby>grasping<rt>containing</rt></ruby>&ensp;<ruby>eagle head,<rt>E(-agle)</rt></ruby>&ensp;<ruby>went for meal<rt>definition</rt></ruby></td><td>ATEOUT</td></tr><tr><td>31A</td><td><ruby>Sauce<rt>definition</rt></ruby>&ensp;<ruby>in<rt>connector</rt></ruby>&ensp;<ruby>pub<rt>INN</rt></ruby>&ensp;<ruby>sandwiches<rt>containing</rt></ruby>&ensp;<ruby>(only<rt>SOLE</rt></ruby>&ensp;<ruby>today!)<rt>CE&emsp14;(common&emsp14;era)</rt></ruby></td><td>INSOLENCE</td></tr><tr><td>32A</td><td><ruby>Stubbornly,<rt>definition</rt></ruby>&ensp;<ruby>like Casanova,<rt>MANLY</rt></ruby>&ensp;<ruby>taking time<rt>containing&emsp14;T</rt></ruby>&ensp;<ruby>to pursue<rt>positionally&emsp14;after</rt></ruby>&ensp;<ruby>programmer Lovelace<rt>ADA</rt></ruby></td><td>ADAMANTLY</td></tr><tr><td>33A</td><td><ruby>Emergence<rt>definition</rt></ruby>&ensp;<ruby>of<rt>connector</rt></ruby>&ensp;<ruby>season defined by trees, wreaths, and gifts<rt>definition</rt></ruby></td><td>ADVENT</td></tr></table></p>
+<h4>Down</h4>
+<p><table><tr><th>Clue</th><th>Clue solution</th><th>Answer</th></tr><tr><td>1D</td><td><ruby>Ironic?<rt>METALLIC</rt></ruby>&ensp;<ruby>One<rt>A</rt></ruby>&ensp;<ruby>Ulrich's band<rt>definition</rt></ruby></td><td>METALLICA</td></tr><tr><td>2D</td><td><ruby>Very competitive<rt>definition</rt></ruby>&ensp;<ruby>game patched ruins after sun has faded<rt>anagram&emsp14;PATCHEDRUINS&emsp14;after&emsp14;deleting&emsp14;SUN&emsp14;=&emsp14;DIRTCHEAP</rt></ruby></td><td>DIRT-CHEAP</td></tr><tr><td>3D</td><td><ruby>Brain, without question,<rt>I(-q)</rt></ruby>&ensp;<ruby>looking back at a Latin<rt>(AT&emsp14;A&emsp14;ROMAN)&emsp14;reversed&emsp14;=&emsp14;NAMORATA</rt></ruby>&ensp;<ruby>lover?<rt>definition</rt></ruby></td><td>INAMORATA</td></tr><tr><td>5D</td><td><ruby>One that indicates checkmate<rt>definition</rt></ruby>&ensp;<ruby>boasts<rt>HAS</rt></ruby>&ensp;<ruby>second place in chess<rt>second&emsp14;letter&emsp14;of&emsp14;CHESS,&emsp14;(-c)H(-ess)</rt></ruby></td><td>HASH</td></tr><tr><td>6D</td><td><ruby>Student<rt>definition</rt></ruby>&ensp;<ruby>remodeled gerund?<rt>anagram&emsp14;GERUND&emsp14;=&emsp14;UNDERG</rt></ruby>&ensp;<ruby>Cool!<rt>RAD</rt></ruby></td><td>UNDERGRAD</td></tr><tr><td>7D</td><td><ruby>Ameliorate diminished second<rt>C(-u)RE</rt></ruby>&ensp;<ruby>with<rt>+</rt></ruby>&ensp;<ruby>dissonant second<rt>anagram&emsp14;SECOND&emsp14;=&emsp14;SCENDO</rt></ruby>&emsp;<ruby>for<rt>connector</rt></ruby>&ensp;<ruby>peak intensity<rt>definition</rt></ruby></td><td>CRESCENDO</td></tr><tr><td>8D</td><td><ruby>Lash out<rt>SPEND</rt></ruby>&ensp;<ruby>about<rt>containing</rt></ruby>&ensp;<ruby>halves being swapped in flyer<rt>swap&emsp14;halves&emsp14;in&emsp14;BILL&emsp14;=&emsp14;LLBI</rt></ruby>&ensp;<ruby>'s<rt>connector</rt></ruby>&ensp;<ruby>entrance<rt>definition</rt></ruby></td><td>SPELLBIND</td></tr><tr><td>9D</td><td><ruby>Give another role to<rt>definition</rt></ruby>&ensp;<ruby>simpleton:<rt>ASS</rt></ruby>&ensp;<ruby>to infiltrate<rt>contained&emsp14;by</rt></ruby>&ensp;<ruby>king's dominion<rt>REIGN</rt></ruby></td><td>REASSIGN</td></tr><tr><td>14D</td><td><ruby>Army personnel<rt>definition</rt></ruby>&ensp;<ruby>complains when leader fails to appear<rt>(-r)ANTS</rt></ruby></td><td>ANTS</td></tr><tr><td>17D</td><td><ruby>Torn<rt>definition</rt></ruby>&ensp;<ruby>fabric<rt>LACE</rt></ruby>&ensp;<ruby>carefully evaluated<rt>RATED</rt></ruby></td><td>LACERATED</td></tr><tr><td>18D</td><td><ruby>Listen to<rt>HEAR</rt></ruby>&ensp;<ruby>a couple<rt>TWO</rt></ruby>&ensp;<ruby>on<rt>+</rt></ruby>&ensp;<ruby>edge, extracting internal<rt>R(-i)M</rt></ruby>&ensp;<ruby>parasite<rt>definition</rt></ruby></td><td>HEARTWORM</td></tr><tr><td>19D</td><td><ruby>Not impressed with<rt>definition</rt></ruby>&ensp;<ruby>Touhou creator's rejected initial<rt>(-z)UN'S</rt></ruby>&ensp;<ruby>"Winter" cover<rt>MITTEN&emsp14;(covering&emsp14;worn&emsp14;in&emsp14;winter)</rt></ruby></td><td>UNSMITTEN</td></tr><tr><td>20D</td><td><ruby>Joint with front missing:<rt>(-f)USED</rt></ruby>&ensp;<ruby>as salesmen say, "almost new"<rt>definition</rt></ruby></td><td>USED</td></tr><tr><td>21D</td><td><ruby>Most Gates-like guillotined<rt>(-p)EARLIEST&emsp14;(most&emsp14;like&emsp14;the&emsp14;Pearly&emsp14;Gates)</rt></ruby>&ensp;<ruby>first?<rt>definition</rt></ruby></td><td>EARLIEST</td></tr><tr><td>22D</td><td><ruby>Sword forged<rt>anagram&emsp14;SWORD&emsp14;=&emsp14;WORDS</rt></ruby>&ensp;<ruby>by<rt>+</rt></ruby>&ensp;<ruby>a boy<rt>A&emsp14;LAD</rt></ruby>&ensp;<ruby>in<rt>connector</rt></ruby>&ensp;<ruby>Jabberwocky, perhaps<rt>definition</rt></ruby></td><td>WORD SALAD</td></tr><tr><td>23D</td><td><ruby>Red<rt>R</rt></ruby>&ensp;<ruby>moon<rt>IO</rt></ruby>&ensp;<ruby>posed danger<rt>anagram&emsp14;DANGER&emsp14;=&emsp14;GRANDE</rt></ruby>&emsp;<ruby>to<rt>connector</rt></ruby>&ensp;<ruby>part of US border<rt>definition</rt></ruby></td><td>RIO GRANDE</td></tr><tr><td>24D</td><td><ruby>Most worn out<rt>definition</rt></ruby>&ensp;<ruby>hollow trees<rt>PI(-n)ES</rt></ruby>&ensp;<ruby>beset by<rt>contained&emsp14;by</rt></ruby>&ensp;<ruby>winter weather<rt>SLEET</rt></ruby></td><td>SLEEPIEST</td></tr><tr><td>29D</td><td><ruby>Draw and discard a card<rt>definition</rt></ruby>&ensp;<ruby>with<rt>connector</rt></ruby>&ensp;<ruby>location to grind<rt>definition</rt></ruby></td><td>MILL</td></tr></table></p>
+<h3>Unused words and extraction</h3>
+<table>
+<thead>
+<tr>
+<th>Unused word</th>
+<th>Letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ancient</td>
+<td>P</td>
+</tr>
+<tr>
+<td>authority</td>
+<td>U</td>
+</tr>
+<tr>
+<td>bawling</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>Burger</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>Cartographer</td>
+<td>L</td>
+</tr>
+<tr>
+<td>cocktails</td>
+<td>E</td>
+</tr>
+<tr>
+<td>crawl</td>
+<td>A</td>
+</tr>
+<tr>
+<td>even</td>
+<td>N</td>
+</tr>
+<tr>
+<td>flinching</td>
+<td>S</td>
+</tr>
+<tr>
+<td>gradient</td>
+<td>W</td>
+</tr>
+<tr>
+<td>Hummer</td>
+<td>E</td>
+</tr>
+<tr>
+<td>Irreparably</td>
+<td>R</td>
+</tr>
+<tr>
+<td>lockbox</td>
+<td>I</td>
+</tr>
+<tr>
+<td>nearby</td>
+<td>S</td>
+</tr>
+<tr>
+<td>president's</td>
+<td>S</td>
+</tr>
+<tr>
+<td>rabidly</td>
+<td>U</td>
+</tr>
+<tr>
+<td>rich</td>
+<td>L</td>
+</tr>
+<tr>
+<td>Rightly</td>
+<td>F</td>
+</tr>
+<tr>
+<td>Rushed</td>
+<td>U</td>
+</tr>
+<tr>
+<td>secure</td>
+<td>R</td>
+</tr>
+<tr>
+<td>supercalifragilisticexpialidocious</td>
+<td>Q</td>
+</tr>
+<tr>
+<td>suspiciously</td>
+<td>U</td>
+</tr>
+<tr>
+<td>The</td>
+<td>E</td>
+</tr>
+<tr>
+<td>through</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Unbelievably</td>
+<td>C</td>
+</tr>
+<tr>
+<td>very</td>
+<td>H</td>
+</tr>
+<tr>
+<td>Wonderland</td>
+<td>I</td>
+</tr>
+<tr>
+<td>worldly</td>
+<td>N</td>
+</tr>
+<tr>
+<td>yields</td>
+<td>G</td>
+</tr>
+</tbody>
+</table>
+    
+
+</main>
+
+
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/galacticpuzzlehunt/gph-site">gph-site</a>
+    </footer>
+    
+</body>
+
+</html>
